@@ -2,6 +2,23 @@ package saviyntconnectors
 
 import "encoding/json"
 
+type RequestsAttribute struct {
+	Name     string
+	Requests Requests
+}
+
+func (ra RequestsAttribute) ExtendedAttr() (ExternalAttr, error) {
+	encrypted, err := ra.Requests.String()
+	if err != nil {
+		return ExternalAttr{}, err
+	}
+	ea := ExternalAttr{
+		AttributeName:           ra.Name,
+		EncryptedAttributeValue: encrypted,
+	}
+	return ea, nil
+}
+
 type Requests struct {
 	AccountIdPath          string            `json:"accountIdPath"`
 	ResponseColsToPropsMap map[string]string `json:"responseColsToPropsMap"`

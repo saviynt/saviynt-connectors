@@ -1,6 +1,10 @@
 package ringcentral
 
-import saviyntconnectors "github.com/grokify/saviynt-connectors"
+import (
+	"net/http"
+
+	saviyntconnectors "github.com/grokify/saviynt-connectors"
+)
 
 func ObjectSummary() saviyntconnectors.ObjectSummary {
 	return saviyntconnectors.ObjectSummary{
@@ -19,15 +23,43 @@ func ObjectSummary() saviyntconnectors.ObjectSummary {
 }
 
 func Connection() saviyntconnectors.ConnectionMap {
+	ra := saviyntconnectors.RequestsAttribute{
+		Name: "CreateAccountJSON",
+		Requests: saviyntconnectors.Requests{
+			AccountIdPath: "call1.message.id",
+			ResponseColsToPropsMap: map[string]string{
+				"name": "call1.message.userName~#~char",
+			},
+			Calls: []saviyntconnectors.Call{
+				{
+					Name:       "call1",
+					Connection: "acctAuth",
+					URL:        "https://platform.devtest.ringcentral.com/scim/v2/Users",
+					HTTPMethod: http.MethodPost,
+					HTTPParams: "{\"active\":true,\"name\":{\"familyName\":\"${user.lastname}\",\"givenName\":\"${user.firstname}\"},\"emails\":[{\"type\":\"work\",\"value\":\"${user.email}\"}],\"schemas\":[\"urn:ietf:params:scim:schemas:core:2.0:User\"],\"userName\":\"${user.username}\"}",
+					HTTPHeaders: map[string]string{
+						"authorization": "${access_token}",
+						"Accept":        "application/json",
+					},
+					HTTPContentType: "application/json",
+					SuccessResponses: saviyntconnectors.Responses{
+						StatusCodes: []uint{200, 201},
+					},
+				},
+			},
+		},
+	}
+	ea, err := ra.ExtendedAttr()
+	if err != nil {
+		panic(err)
+	}
+
 	extAttrs := saviyntconnectors.ExternalAttrs{
 		{
 			AttributeName:           "ConnectionJSON",
 			EncryptedAttributeValue: "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw8R3gKwlb5P5Pls/NpXrJCJEOIIKBqZmra7c/8I5jIPpwDMQA72hCb7+NjiIMbsrgAdpeFAoP6/433ACaPmQ86SoWaZO2mA0+TKvsTYHtVp6K9yHo/Z1fKuWU+vJl7Lxa32+Kz/u5eUMFbVq8zOMQr90/02BPk1s1lKjq1MxsJ7FL18zFq3rzaC2M0icHhhGcz804Dz7klQFnwn58kFix0ThAV8SuLnAi8W4nCINNWsbdbnJomLGY2IQzoogWU7i8lvx1a5VS38MNppSyGQaXnHgO7sdnGs7JHDenJ1Hh25Dz8C1uMfEs7aonK83W+hdAQIi2usFnc5i5z1+9pmhbhkkfQAIuEECtSBCuDyIiOVkpthljbmF+IiIIyYgfSfnv91wCLSwL6NUH/kqcuI870Rwc/WV6bFGGJT3NYaPlf1gvNAfLfBkfrV/eGDAnZX33jK9+vfJDTfYnOgjVztRS21Tr1w3FJNogJjZuRclkjk0ZjoUHZOu9cpoah88ByFN6idLJN51r4kSAMoz+RxnsdfHSuuZKsk3AJmpldcy4QLKV+JnLVy24OSJZC9t4tTfWdKhJUibFN0A3qHMM+o3xhehOeaKooW1q3+FdbZLieB4Q==",
 		},
-		{
-			AttributeName:           "CreateAccountJSON",
-			EncryptedAttributeValue: "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"responseColsToPropsMap\": {\r\n    \"name\": \"call1.message.userName~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://platform.devtest.ringcentral.com/scim/v2/Users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"active\\\":true,\\\"name\\\":{\\\"familyName\\\":\\\"${user.lastname}\\\",\\\"givenName\\\":\\\"${user.firstname}\\\"},\\\"emails\\\":[{\\\"type\\\":\\\"work\\\",\\\"value\\\":\\\"${user.email}\\\"}],\\\"schemas\\\":[\\\"urn:ietf:params:scim:schemas:core:2.0:User\\\"],\\\"userName\\\":\\\"${user.username}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
-		},
+		ea,
 		{
 			AttributeName:           "DisableAccountJSON",
 			EncryptedAttributeValue: "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://platform.devtest.ringcentral.com/scim/v2/Users/${account.accountID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:api:messages:2.0:PatchOp\\\"],\\\"Operations\\\":[{\\\"op\\\":\\\"replace\\\",\\\"path\\\":\\\"active\\\",\\\"value\\\":\\\"false\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
