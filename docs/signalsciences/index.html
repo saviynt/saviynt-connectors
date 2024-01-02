@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://saviynt.com/signalsciences/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Signal Sciences Connector for Saviynt - Saviynt Community Connectors</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Signal Sciences Connector for Saviynt";
+        var mkdocs_page_input_path = "signalsciences/index.md";
+        var mkdocs_page_url = "/signalsciences/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Saviynt Community Connectors
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Connectors</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ringcentral/">RingCentral</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="index.md'">Signal Sciences</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Saviynt Community Connectors</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Signal Sciences Connector for Saviynt</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="signal-sciences-connector-for-saviynt">Signal Sciences Connector for Saviynt</h1>
+<h2 id="preface">Preface</h2>
+<p>This guide describes the integration between <strong>Saviynt Enterprise Identity Cloud (EIC)</strong> and Signal Sciences .</p>
+<h2 id="audience">Audience</h2>
+<p>This guide is intended for administrators and target application integration teams responsible for implementing a secure integration service with Signal Sciences .</p>
+<h2 id="introduction">Introduction</h2>
+<p><strong>Signal Sciences</strong> was a cybersecurity company that specialized in web application and API security. The company provided a cloud-native web application firewall (WAF) and runtime application self-protection (RASP) solution designed to protect web applications and APIs from various threats, including web application attacks and OWASP Top Ten vulnerabilities.</p>
+<p><strong>Signal Sciences</strong> platform offered real-time threat protection, visibility, and security analytics, helping organizations defend against web application attacks, such as SQL injection, cross-site scripting (XSS), and more. The company aimed to provide security teams with the tools and insights needed to protect their applications and APIs in modern, dynamic, and cloud-native environments.</p>
+<p>The <strong>Signal Sciences</strong> connector enables you to seamlessly integrate with Signal Sciences to manage user lifecycle and govern access to their Sites.</p>
+<p>For more information about different connectors in EIC, see <a href="https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm">Saviynt Enterprise Identity Cloud Connectors</a>.</p>
+<p><strong>Note:</strong> This guide provides information about using the Signal Sciences REST connector using REST API for performing operations listed in the Supported Features.</p>
+<h2 id="supported-features">Supported Features</h2>
+<p>The Signal Sciences integration supports the following features:</p>
+<ol>
+<li>Incremental Import</li>
+<li>Lifecycle Management</li>
+<li>Add or Remove Access</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Signal Sciences Object</th>
+<th>EIC Object</th>
+<th>Full Import</th>
+<th>Incremental Import</th>
+<th>Lifecycle Management</th>
+<th>Access Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Users</td>
+<td>Accounts</td>
+<td>Yes</td>
+<td>No</td>
+<td>Support for creating, updating, and removing accounts</td>
+<td>Not applicable</td>
+</tr>
+<tr>
+<td>Sites</td>
+<td>Sites</td>
+<td>Yes</td>
+<td>No</td>
+<td>Not applicable</td>
+<td>Support for adding and removing site members</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-software-versions">Supported Software Versions</h2>
+<table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EIC</td>
+<td>Release v4.5 and later</td>
+</tr>
+</tbody>
+</table>
+<h2 id="understanding-the-integration-between-eic-and-signal-sciences">Understanding the Integration between EIC and Signal Sciences</h2>
+<p>You must create an integration between EIC and the collaboration platform hosted by the target application to perform import, provisioning, and deprovisioning tasks. The following components are involved in the integration:</p>
+<ul>
+<li>The Complete Service Management platform Signal Sciences combines ITSM with ESM and SIAM capabilities, enabling all internal departments, such as IT, HR, and Facilities, as well as external service providers and customers, to collaborate securely and seamlessly on one complete platform, reducing complexity and improving productivity.</li>
+<li><strong>Objects</strong> are imported as entitlement types into EIC.</li>
+<li><strong>Security System</strong> represents the connection between EIC and the target application.<ul>
+<li>It comprises of an endpoint, which is the target application for which you want EIC to manage the identity repository.</li>
+<li>It provides application instance abstraction from connectivity including high-level metadata. For more information about creating a security system, see Creating a Security System.</li>
+</ul>
+</li>
+<li><strong>Endpoint</strong> is an instance of an application within the context of a security system.<ul>
+<li>It is the target application or application from which the connector imports the data and performs provisioning or deprovisioning of identity objects, such as users, accounts, and entitlements.</li>
+<li>It is mandatory to create an endpoint after creating the security system.<br /><br />You can associate a single security system with multiple endpoints if the deployment involves modelling of multiple isolated virtual applications (based on sets of specific entitlements according to certain categories) within a single application instance. For more information about creating an endpoint, see Creating an Endpoint for the Security System.</li>
+</ul>
+</li>
+<li><strong>Connector</strong> is a software component that enables communication between EIC and the target application. It provides a simplified integration mechanism where in some instances you only need to create a connection with minimal connectivity information for your target application. The REST connector is used for importing, provisioning accounts and access through the REST APIs. For more information about creating a connection, see Creating a Connection.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
