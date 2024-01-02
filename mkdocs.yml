@@ -8,4 +8,4 @@ nav:
 - 'Home': index.md
 - 'Connectors':
     - 'RingCentral': 'ringcentral/index.md'
-    - 'Signal Sciences': signalsciences/index.md'
+    - 'Signal Sciences': 'signalsciences/index.md'
