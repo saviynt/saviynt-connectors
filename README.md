@@ -4,6 +4,7 @@ This is a repo for Saviynt Connector Packages built for the REST Connector as Co
 
 This repo currently covers the files available at the following locaitons:
 
+1. [Connecteam](https://forums.saviynt.com/t5/community-sourced-integrations/connecteam-hr-integration-guide/ta-p/55821) - [website](https://connecteam.com/)
 1. [Google Analytics](https://forums.saviynt.com/t5/community-sourced-integrations/google-analytics-integration-guide/ta-p/58306) - [website](https://analytics.google.com/)
 1. [Intercom](https://forums.saviynt.com/t5/community-sourced-integrations/intercom-integration-guide/ta-p/52123) - [website](https://www.intercom.com/)
 1. [Jack Henry](https://forums.saviynt.com/t5/community-sourced-integrations/jack-henry-integration-guide/ta-p/60263) - [website](https://www.jackhenry.com/)
