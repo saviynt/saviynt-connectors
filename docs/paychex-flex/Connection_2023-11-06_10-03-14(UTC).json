@@ -1,0 +1,166 @@
+{
+  "Paychex_HR": {
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "templateName": "Paychex_HR",
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectionname": "Paychex_HR",
+    "externalconnectiontype": "REST",
+    "templateMandatoryData": "/qXFAG/Le4aBHE5JlJu9cz9LyfnTfmmsLZy/DzHRMFF4y2Ha9FON+Sf9JOx7uLKo37lv8oq2RYGgIhzx3lYAKKaYoGvTVDqHm0b3WOUzNILUemMGKBash0mG3/2Jfv8a",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw8R3gKwlb5P5Pls/NpXrJCJmB/uk9M2budYKKYw/SLj3IdaydGYaewHphAsnEr8o/w91Mua5XZUa3uNYeX0Ih2cGNaaMCecNe1z1M/s85a6pteh+ntLD57AqVQPMUu1tPsPBhaEFclVx+W4Mksvy9r5XGb9/N7sXeCDXfxwJTPah6sx54pysFU0zoI67zPRXhrPG+bna9iDnGx/t/FyxqoXd1r938DVAcxzJmuXQ3iSdZyCgWo8WlKtzt8t+d+SQr9gD9F9MQzws+BU0wumMLj3QyS6xcTwAsmdVoefkF8neWZoeMUtYRSC3tAtTCcwgNXnL5apmCPmvYmIaY8WX4etVU5RfBY/R7YyY2WU4mh6HKSsc6gTDpuehjvuMzdtTyCDGKY4UwbYZiRZZ32T6+XW9x3gn3u7OLlIDzmE031GRFK+giiKlMpsaXhk+SbL7eLtqcW0Ahovbwd/w6mrDYrh8cSLKW/kY7gLs4bAhZnedkZfPSaOqni/3EETVSWGNaZXEOHyRtFyRxV2+xQw188RpVG8gDZGpYDvDtOZpxUaV/CGkssJls7IpYRPugFzR6N3AEJ7pR1EJqPqK+IFM11CYs5YrWU/MFjboU4/W5KHyPhTxl1JKjM7pcB2ix+OaxVmTbZrf5E85ZRGoRbG0aG2TjQeXflXENPpDnkj63OcoiHlIFwdKi/KI73S8URYcSR9bQEnqYj2W4vJHYVGOeqzGLJVowRkSHde68WYINfnHMRA9afyizz/TFQAeevf8wZ9JqqnAhiPzl/gsfaLdOEk2S89+cxLNNwlPvQMTVqVSV61S+JxyXrZsPDy1M2pb6RuK7LUf1RuqxweOEfaVLl+Nhgumd9LEWINQ1c4rCPV0KPRwSnqY5VXTN166B+GLjk="
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"connection\": \"acctAuth\",\r\n  \"successResponses\": {\r\n    \"statusCode\": [\r\n      200,\r\n      201,\r\n      202,\r\n      203,\r\n      204,\r\n      205\r\n    ]\r\n  },\r\n  \"url\": \"https://api.paychex.com/companies/@COMPANYID@/workers?offset=5&limit=5\",\r\n  \"httpMethod\": \"GET\",\r\n  \"httpHeaders\": {\r\n    \"Authorization\": \"${access_token}\"\r\n  },\r\n  \"userResponsePath\": \"content\",\r\n  \"colsToPropsMap\": {\r\n    \"username\": \"workerId~#~char\",\r\n    \"systemUserName\": \"workerId~#~char\",\r\n    \"firstname\": \"name.givenName~#~char\",\r\n    \"lastname\": \"name.familyName~#~char\",\r\n    \"customproperty1\": \"employeeId~#~char\",\r\n    \"customproperty2\": \"workerType~#~char\",\r\n    \"customproperty3\": \"employmentType~#~char\",\r\n    \"customproperty4\": \"workState~#~char\",\r\n    \"customproperty5\": \"birthDate~#~char\",\r\n    \"customproperty6\": \"sex~#~char\",\r\n    \"customproperty7\": \"hireDate~#~char\",\r\n    \"customproperty8\": \"ethnicityCode~#~char\",\r\n    \"customproperty9\": \"laborAssignmentId~#~char\",\r\n    \"customproperty10\": \"jobId~#~char\",\r\n    \"location\": \"locationId~#~char\"\r\n  },\r\n  \"pagination\": {\r\n    \"offset\": {\r\n      \"offsetParam\": \"offset\",\r\n      \"batchParam\": \"limit\",\r\n      \"batchSize\": 100,\r\n      \"totalCountPath\": \"completeResponseMap.itemCount\"\r\n    }\r\n  }\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}
