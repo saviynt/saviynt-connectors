@@ -1,0 +1,166 @@
+{
+  "SAP_Business_Technology_Platform": {
+    "templateName": "SAP_Business_Technology_Platform",
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "externalconnectiontype": "REST",
+    "templateMandatoryData": "/qXFAG/Le4aBHE5JlJu9c76fGOn5wwtyDvDqrQprR9h2Mo4O+1KqbMH9sIbyWYHsXMik6U4BnLxpaqSoUg8beDjmFJXMpaSzfU2NSFlvDOJhm2ELsVRrmp2IdXPgLS5i",
+    "connectorType": null,
+    "connectionname": "SAP_Business_Technology_Platform",
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJP/ZYWYXdVydcxxs6gdn+GrSaezAz6IzFsq8pJPBh+ZEzDJw8PhFvgc5Q2m5+mmeZYvcKIGCeX09vmYHKEB86cnGejChihIniGhRtxfpc2DexFGauBrvM/7lHoEDDjj/P4ETaDzOd0IPGV0XBxHSpaFKkVolPBOwxewYkvAv8rxQJL3m5UVYgmD5gVVg+XMtvY9t2Fh0s0ALLPU/8SCmHTg5KzObNPNStQpkQ677Bb+8/OGB7j7kqRPAvPdAwx1zxevz1n13LDjdiUEgxzLiwNlHKvtmB3aldRIM7uRWe7eUxfizMw0+3SRbEsY/JbARO5cfkrDHIgJE/tOp9lK9k7fK4JhtYuDDxNaTVpI7fr/tbyoxtN7Cq2eZSjfv/8v7P1KXsp1U0uDMtYANzZ6Y5+LP2ub1nhWEGQk2T1QYycoqeTEeMBOiyhCPmNanLWgcp3CTGj4/3FuSpmlttK33Kx2P5m4JxwfX5F+mOhIk+P0Y25XxPWBsRMp7oCoB5D3Aqg3Mc7foCpSKiOxygBCy7TiNFA6dhXgGBo1SPpBcSpIGh4R3ilPvmERtvzQQyHxWSgDHEBj1W1v9fDRNEKURLKPTQqDK1JnlXb629iNa90C4g1z70rOtXPoGE72vIHHPHckJ1hX76FDSFwVIb7IWMsCePuv6hj2ph2YbWb4I2DHC9bhbk7OldoOTHn6z8TDnUx2Ei1JXn4rskwWn+kyzrtdorAUvYY6RTCScs1tos5DoVxbUv5G1AU8W/furNUW9Ysaus+siclpu53mr3l88ODY9ImnjKs9s0x/WxFP3lDz+tjeQzUsCvBRQ6YSpjaWdZ0IZuPudFvwOTcZ24qCY5bkVAA6YxG1JW1ZWjvpt3L9LntHYgegcro8HZqHWh8v7UKehBAAeWwWuBJjKeh2znR5Wx7q3DPC5DN3BzkGbvfZ83H1Pm6V3F747TPDFewHKSGHo/pFGZKisrQGNz6A3UAz51Y2FLAK9lE9ACa/9r/D9fVXwAw3exsZ7lM2ZtsEKWueTb/k+HX7Nm4TrFag3iJlk4O9n5mO2MImP2j0Kk05xBHCcuZRmCJX8zrBukaeJleq/Picv5NoGt3l7qJeGdPAtt+/wh8k9C5SshFVju7wQ97FBR8WlN/gVQH/fiM9dK/eMrgdyZBPv+OeWkRn4XFt",
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"accAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"statusAndThresholdConfig\": {\r\n      \"statusColumn\": \"customproperty11\",\r\n      \"activeStatus\": [\r\n        \"true\"\r\n      ],\r\n      \"accountThresholdValue\": 2000,\r\n      \"correlateInactiveAccounts\": false,\r\n      \"inactivateAccountsNotInFile\": false\r\n    },\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://@HOST_URL@/Users\",\r\n          \"httpMethod\": \"GET\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\"\r\n        },\r\n        \"statusConfig\": {\r\n          \"active\": \"true\"\r\n        },\r\n        \"listField\": \"resources\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"name\": \"userName~#~char\",\r\n          \"customproperty8\": \"emails.value~#~char\",\r\n          \"customproperty11\": \"active~#~char\",\r\n          \"status\": \"active~#~char\",\r\n          \"customproperty31\": \"STORE#ACC#ENT#MAPPINGINFO~#~char\"\r\n        },\r\n        \"pagination\": {\r\n          \"offset\": {\r\n            \"offsetParam\": \"startIndex\",\r\n            \"batchParam\": \"count\",\r\n            \"batchSize\": 400,\r\n            \"totalCountPath\": 5000\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"acctEntMappings\": {\r\n      \"Groups\": {\r\n        \"listPath\": \"groups\",\r\n        \"idPath\": \"value\",\r\n        \"keyField\": \"entitlementID\"\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"accAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Groups\": {\r\n        \"entTypeOrder\": 0,\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"https://@HOST_URL@/Groups\",\r\n              \"httpMethod\": \"GET\",\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\"\r\n            },\r\n            \"listField\": \"resources\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"id~#~char\",\r\n              \"entitlement_value\": \"id~#~char\",\r\n              \"displayName\": \"id~#~char\",\r\n              \"description\": \"description~#~char\"\r\n            },\r\n            \"pagination\": {\r\n              \"offset\": {\r\n                \"offsetParam\": \"startIndex\",\r\n                \"batchParam\": \"count\",\r\n                \"batchSize\": 500,\r\n                \"totalCountPath\": 5000\r\n              }\r\n            },\r\n            \"disableDeletedEntitlements\": true\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"processingType\": \"acctToEntMapping\"\r\n  }\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"accAuth\",\r\n      \"url\": \"https://@HOST_URL@/Users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"userName\\\": \\\"${user.customproperty22}\\\",\\\"name\\\":{\\\"familyName\\\":\\\"${user.lastname}\\\",\\\"givenName\\\":\\\"${user.firstname}\\\"},\\\"emails\\\":[{\\\"value\\\":\\\"${user.customproperty22}\\\"}],\\\"schemas\\\":[\\\"urn:scim:schemas:core:1.0\\\"]}\",\r\n      \"httpHeaders\": {\r\n        \"Accept\": \"application/json\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          201,\r\n          200,\r\n          204\r\n        ]\r\n      },\r\n      \"unsuccessResponses\": {\r\n        \"statusCode\": [\r\n          400,\r\n          403,\r\n          401,\r\n          404,\r\n          409,\r\n          501,\r\n          500\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Groups\",\r\n      \"connection\": \"accAuth\",\r\n      \"url\": \"https://@HOST_URL@/Groups/${entitlementValue.entitlementID.replace(' ', '%20')}/members\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"origin\\\": \\\"sap.default\\\",\\\"type\\\":\\\"USER\\\",\\\"value\\\":\\\"${account.accountID}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Accept\": \"application/json\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          201,\r\n          200,\r\n          204\r\n        ]\r\n      },\r\n      \"unsuccessResponses\": {\r\n        \"statusCode\": [\r\n          400,\r\n          403,\r\n          401,\r\n          404,\r\n          409,\r\n          501,\r\n          500\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Groups\",\r\n      \"connection\": \"accAuth\",\r\n      \"url\": \"https://@HOST_URL@/Groups/${entitlementValue.entitlementID.replace(' ', '%20')}/members/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"Accept\": \"application/json\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          201,\r\n          200,\r\n          204\r\n        ]\r\n      },\r\n      \"unsuccessResponses\": {\r\n        \"statusCode\": [\r\n          400,\r\n          403,\r\n          401,\r\n          404,\r\n          409,\r\n          501,\r\n          500\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"accAuth\",\r\n      \"url\": \"https://@HOST_URL@/Users/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"Accept\": \"application/json\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          201,\r\n          200,\r\n          204\r\n        ]\r\n      },\r\n      \"unsuccessResponses\": {\r\n        \"statusCode\": [\r\n          400,\r\n          403,\r\n          401,\r\n          404,\r\n          409,\r\n          501,\r\n          500\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}
