@@ -1,0 +1,166 @@
+{
+  "Ironclad": {
+    "externalconnectiontype": "REST",
+    "templateName": "Ironclad",
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "templateMandatoryData": "DwitEostW3Z60d/A6Ua4sw==",
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectorType": null,
+    "connectiondescription": "",
+    "connectionname": "Ironclad",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw/IDMeq+7eo15suLHpyy/V18efpBqqbFFlKCNvWdDsrevefL6lDRO2akwgpaY/4FVr8BpHmPyieMBW5xkd7aYXn0s3hRysCS3BOnK64vaNVj5vPC2iCTJ9lw3WBiPp1E+2XReSIZNKFfbjdaL64u/mCGE8tMMeK6+SOQh2KBDYkvCxr1M4Mv01OojguHd1a/eYcB7bM8vhSE0NRp6JnzXTAT1dgYZXlnh59Odr+p4QOTudtQPToMAWx2niCM/eyYOkwIa/xkmZx3dMPJnyUL1XMYaCPweG2R3jS7SfYAMHkhj/S35ZIf7Rnoq67Y+Kfz3/vfd+9gXAp/4geudZcojkgMGYPxwLlCgZkETUIfIJERY4PWS2GM29aPFNSQ39cI1vkm56VtpswNWudxCx4/D3T9BKQ6bPsccxGn+xCbq0CBgrpL+g6F0lqMnc20edky8KoSK1sxAkoPwMK/zpRCdffxFCAR0W3wtVoTIL3O4qFrDV8UyCwfRxM7eazxwWI2+6l1C4k6nwn4LNLNMYZ0lHCn3LmrWprjpjzOJqdq25iQNmv3BLBFXAnqhw7VO5PckFcq6FKEuGTcpIh3ammVvv8xe/dIhtQyuT3Uf2xomCVYVoUg/gbhLCNXvXEuTS/pfQAa0unwjCKW/WmNDmFfn2TuJY+HhGRWukh9F0AAoOL1/tqvGbFqtffV97ofn9MsxkkuJqcdE2d4wzdo0debQJFFIDmqa97FPyvKQHDmxTjYZJF7GKrV1daHk5r3WCETm1bgVMtcnIZlk8ll1KnLU3Tq2Qr56nb1DlzOHsr8PkOBmyHxiNmY1/72cM19kOGlGBudFHPuKOevYcE4Q/zST1Ntjuyq/6f3DqC6GZIc7MjdQ=="
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"statusAndThresholdConfig\": {\r\n      \"statusColumn\": \"customproperty7\",\r\n      \"activeStatus\": [\r\n        \"true\"\r\n      ],\r\n      \"deleteLinks\": true,\r\n      \"accountThresholdValue\": 1000,\r\n      \"correlateInactiveAccounts\": false,\r\n      \"inactivateAccountsNotInFile\": true,\r\n      \"deleteAccEntForActiveAccounts\": true\r\n    },\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://ironcladapp.com/scim/v2/Users\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"Resources\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"name\": \"userName~#~char\",\r\n          \"status\": \"active~#~char\",\r\n          \"customproperty1\": \"name.givenName~#~char\",\r\n          \"customproperty2\": \"name.familyName~#~char\",\r\n          \"customproperty3\": \"schemas~#~char\",\r\n          \"customproperty4\": \"emails[0].value~~#~char\",\r\n          \"customproperty5\": \"emails[0].type~#~char\",\r\n          \"customproperty6\": \"emails[0].primary~#~char\",\r\n          \"customproperty7\": \"active~#~char\"\r\n        },\r\n        \"pagination\": {\r\n          \"page\": {\r\n            \"pageSizeParam\": \"perPage\",\r\n            \"pageSize\": 50,\r\n            \"pageRecordCount\": \"completeResponseMap.itemsPerPage\",\r\n            \"pageNumberParam\": \"page\",\r\n            \"totalCountPath\": \"completeResponseMap.totalResults\",\r\n            \"firstPageNumber\": 0\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Groups\": {\r\n        \"entTypeOrder\": 0,\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"https://ironcladapp.com/scim/v2/Groups\",\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"Resources\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"id~#~char\",\r\n              \"entitlement_value\": \"displayName~#~char\",\r\n              \"customproperty1\": \"schemas[0]~#~char\",\r\n              \"customproperty2\": \"externalId~#~char\",\r\n              \"customproperty3\": \"members[0].type~#~char\",\r\n              \"customproperty4\": \"members[0].$ref~#~char\",\r\n              \"customproperty5\": \"members[0].value~~#~char\",\r\n      \"acctEntMappingInfoColumnFromEnt\": \"STORE#ACC#ENT#MAPPINGINFO~#~char\"\r\n            }\r\n          }\r\n        },\r\n        \"acctEntMappings\": {\r\n          \"listField\": \"members\",\r\n          \"idPath\": \"value\",\r\n          \"keyField\": \"accountID\",\r\n          \"importAsAccount\": false\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n   \"processingType\": \"entToAcctMapping\"\r\n  }\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"responseColsToPropsMap\": {\r\n    \"displayName\": \"call1.message.userName~#~char\",\r\n    \"firstname\": \"call1.message.name.givenName~#~char\",\r\n    \"lastname\": \"call1.message.name.familyName~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://ironcladapp.com/scim/v2/Users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:schemas:core:2.0:User\\\"],\\\"name\\\":{\\\"givenName\\\":\\\"${user.firstname}\\\",\\\"familyName\\\":\\\"${user.lastname}\\\"},\\\"userName\\\":\\\"${user.username}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://ironcladapp.com/scim/v2/Users/${account.accountID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:api:messages:2.0:PatchOp\\\"],\\\"Operations\\\":[{\\\"op\\\":\\\"replace\\\",\\\"path\\\":\\\"name.familyName\\\",\\\"value\\\":\\\"${user.lastname}\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Entitlement\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \" https://ironcladapp.com/scim/v2/Groups/${entitlementValue.entitlementID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:api:messages:2.0:PatchOp\\\"],\\\"Operations\\\":[{\\\"path\\\":\\\"members\\\",\\\"value\\\":[{\\\"value\\\":\\\"${account.accountID}\\\"}],\\\"op\\\":\\\"add\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Entitlement\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \" https://ironcladapp.com/scim/v2/Groups/${entitlementValue.entitlementID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:api:messages:2.0:PatchOp\\\"],\\\"Operations\\\":[{\\\"path\\\":\\\"members\\\",\\\"value\\\":[{\\\"value\\\":\\\"${account.accountID}\\\"}],\\\"op\\\":\\\"remove\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://ironcladapp.com/scim/v2/Users/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpParams\": \"{}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          204,\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "TEAM_CONNECT": {
+    "connectiondescription": "TEAMCONNECT",
+    "sslCertificateId": null,
+    "templateName": "Team_Connect",
+    "msconnectorversion": null,
+    "externalconnectiontype": "SOAP",
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "templateMandatoryData": "DZfk4W6r8SryB5q3bGmeQO8kM0BmGqIngIHim5fta/D9SUIWfcK/hqClazU841jSPqiBfWP/5GoZ/ZqKL0aO0ZB8Acv/9NHnXlbs7X9N37Y=",
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectionname": "TEAM_CONNECT",
+    "connectorType": null,
+    "status": 0,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJP4m3+7wQqnGkogfkeZIXUUKAu/FcF31pZk/Ugf8tj7IW9x0rwudh/ob32m/WLrnulAqu+57RNo0XCXokkSKcsOUiiixu5N84gNDKdi65QJwW+lOsakSFF+T7HqKdzpHu9XqOoF1Xi76x+H8ofzJT4l4UjG7Uu9NODkmap69dlI8SNaLkpN51EQwnCa4HrQCTGCbcHeKm+sIS9XikPsyqArzamH1mTxf+9QWlhtMHEE4V0s9QRmB+Z8CE0edruqe8rAylMYpMbinplnV1GwA5oiR0is2ngxAr6OdHOBPhLBqFapcjNgNJAT9qnGWAFr7Pd06H0xMe3+/cm+iY7yu+095A4aT1pyywPq+84euUmBTcK3HKDtYy2lKE89QYEMftQ+s4a3vlFkRN41pSICMMXFhilgYWsiJo17p7h6OXOo0ihy30EfnV5eJgga5ye/r/oGZox3eX/WyW4O9kn4wQ4RW+ikMBEjjE8sayN+VLaJl9fep3m4kbUZ9wKwWXk96VXxEgMN8LC4OEuL8ufw9VDsGHch6z/wFEiEadgnyGStv2K33G1w5otwq99buDn0FeJwaMhZX419a/4/DrBufIiiu9hsbPK6gpw1xBb2J5HhXdTZXTTnCLdYNe6uC1A/iKpBubzInnPpTP5gc81BvpBzSU5lYe1oBDhFHtsSK8PsnXu5Bv0/WHTiC9i/ILAdA1Ba2kr7UUJDis5RrjJ3m48NPGOmNUS3jXZ66lypOT6chdx+9KyD2uohlavxW8Hu8kS9NSuaIs/bcV/XZOSkkVqhqm1LhXmGVUhClvFilyiyOvsqOwqaLAtjG42YBk26qDNbBpd99xYBwv5mCQXiN4uiykcILxxiWiMZcd0Fhbxpv8UmiRblR4jgGl03gBeHTEyLf6dA0lqX694cU5/GO6pLU6moB2fMVubPQwR7l//rtRXvIZlenYoZKv+Z0atfzfulvv9QFus7ajKU1pAUfRMg2HOAJtztylGxpkkdAUnJKnBmsZF438CafcMtUgAeWlIrtkn4F91W0oNNsZw4m/qbGSrK+AUr5GyhIDzHETklg9Fqlj2IHmETKK9CeqbmjPSVy5rSKcmeywRUxLapNm4lwr7FS1dtBDjkzF3tIThmfkQX9fn8+ftUFeRZ3gkoGy77Im1Gb7173jFoH4l7ecokmyxfbGPgj1+nfjUFXBAOXHG4iz9XldCWrcte0J/tg5s=",
+        "credentialSaveStatus": false,
+        "attributename": "CONNECTIONJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SOAP_ENDPOINT",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "XML",
+        "attributename": "SOAP_OR_XML",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "PAGE_SIZE",
+        "credentialSaveStatus": false
+      },
+      {
+        "attributename": "HR_IMPORT_JSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "attributename": "ACCOUNTS_IMPORT_JSON",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"CONNECTION1\": \"call2\",\r\n  \"REQUESTTYPE1\": \"ENTITLEMENTS\",\r\n  \"REQUESTXML1\": \"<soapenv:Envelope xmlns:gro=\\\"http://mitratech.com/teamconnect/webservice/groupaccountrepository\\\" xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"> <soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\"1\\\" xmlns:wsse=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\" xmlns:wsu=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\"><wsse:UsernameToken><wsse:Username>$@USERNAME<\u002fwsse:Username><wsse:Password Type=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\"@PASWWORD@<\u002fwsse:Password><\u002fwsse:UsernameToken><\u002fwsse:Security><\u002fsoapenv:Header><soapenv:Body> <gro:readGroupAccountsByCriteria> <criteria xsi:type=\\\"ns19:fieldSearchClause\\\" xmlns:ns19=\\\"http://mitratech.com/teamconnect/webservice/type\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"> <\u002fcriteria><limit>-1<\u002flimit> <properties>uniqueKey<\u002fproperties><properties>displayName<\u002fproperties><\u002fgro:readGroupAccountsByCriteria><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n  \"REQUESTPARAMS1\": {\r\n    \"Content-Type\": \"text/xml;charset=UTF-8\"\r\n  },\r\n  \"RESPONSEDATAPATH1\": \"Body.readGroupAccountsByCriteriaResponse.groupAccounts\",\r\n  \"ENTITLEMENTMAPPING1\": {\r\n    \"GROUP\": \"uniqueKey\"\r\n  },\r\n  \"CONNECTION2\": \"call1\",\r\n  \"REQUESTXML2\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:user=\\\"http://mitratech.com/teamconnect/webservice/useraccountrepository\\\"><soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\"1\\\" xmlns:wsse=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\" xmlns:wsu=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\"><wsse:UsernameToken><wsse:Username>@USERNAME<\u002fwsse:Username><wsse:Password Type=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\">$@PASWWORD@<\u002fwsse:Password><\u002fwsse:UsernameToken><\u002fwsse:Security><\u002fsoapenv:Header><soapenv:Body><user:readUserAccountsByCriteria><criteria xsi:type=\\\"ns19:fieldSearchClause\\\" xmlns:ns19=\\\"http://mitratech.com/teamconnect/webservice/type\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"><operator>AND<\u002foperator><criteria xsi:type=\\\"ns19:stringFieldCriterion\\\"><fieldPath xsi:type=\\\"ns19:legacySearchFieldPathExpression\\\"><searchKeyPath>isActive<\u002fsearchKeyPath><\u002ffieldPath><comparator>EQUALS<\u002fcomparator><value>1<\u002fvalue><\u002fcriteria><\u002fcriteria><limit>-1<\u002flimit><properties>username<\u002fproperties><properties>uniqueKey<\u002fproperties><properties>active<\u002fproperties><properties>userType<\u002fproperties><properties>groups.uniqueKey<\u002fproperties><properties>groups.uniqueName<\u002fproperties><properties>groups.displayName<\u002fproperties><\u002fuser:readUserAccountsByCriteria><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n  \"REQUESTPARAMS2\": {\r\n    \"Content-Type\": \"text/xml;charset=UTF-8\"\r\n  },\r\n  \"RESPONSEDATAPATH2\": \"Body.readUserAccountsByCriteriaResponse.userAccounts\",\r\n  \"ACCOUNTMAPPING2\": \"NAME:username,ACCOUNTID:uniqueKey,customproperty11:active\",\r\n  \"ENTITLEMENTMAPPING2\": {\r\n    \"GROUP\": \"groups.uniqueKey\"\r\n  }\r\n}"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"statusAndThresholdConfig\": {\r\n    \"statusColumn\": \"customproperty11\",\r\n    \"activeStatus\": [\r\n      \"true\"\r\n    ],\r\n    \"deleteLinks\": true,\r\n    \"accountThresholdValue\": 50,\r\n    \"inactivateAccountsNotInFile\": false,\r\n    \"correlateInactiveAccounts\": false\r\n  }\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CUSTOM_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RESPONSEPATH_TOTALRESULTS"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RESPONSEPATH_PAGERESULTS"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "RESPONSEPATH_USERLIST",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DATEFORMAT"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "COMBINEDCREATEREQUEST"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "[\r\n  {\r\n    \"CONNECTION\": \"call3\",\r\n    \"REQUESTXML\": \"<?xml version=\\\"1.0\\\"?><soapenv:Envelope xmlns:con=\\\"http://mitratech.com/teamconnect/webservice/contactrepository\\\" xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\"1\\\" xmlns:wsse=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\" xmlns:wsu=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\"><wsse:UsernameToken><wsse:Username>@USERNAME<\u002fwsse:Username><wsse:Password Type=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\">$@PASWWORD@<\u002fwsse:Password><\u002fwsse:UsernameToken><\u002fwsse:Security><\u002fsoapenv:Header><soapenv:Body><con:readContactsByCriteria><criteria xsi:type=\\\"ns19:fieldSearchClause\\\" xmlns:ns19=\\\"http://mitratech.com/teamconnect/webservice/type\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"><operator>AND<\u002foperator><criteria xsi:type=\\\"ns19:stringFieldCriterion\\\"><fieldPath xsi:type=\\\"ns19:legacySearchFieldPathExpression\\\"><searchKeyPath>CONT_INTE_EMPE_NHRF__HRF_Custom02<\u002fsearchKeyPath><\u002ffieldPath><comparator>EQUALS<\u002fcomparator><value>${user.username}<\u002fvalue><\u002fcriteria><\u002fcriteria><limit>1<\u002flimit><properties>uniqueKey<\u002fproperties><\u002fcon:readContactsByCriteria><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n    \"REQUESTPARAMS\": {\r\n      \"Content-Type\": \"application/soap+xml;charset=utf-8\"\r\n    },\r\n    \"RESPONSEMAPPING\": {\r\n      \"contactUniqueKey\": \"Body.readContactsByCriteriaResponse.contacts.uniqueKey\",\r\n      \"TASK.PROVISIONINGCOMMENTS\": \"Body.readContactsByCriteriaResponse.contacts.uniqueKey\"\r\n    }\r\n  },\r\n  {\r\n    \"CONNECTION\": \"call1\",\r\n    \"REQUESTXML\": \"<?xml version=\\\"1.0\\\"?><soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:user=\\\"http://mitratech.com/teamconnect/webservice/useraccountrepository\\\"><soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\"1\\\" xmlns:wsse=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\" xmlns:wsu=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\"><wsse:UsernameToken><wsse:Username>$@USERNAME<\u002fwsse:Username><wsse:Password Type=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\">$@PASWWORD@<\u002fwsse:Password><\u002fwsse:UsernameToken><\u002fwsse:Security><\u002fsoapenv:Header><soapenv:Body><user:insertUserAccount><userAccount><username>${user.username}<\u002fusername><contactUniqueKey>${contactUniqueKey}<\u002fcontactUniqueKey><active>true<\u002factive><userType>${USERTYPE}<\u002fuserType><groupAccountUniqueKeys>${if(UIGROUP=='UI Finance'){'GROU_13961'} else if(UIGROUP=='UI Litigation-Default'){'GROU_13966'} else if(UIGROUP=='UI Litigation-United States'){'GROU_13968'} else if(UIGROUP=='UI Non-Litigation Default'){'GROU_13967'} else if(UIGROUP=='UI Intake'){'GROU_13962'} else {'GROU_13960'}}<\u002fgroupAccountUniqueKeys><shortDescription>${DESCRIPTION}<\u002fshortDescription><\u002fuserAccount><\u002fuser:insertUserAccount><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n    \"REQUESTPARAMS\": {\r\n      \"Content-Type\": \"application/soap+xml;charset=utf-8\"\r\n    },\r\n    \"RESPONSEMAPPING\": {\r\n      \"ACCOUNT.ACCOUNTID\": \"Body.insertUserAccountResponse.uniqueKey\",\r\n      \"TASK.PROVISIONINGCOMMENTS\": \"Body.insertUserAccountResponse.uniqueKey\",\r\n      \"userUniqueKey\": \"Body.insertUserAccountResponse.uniqueKey\"\r\n    }\r\n  }\r\n]",
+        "credentialSaveStatus": false,
+        "attributename": "CREATEACCOUNTJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UPDATEACCOUNTJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DELETEACCOUNTJSON",
+        "encryptedattributevalue": "[\r\n  {\r\n    \"CONNECTION\": \"call1\",\r\n    \"REQUESTXML\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:user=\\\"http://mitratech.com/teamconnect/webservice/useraccountrepository\\\"><soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\"1\\\" xmlns:wsse=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\" xmlns:wsu=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\"><wsse:UsernameToken><wsse:Username>USERNAME@<\u002fwsse:Username><wsse:Password Type=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\">$@PASWWORD@<\u002fwsse:Password><\u002fwsse:UsernameToken><\u002fwsse:Security><\u002fsoapenv:Header><soapenv:Body>      <user:updateUserAccount><userAccount><uniqueKey>${account.accountID}<\u002funiqueKey><active>0<\u002factive><\u002fuserAccount><\u002fuser:updateUserAccount><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n    \"REQUESTPARAMS\": {\r\n      \"Content-Type\": \"text/xml;charset=UTF-8\"\r\n    },\r\n    \"RESPONSEMAPPING\": {\r\n      \"TASK.PROVISIONINGCOMMENTS\": \"Body.updateUserAccountResponse\"\r\n    }\r\n  }\r\n]"
+      },
+      {
+        "encryptedattributevalue": "",
+        "attributename": "DISABLEACCOUNTJSON",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ENABLEACCOUNTJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "GRANTACCESSJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "[\r\n  {\r\n    \"CONNECTION\": \"call2\",\r\n    \"REQUESTXML\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\">\\n<soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header><soap:Body><aba:BusinessUserBundleMaintainRequest_sync><BusinessUser actionCode=\\\"02\\\"><PersonID>${account.accountID}<\u002fPersonID><PersonUUID><\u002fPersonUUID><User actionCode=\\\"02\\\">${String rolesStr = '';int size = entitlementSet.size();int i = 0;for (String ent : entitlementSet){rolesStr=rolesStr+'<Role actionCode=\\\"01\\\"><RoleName>'+ent.toUpperCase()+'<\u002fRoleName><\u002fRole>';i++;if(i == size){System.out.println(rolesStr);return rolesStr;}}}<\u002fUser><\u002fBusinessUser><\u002faba:BusinessUserBundleMaintainRequest_sync><\u002fsoap:Body><\u002fsoap:Envelope>\",\r\n    \"COOKIEOPTIONS\": \"SAVEFROMRESPONSE\",\r\n    \"REQUESTPARAMS\": {\r\n      \"Content-Type\": \"text/xml; charset=utf-8\"\r\n    },\r\n    \"SOAPAction\": \"http://sap.com/xi/ABA/QueryBusinessUserIn/QueryBusinessUserInRequest\",\r\n    \"RESPONSEMAPPING\": {\r\n      \"ADDUSERRESPONSE\": \"Body.BusinessUserBundleMaintainConfirmation_sync.BusinessUser.Log.Item.Note.nodeexists\"\r\n    },\r\n    \"SUCCESSCRITERIA\": {\r\n      \"ADDUSERRESPONSE\": \"1\"\r\n    }\r\n  }\r\n]"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "[\r\n  {\r\n    \"CONNECTION\": \"call2\",\r\n    \"REQUESTXML\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\">\\n<soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header><soap:Body><aba:BusinessUserBundleMaintainRequest_sync><BusinessUser actionCode=\\\"02\\\"><PersonID>${account.accountID}<\u002fPersonID><PersonUUID><\u002fPersonUUID><User actionCode=\\\"02\\\">${String rolesStr = '';int size = entitlementSet.size();int i = 0;for (String ent : entitlementSet){rolesStr=rolesStr+'<Role actionCode=\\\"03\\\"><RoleName>'+ent.toUpperCase()+'<\u002fRoleName><\u002fRole>';i++;if(i == size){System.out.println(rolesStr);return rolesStr;}}}<\u002fUser><\u002fBusinessUser><\u002faba:BusinessUserBundleMaintainRequest_sync><\u002fsoap:Body><\u002fsoap:Envelope>\",\r\n    \"COOKIEOPTIONS\": \"SAVEFROMRESPONSE\",\r\n    \"REQUESTPARAMS\": {\r\n      \"Content-Type\": \"text/xml; charset=utf-8\"\r\n    },\r\n    \"SOAPAction\": \"http://sap.com/xi/ABA/QueryBusinessUserIn/QueryBusinessUserInRequest\",\r\n    \"RESPONSEMAPPING\": {\r\n      \"ADDUSERRESPONSE\": \"Body.BusinessUserBundleMaintainConfirmation_sync.BusinessUser.Log.Item.Note.nodeexists\"\r\n    },\r\n    \"SUCCESSCRITERIA\": {\r\n      \"ADDUSERRESPONSE\": \"1\"\r\n    }\r\n  }\r\n]",
+        "attributename": "REVOKEACCESSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CHANGEPASSJSON",
+        "encryptedattributevalue": null
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UPDATEUSERJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "TICKETSTATUSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      }
+    ]
+  }
+}
