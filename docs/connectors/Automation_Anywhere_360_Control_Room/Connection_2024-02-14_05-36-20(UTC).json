@@ -1,0 +1,166 @@
+{
+  "AA 360 Control Room": {
+    "sslCertificateId": null,
+    "connectiondescription": "Automation Anywhere 360 Control Room",
+    "connectionname": "AA 360 Control Room",
+    "msconnectorversion": null,
+    "connectorms": false,
+    "templateName": null,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "templateMandatoryData": null,
+    "connectorType": null,
+    "status": 1,
+    "externalconnectiontype": "REST",
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "W0BQwICJgA4QnMUdMobNxg=="
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"globalSettings\": {\r\n\t\t\"dateFormat\": \"yyyy-MM-dd'T'HH:mm:ss\"\r\n\t},\r\n\t\"accountParams\": {\r\n\t\t\"connection\": \"userAuth\",\r\n\t\t\"processingType\": \"SequentialAndIterative\",\r\n\t\t\"statusAndThresholdConfig\": {\r\n\t\t\t\"statusColumn\": \"customproperty11\",\r\n\t\t\t\"activeStatus\": [\r\n\t\t\t\t\"false\"\r\n\t\t\t],\r\n\t\t\t\"deleteLinks\": true,\r\n\t\t\t\"accountThresholdValue\": 1000,\r\n\t\t\t\"correlateInactiveAccounts\": true,\r\n\t\t\t\"inactivateAccountsNotInFile\": false,\r\n\t\t\t\"deleteAccEntForActiveAccounts\": true\r\n\t\t},\r\n\t\t\"includeExistingInActiveAccounts\": true,\r\n\t\t\"call\": {\r\n\t\t\t\"call1\": {\r\n\t\t\t\t\"callOrder\": 0,\r\n\t\t\t\t\"stageNumber\": 0,\r\n\t\t\t\t\"http\": {\r\n\t\t\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/list\",\r\n\t\t\t\t\t\"httpMethod\": \"POST\",\r\n\t\t\t\t\t\"httpParams\": \"{}\",\r\n\t\t\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t\"httpContentType\": \"application/json\"\r\n\t\t\t\t},\r\n\t\t\t\t\"listField\": \"list\",\r\n\t\t\t\t\"keyField\": \"accountID\",\r\n\t\t\t\t\"colsToPropsMap\": {\r\n\t\t\t\t\t\"name\": \"username~#~char\",\r\n\t\t\t\t\t\"accountID\": \"id~#~char\",\r\n\t\t\t\t\t\"status\": \"disabled~#~bool\",\r\n\t\t\t\t\t\"description\": \"description~#~char\",\r\n\t\t\t\t\t\"lastlogondate\": \"lastLoginTime~#~date\",\r\n\t\t\t\t\t\"created_on\": \"createdOn~#~date\",\r\n\t\t\t\t\t\"updatedate\": \"updatedOn~#~date\",\r\n\t\t\t\t\t\"customproperty1\": \"email~#~char\",\r\n\t\t\t\t\t\"customproperty2\": \"firstName~#~char\",\r\n\t\t\t\t\t\"customproperty3\": \"lastName~#~char\",\r\n\t\t\t\t\t\"customproperty4\": \"createdBy~#~char\",\r\n\t\t\t\t\t\"customproperty5\": \"updatedBy~#~char\",\r\n\t\t\t\t\t\"customproperty11\": \"disabled~#~bool\"\r\n\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t},\r\n\t\"entitlementParams\": {\r\n\t\t\"connection\": \"userAuth\",\r\n\t\t\"processingType\": \"SequentialAndIterative\",\r\n\t\t\"entTypes\": {\r\n\t\t\t\"Role\": {\r\n\t\t\t\t\"entTypeOrder\": 0,\r\n\t\t\t\t\"call\": {\r\n\t\t\t\t\t\"call1\": {\r\n\t\t\t\t\t\t\"callOrder\": 0,\r\n\t\t\t\t\t\t\"stageNumber\": 0,\r\n\t\t\t\t\t\t\"http\": {\r\n\t\t\t\t\t\t\t\"url\": \"https://<URL>/v1/usermanagement/roles/list\",\r\n\t\t\t\t\t\t\t\"httpMethod\": \"POST\",\r\n\t\t\t\t\t\t\t\"httpParams\": \"{}\",\r\n\t\t\t\t\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\t\"httpContentType\": \"application/json\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"listField\": \"list\",\r\n\t\t\t\t\t\t\"keyField\": \"entitlementID\",\r\n\t\t\t\t\t\t\"colsToPropsMap\": {\r\n\t\t\t\t\t\t\t\"entitlementID\": \"id~#~char\",\r\n\t\t\t\t\t\t\t\"entitlement_value\": \"name~#~char\",\r\n\t\t\t\t\t\t\t\"description\": \"description~#~char\",\r\n\t\t\t\t\t\t\t\"displayname\": \"name~#~char\",\r\n\t\t\t\t\t\t\t\"entitlement_glossary\": \"name~#~char\",\r\n\t\t\t\t\t\t\t\"createdate\": \"createdOn~#~date\",\r\n\t\t\t\t\t\t\t\"updatedate\": \"updatedOn~#~date\",\r\n\t\t\t\t\t\t\t\"customproperty1\": \"systemRole~#~char\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"disableDeletedEntitlements\": true\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t},\r\n\t\"acctEntParams\": {\r\n\t\t\"connection\": \"userAuth\",\r\n\t\t\"entTypes\": {\r\n\t\t\t\"Role\": {\r\n\t\t\t\t\"call\": {\r\n\t\t\t\t\t\"call1\": {\r\n\t\t\t\t\t\t\"callOrder\": 0,\r\n\t\t\t\t\t\t\"stageNumber\": 0,\r\n\t\t\t\t\t\t\"processingType\": \"httpAcctToEnt\",\r\n\t\t\t\t\t\t\"http\": {\r\n\t\t\t\t\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${id}\",\r\n\t\t\t\t\t\t\t\"httpMethod\": \"GET\",\r\n\t\t\t\t\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\t\"httpContentType\": \"application/json\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"listField\": \"roles\",\r\n\t\t\t\t\t\t\"entIdPath\": \"id\",\r\n\t\t\t\t\t\t\"entKeyField\": \"entitlementID\",\r\n\t\t\t\t\t\t\"acctKeyField\": \"accountID\"\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"accountIdPath\": \"call.message.id\",\r\n\t\"responseColsToPropsMap\": {\r\n\t\t\"customproperty12\": \"call.message.id~#~char \"\r\n\t},\r\n\t\"call\": [{\r\n\t\t\"name\": \"call\",\r\n\t\t\"connection\": \"userAuth\",\r\n\t\t\"showResponse\": true,\r\n\t\t\"url\": \"https://<URL>/v1/usermanagement/users\",\r\n\t\t\"httpMethod\": \"POST\",\r\n\t\t\"httpParams\": \"{\\\"email\\\": \\\"${user.email}\\\",\\\"enableAutoLogin\\\" : \\\"true\\\",\\\"username\\\": \\\"${user.systemUserName}\\\",\\\"firstName\\\": \\\"${user.firstname}\\\",\\\"lastName\\\": \\\"${user.lastname}\\\",\\\"description\\\": \\\"User created by Saviynt\\\",\\\"disabled\\\":\\\"false\\\",\\\"multipleLoginAllowed\\\":\\\"true\\\",\\\"roles\\\": [{\\\"id\\\": 30}]}\",\r\n\t\t\"httpHeaders\": {\r\n\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t},\r\n\t\t\"httpContentType\": \"application/json\",\r\n\t\t\"successResponses\": {\r\n\t\t\t\"statusCode\": [\r\n\t\t\t\t200\r\n\t\t\t]\r\n\t\t},\r\n\t\t\"unsuccessResponses\": {\r\n\t\t\t\"statusCode\": [\r\n\t\t\t\t400,\r\n\t\t\t\t401,\r\n\t\t\t\t403,\r\n\t\t\t\t404,\r\n\t\t\t\t429,\r\n\t\t\t\t500,\r\n\t\t\t\t503\r\n\t\t\t]\r\n\t\t}\r\n\t}]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n\t\"call\": [{\r\n\t\t\t\"name\": \"call1\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${account.accountID}\",\r\n\t\t\t\"httpMethod\": \"GET\",\r\n\t\t\t\"httpParams\": \"\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"call2\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${account.accountID}\",\r\n\t\t\t\"httpMethod\": \"PUT\",\r\n\t\t\t\"httpParams\": \"{\\\"disabled\\\":\\\"${response.call1.message.disabled}\\\",\\\"username\\\":\\\"${response.call1.message.username}\\\",\\\"description\\\":\\\"${response.call1.message.description}\\\",\\\"firstName\\\":\\\"${user.firstname}\\\",\\\"lastName\\\":\\\"${user.lastname}\\\",\\\"email\\\":\\\"${user.email}\\\",\\\"principalId\\\":\\\"${response.call1.message.principalId}\\\",\\\"roles\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.roles)},\\\"sysAssignedRoles\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.sysAssignedRoles)},\\\"groupNames\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.groupNames)},\\\"permissions\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.permissions)},\\\"licenseFeatures\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.licenseFeatures)},\\\"clientRegistered\\\":\\\"${response.call1.message.clientRegistered}\\\",\\\"createdBy\\\":\\\"${response.call1.message.createdBy}\\\",\\\"createdOn\\\":\\\"${response.call1.message.createdOn}\\\",\\\"lastLoginTime\\\":\\\"${response.call1.message.lastLoginTime}\\\",\\\"deviceCredentialAttested\\\":\\\"${response.call1.message.deviceCredentialAttested}\\\",\\\"multipleLoginAllowed\\\":\\\"${response.call1.message.multipleLoginAllowed}\\\"}\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"call\": [{\r\n\t\t\t\"name\": \"call1\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${account.accountID}\",\r\n\t\t\t\"httpMethod\": \"GET\",\r\n\t\t\t\"httpParams\": \"\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503,\r\n\t\t\t\t\t502\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"call2\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${account.accountID}\",\r\n\t\t\t\"httpMethod\": \"PUT\",\r\n\t\t\t\"httpParams\": \"{\\\"disabled\\\":\\\"false\\\",\\\"username\\\":\\\"${response.call1.message.username}\\\",\\\"description\\\":\\\"${response.call1.message.description}\\\",\\\"firstName\\\":\\\"${response.call1.message.firstName}\\\",\\\"lastName\\\":\\\"${response.call1.message.lastName}\\\",\\\"email\\\":\\\"${response.call1.message.email}\\\",\\\"principalId\\\":\\\"${response.call1.message.principalId}\\\",\\\"roles\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.roles)},\\\"sysAssignedRoles\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.sysAssignedRoles)},\\\"groupNames\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.groupNames)},\\\"permissions\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.permissions)},\\\"licenseFeatures\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.licenseFeatures)},\\\"clientRegistered\\\":\\\"${response.call1.message.clientRegistered}\\\",\\\"createdBy\\\":\\\"${response.call1.message.createdBy}\\\",\\\"createdOn\\\":\\\"${response.call1.message.createdOn}\\\",\\\"lastLoginTime\\\":\\\"${response.call1.message.lastLoginTime}\\\",\\\"deviceCredentialAttested\\\":\\\"${response.call1.message.deviceCredentialAttested}\\\",\\\"multipleLoginAllowed\\\":\\\"${response.call1.message.multipleLoginAllowed}\\\"}\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"call\": [{\r\n\t\t\t\"name\": \"call1\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${account.accountID}\",\r\n\t\t\t\"httpMethod\": \"GET\",\r\n\t\t\t\"httpParams\": \"\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503,\r\n\t\t\t\t\t502\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"call2\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${account.accountID}\",\r\n\t\t\t\"httpMethod\": \"PUT\",\r\n\t\t\t\"httpParams\": \"{\\\"disabled\\\":\\\"true\\\",\\\"username\\\":\\\"${response.call1.message.username}\\\",\\\"description\\\":\\\"${response.call1.message.description}\\\",\\\"firstName\\\":\\\"${response.call1.message.firstName}\\\",\\\"lastName\\\":\\\"${response.call1.message.lastName}\\\",\\\"email\\\":\\\"${response.call1.message.email}\\\",\\\"principalId\\\":\\\"${response.call1.message.principalId}\\\",\\\"roles\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.roles)},\\\"sysAssignedRoles\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.sysAssignedRoles)},\\\"groupNames\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.groupNames)},\\\"permissions\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.permissions)},\\\"licenseFeatures\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.call1.message.licenseFeatures)},\\\"clientRegistered\\\":\\\"${response.call1.message.clientRegistered}\\\",\\\"createdBy\\\":\\\"${response.call1.message.createdBy}\\\",\\\"createdOn\\\":\\\"${response.call1.message.createdOn}\\\",\\\"lastLoginTime\\\":\\\"${response.call1.message.lastLoginTime}\\\",\\\"deviceCredentialAttested\\\":\\\"${response.call1.message.deviceCredentialAttested}\\\",\\\"multipleLoginAllowed\\\":\\\"${response.call1.message.multipleLoginAllowed}\\\"}\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"call\": [{\r\n\t\t\t\"name\": \"Role\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/roles/${entitlementValue.entitlementID}\",\r\n\t\t\t\"httpMethod\": \"GET\",\r\n\t\t\t\"httpParams\": \"\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Role\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/roles/${entitlementValue.entitlementID}\",\r\n\t\t\t\"httpMethod\": \"PUT\",\r\n\t\t\t\"httpParams\": \"{\\\"description\\\":\\\"${response.Role1.message.description}\\\",\\\"name\\\":\\\"${response.Role1.message.name}\\\",\\\"permissions\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.Role1.message.permissions)},\\\"principals\\\":${List responseList=response.Role1.message.principals;Map test = new HashMap();test.put(\\\"id\\\",account.accountID);test.put(\\\"username\\\",account.name);test.put(\\\"email\\\",account.customproperty1);test.put(\\\"firstName\\\",account.customproperty2);test.put(\\\"lastName\\\",account.customproperty3);responseList.add(test);return new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(responseList)}}\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"call\": [{\r\n\t\t\t\"name\": \"Role\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/roles/${entitlementValue.entitlementID}\",\r\n\t\t\t\"httpMethod\": \"GET\",\r\n\t\t\t\"httpParams\": \"\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Role\",\r\n\t\t\t\"connection\": \"userAuth\",\r\n\t\t\t\"url\": \"https://<URL>/v1/usermanagement/roles/${entitlementValue.entitlementID}\",\r\n\t\t\t\"httpMethod\": \"PUT\",\r\n\t\t\t\"httpParams\": \"{\\\"description\\\":\\\"${response.Role1.message.description}\\\",\\\"name\\\":\\\"${response.Role1.message.name}\\\",\\\"permissions\\\":${new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(response.Role1.message.permissions)},\\\"principals\\\":${List responseList=response.Role1.message.principals;int size = responseList.size();int i = 0;for(Map map: responseList){i++;if(map.get('username').toString().equals(user.systemUserName)){responseList.remove(map);return new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(responseList)}else{if(i==size){return new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(responseList)}}}}}\",\r\n\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t\t},\r\n\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\"successResponses\": {\r\n\t\t\t\t\"statusCode\": [200]\r\n\t\t\t},\r\n\t\t\t\"unsuccessResponses\": {\r\n\t\t\t\t\"statusCode\": [\r\n\t\t\t\t\t400,\r\n\t\t\t\t\t401,\r\n\t\t\t\t\t403,\r\n\t\t\t\t\t404,\r\n\t\t\t\t\t429,\r\n\t\t\t\t\t500,\r\n\t\t\t\t\t503\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t}\r\n\t]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n\t\"call\": [{\r\n\t\t\"name\": \"call1\",\r\n\t\t\"connection\": \"userAuth\",\r\n\t\t\"url\": \"https://<URL>/v1/usermanagement/users/${account.accountID}\",\r\n\t\t\"httpMethod\": \"DELETE\",\r\n\t\t\"httpParams\": \"\",\r\n\t\t\"httpHeaders\": {\r\n\t\t\t\"contentType\": \"application/json\",\r\n\t\t\t\"X-Authorization\": \"${access_token}\"\r\n\t\t},\r\n\t\t\"httpContentType\": \"application/json\",\r\n\t\t\"successResponses\": {\r\n\t\t\t\"statusCode\": [200]\r\n\t\t},\r\n\t\t\"unsuccessResponses\": {\r\n\t\t\t\"statusCode\": [\r\n\t\t\t\t400,\r\n\t\t\t\t401,\r\n\t\t\t\t403,\r\n\t\t\t\t404,\r\n\t\t\t\t429,\r\n\t\t\t\t500,\r\n\t\t\t\t503\r\n\t\t\t]\r\n\t\t}\r\n\t}]\r\n}",
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON",
+        "encryptedattributevalue": "{\r\n   \"showLogs\": true,\r\n   \"connectionTimeoutConfig\": {\r\n     \"connectionTimeout\": 10,\r\n     \"readTimeout\": 500,\r\n     \"writeTimeout\": 500,\r\n     \"retryWait\": 2,\r\n     \"retryCount\": 3\r\n   }\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}
