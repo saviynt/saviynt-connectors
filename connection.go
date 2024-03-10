@@ -1,10 +1,28 @@
 package saviyntconnectors
 
-import "sort"
+import (
+	"sort"
+	"strings"
+
+	"github.com/grokify/mogo/encoding/jsonutil"
+	"github.com/grokify/mogo/type/maputil"
+	"github.com/grokify/mogo/type/slicesutil"
+)
 
 type ConnectionMap map[string]Connection
 
+func (cm ConnectionMap) Names() []string {
+	return maputil.Keys(cm)
+}
+
+func ConnectionMapReadFile(filename string) (*ConnectionMap, error) {
+	connMap := &ConnectionMap{}
+	_, err := jsonutil.UnmarshalFile(filename, connMap)
+	return connMap, err
+}
+
 type Connection struct {
+	ConnectionKey             string        `json:"_connectionKey"`
 	ConnectionDescription     string        `json:"connectiondescription"`
 	ConnectionName            string        `json:"connectionname"`
 	Connectorms               bool          `json:"connectorms"`
@@ -43,10 +61,25 @@ func (e ExternalAttrs) Inflate() ExternalAttrs {
 	return inflated
 }
 
-func (e ExternalAttrs) Names(sortNames bool) []string {
+func (e ExternalAttrs) Names(uppercaseNames, dedupeNames, sortNames, requireValue bool) []string {
 	var names []string
 	for _, ea := range e {
-		names = append(names, ea.AttributeName)
+		name := ea.AttributeName
+		name = strings.TrimSpace(name)
+		if uppercaseNames {
+			name = strings.ToUpper(name)
+		}
+		if requireValue {
+			if v := strings.TrimSpace(ea.EncryptedAttributeValue); v == "" {
+				continue
+			}
+		}
+		if name != "" {
+			names = append(names, name)
+		}
+	}
+	if dedupeNames {
+		names = slicesutil.Dedupe(names)
 	}
 	if sortNames {
 		sort.Strings(names)
