@@ -2,13 +2,13 @@
   "Objects": {
     "connection": 
     [
-      "Signal_Sciences"
+      "Zoho_Desk"
     ]
   },
   "Information": {
-    "GUID": "95af5d93-1675-40d0-99fc-e08bc6f15cb9",
+    "GUID": "86dede21-abc2-4a78-931a-86ee3626a9c6",
     "Exported By": "admin",
-    "Exported On": "2023-08-25 04:41:26",
+    "Exported On": "2023-09-08 07:57:37",
     "System": "scrum-exchange.saviyntcloud.com",
     "TransferOwners": "0",
     "TransferUsers": "0"

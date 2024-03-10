@@ -15,7 +15,8 @@
     "connectorType": null,
     "connectiondescription": "",
     "status": 1,
-    "EXTERNAL_ATTR": [
+    "EXTERNAL_ATTR": 
+    [
       {
         "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw8R3gKwlb5P5Pls/NpXrJCJ3fWcwm7suTm3GoNQ+WWugs9WQBhG3HfINvzDWkpgt+8M8MOKmVIOOuMk008L5Dj40aTfaf1cSId2f9lUiHNQXgvn3fxB0V21DO6MSRFLqJv+/CHrPcVoc5ERicpdewWG2aKX5tvma8zw7mkbUxffFFe3/PXLPYP9nqogeYoqkW/tNeb+w9CrGunqSLV6wNApBvkOeaFXuNc8PtSu6X6kdeg6jEpNXP+ZEX5aOwGHQRmPhcHaaGr3py9jQlwIQ8U9QoOK8F6/OxXdGCgKeAWaWpRyCF485RvvKZyb56/rRGqmLz4AXthebN1YxEs8YYUBn5vh5d2jQf+dmIy1NOvTky6CAjzvXMVVeOLGyEHmqAI48WpDMpQ6i1XpZzBmLwdpV9HLIxjlpyOIHJjYdRR9IWySxVVH3ia+fwe+LKCcdiKg64ti4Uyt/7B5ksDlJUCYWXNxM81XFdMX8BqZHSf5iTrOebj5dtWoXSE1X/O0r4zOVwRqGdgRAHbIVKr9lwHBteH+zdekX02CFiQU/GsC1aTLbvuh3DmYGo3kBNeUjOXgc5G8DfWv/joPskPGqNvGvVxkQ6ro9NxM8v+qQw/l/A==",
         "formdata": null,
