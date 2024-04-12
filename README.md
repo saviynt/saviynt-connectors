@@ -11,9 +11,11 @@ Maintain Following folder strcuture
      - static/: (Optional) images / logo etc
        - connector_logo.svn
      - authors.yaml (Optional)
+       ```yml 
          gitAccount:
            name: Kundan Kumar
            title: Director, Product Management @ Saviynt
            url: https://github.com/Kkundan
            image_url: https://github.com/Kkundan.png
            email: kundan.kumar@Saviynt
+       ```
