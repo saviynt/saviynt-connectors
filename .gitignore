@@ -7,3 +7,6 @@ generateFolderJson.js
 output.json
 removeLinksAndConvertToMarkdown.js
 ./downloads
+.babelrc
+test.js
+node_modules
