@@ -6,8 +6,14 @@ Maintain Following folder strcuture
    - [Connector Name]
      - readme.md (Mandatory)
      - dist/ :  (Mandatory) your artifacts for distribution. it could be just json files use to define connection object
-     - src/ : put your source file here 
-     - docs/ : additional docs
-     - static/
+     - src/ : (Optional) put your source file here 
+     - docs/ : (Optional) additional docs
+     - static/: (Optional) images / logo etc
        - connector_logo.svn
-     - authors.md
+     - authors.yaml (Optional)
+         gitAccount:
+           name: Kundan Kumar
+           title: Director, Product Management @ Saviynt
+           url: https://github.com/Kkundan
+           image_url: https://github.com/Kkundan.png
+           email: kundan.kumar@Saviynt
