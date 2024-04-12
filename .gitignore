@@ -5,4 +5,5 @@ myscript.js
 Saviynt Exchange CSV Export 10April2024.xls
 generateFolderJson.js
 output.json
+removeLinksAndConvertToMarkdown.js
 ./downloads
