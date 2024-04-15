@@ -62,7 +62,7 @@ RingCentral aims to be an all-in-one communication and collaboration platform, h
 
 The **RingCentral** connector enables you to seamlessly integrate with RingCentral to manage user lifecycle .
 
-For more information about different connectors in EIC, see  [Saviynt Enterprise Identity Cloud Connectors]("https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm"").
+For more information about different connectors in EIC, see  [Saviynt Enterprise Identity Cloud Connectors](https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm).
 
 **Note:** This guide provides information about using the RingCentral REST connector using SCIM API for performing operations listed in the Supported Features.
 
