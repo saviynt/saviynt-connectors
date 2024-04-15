@@ -41,20 +41,16 @@ The integration was either created by Saviynt or by Saviynt community users. The
     *   [Configuring Provisioning and Deprovisioning]("https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=Data%20Jobs.-,Configuring%20Provisioning%20and%20Deprovisioning,-Provisioning%20is%20automatically" ""https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=Data%20Jobs.-,Configuring%20Provisioning%20and%20Deprovisioning,-Provisioning%20is%20automatically"")
         
 *   [Troubleshooting]("https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=through%20the%20connector.-,Troubleshooting,-To%20troubleshoot%20common" ""https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=through%20the%20connector.-,Troubleshooting,-To%20troubleshoot%20common"")
-    
 
-Preface
-=======
+# Preface
 
 This guide describes the integration between Saviynt **Enterprise Identity Cloud (EIC)** and RingCentral.
 
-Audience
-========
+# Audience
 
 This guide is intended for administrators and target application integration teams responsible for implementing a secure integration service with RingCentral.
 
-Introduction
-============
+# Introduction
 
 **RingCentral** is a cloud-based communications and collaboration platform that offers a wide range of services, including cloud phone systems, video conferencing, team messaging, and contact center solutions. It is designed to enable businesses of all sizes to communicate and collaborate effectively across various channels, helping to streamline workflows and enhance productivity.
 
@@ -66,60 +62,40 @@ For more information about different connectors in EIC, see  [Saviynt Enterpris
 
 **Note:** This guide provides information about using the RingCentral REST connector using SCIM API for performing operations listed in the Supported Features.
 
-**Supported Features**
-----------------------
+## Supported Features
 
 The RingCentral integration supports the following features:
 
-### **Supported Software Versions**
+## Supported Software Versions
 
-**Software**
+| **Software** | **Version** |
+|--------------|-------------|
+| EIC | Release v5.5 and later |
 
-**Version**
-
-EIC
-
-Release v4.5 and later
-
-Understanding the Integration between EIC and RingCentral
-=========================================================
+# Understanding the Integration between EIC and RingCentral
 
 You must create an integration between EIC and the collaboration platform hosted by the target application to perform import, provisioning, and deprovisioning tasks. The following components are involved in the integration:
 
-*   The Complete Service Management platform RingCentral combines ITSM with ESM and SIAM capabilities, enabling all internal departments, such as IT, HR, and Facilities, as well as external service providers and customers, to collaborate securely and seamlessly on one complete platform, reducing complexity and improving productivity.
+* The Complete Service Management platform RingCentral combines ITSM with ESM and SIAM capabilities, enabling all internal departments, such as IT, HR, and Facilities, as well as external service providers and customers, to collaborate securely and seamlessly on one complete platform, reducing complexity and improving productivity.  
+* **Objects** are imported as entitlement types into EIC.
+* **Security System** represents the connection between EIC and the target application.
+    * It comprises of an endpoint, which is the target application for which you want EIC to manage the identity repository.
+    * It provides application instance abstraction from connectivity including high-level metadata. For more information about creating a security system, see [Creating a Security System]("https://docs.saviyntcloud.com/bundle/EIC-Admin-v2022x/page/Content/Chapter02-Identity-Repository/Creating-a-Security-System.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Admin-v2022x/page/Content/Chapter02-Identity-Repository/Creating-a-Security-System.htm"").
+* **Endpoint** is an instance of an application within the context of a security system.
+    * It is the target application or application from which the connector imports the data and performs provisioning or deprovisioning of identity objects, such as users, accounts, and entitlements.
+    * It is mandatory to create an endpoint after creating the security system. You can associate a single security system with multiple endpoints if the deployment involves modelling of multiple isolated virtual applications (based on sets of specific entitlements according to certain categories) within a single application instance. For more information about creating an endpoint, see [Creating an Endpoint for the Security System]("https://docs.saviyntcloud.com/bundle/EIC-Admin-v23x/page/Content/Chapter02-Identity-Repository/Creating-Endpoints.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Admin-v23x/page/Content/Chapter02-Identity-Repository/Creating-Endpoints.htm"").      
+* **Connector** is a software component that enables communication between EIC and the target application. It provides a simplified integration mechanism where in some instances you only need to create a connection with minimal connectivity information for your target application. The REST connector is used for importing, provisioning accounts and access through the SCIM APIs. For more information about creating a connection, see [Creating a Connection](https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x).  
+* **Job Scheduler** is a software component that executes a job based on the configured schedule to perform import or provisioning operations from EIC. When a provisioning job is triggered, it creates provisioning tasks in EIC. When these tasks are completed, the provisioning action is performed on the target application through the configured connector. If you want to instantly provision requests for completing the tasks without running the provisioning job, you must enable Instant Provisioning at the security system level and the **Instant Provisioning Tasks** global configuration. For more information about the jobs used by the connectors in the RingCentral integration.
     
-*   **Objects** are imported as entitlement types into EIC.
-    
-*   **Security System** represents the connection between EIC and the target application.
-    
-    *   It comprises of an endpoint, which is the target application for which you want EIC to manage the identity repository.
-        
-    *   It provides application instance abstraction from connectivity including high-level metadata. For more information about creating a security system, see [Creating a Security System]("https://docs.saviyntcloud.com/bundle/EIC-Admin-v2022x/page/Content/Chapter02-Identity-Repository/Creating-a-Security-System.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Admin-v2022x/page/Content/Chapter02-Identity-Repository/Creating-a-Security-System.htm"").
-        
-*   **Endpoint** is an instance of an application within the context of a security system.
-    
-    *   It is the target application or application from which the connector imports the data and performs provisioning or deprovisioning of identity objects, such as users, accounts, and entitlements.
-        
-    *   It is mandatory to create an endpoint after creating the security system.  
-        You can associate a single security system with multiple endpoints if the deployment involves modelling of multiple isolated virtual applications (based on sets of specific entitlements according to certain categories) within a single application instance. For more information about creating an endpoint, see [Creating an Endpoint for the Security System]("https://docs.saviyntcloud.com/bundle/EIC-Admin-v23x/page/Content/Chapter02-Identity-Repository/Creating-Endpoints.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Admin-v23x/page/Content/Chapter02-Identity-Repository/Creating-Endpoints.htm"").
-        
-*   **Connector** is a software component that enables communication between EIC and the target application. It provides a simplified integration mechanism where in some instances you only need to create a connection with minimal connectivity information for your target application. The REST connector is used for importing, provisioning accounts and access through the SCIM APIs. For more information about creating a connection, see [Creating a Connection]("https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x"").
-    
-*   **Job Scheduler** is a software component that executes a job based on the configured schedule to perform import or provisioning operations from EIC.  
-    When a provisioning job is triggered, it creates provisioning tasks in EIC. When these tasks are completed, the provisioning action is performed on the target application through the configured connector. If you want to instantly provision requests for completing the tasks without running the provisioning job, you must enable Instant Provisioning at the security system level and the **Instant Provisioning Tasks** global configuration. For more information about the jobs used by the connectors in the RingCentral integration.
-    
-
-Integration Architecture
-------------------------
+## Integration Architecture
 
 EIC uses a **REST** connection for integrating with RingCentral for importing data and for performing provisioning and deprovisioning tasks.
 
 The following diagram illustrates the integration architecture and communication with the target application
 
-Setting Up the Integration
---------------------------
+## Setting Up the Integration
 
-### **Prerequisites**
+### Prerequisites
 
 Perform the following steps to Generate & Setup token authentication
 
