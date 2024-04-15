@@ -108,7 +108,7 @@ Perform the following steps to Generate & Setup token authentication
 
 ### Creating a Connection
 
-Connection refers to the configuration setup for connecting EIC to target applications. For more information about the procedure to create a connection, see [Creating a Connection]("https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x"").
+Connection refers to the configuration setup for connecting EIC to target applications. For more information about the procedure to create a connection, see [Creating a Connection](https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x).
 
 #### Understanding the Configuration Parameters
 
@@ -185,7 +185,7 @@ ConnectionJSON
 
 Specify this parameter to create a connection.
 
-*   Refer to the [Connection Package]("https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip" ""https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip"") 
+*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
 
 Yes
 
@@ -462,7 +462,7 @@ You must apply the following guidelines for configuring provisioning:
 * **Full account import:** When configuring the connection for the first time, first perform full import to import all existing accounts from the target application to EIC. To perform full import, the invoke API gets response from the target application and maps the attributes in the target application with attributes in EIC. As part of this process, the deleted accounts are also identified and marked as suspended from import service.
 * **Full Access import:** When configuring the connection for the first time, first perform full import to import all existing access from the target application to EIC. To perform full import, the invoke API gets response from the target application and maps the attributes in the target application with attributes in EIC. As part of this process, the deleted entitlements are also identified and marked as inactive.
 
-The import jobs are automatically created in EIC after you create a connection for the RingCentral integration. For more information about creating jobs, see [Data Jobs]("https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x"").
+The import jobs are automatically created in EIC after you create a connection for the RingCentral integration. For more information about creating jobs, see [Data Jobs](https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x).
 
 ### Importing Accounts and Accesses
 
