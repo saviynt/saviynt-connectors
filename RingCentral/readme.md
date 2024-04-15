@@ -4,12 +4,9 @@ The integration was either created by Saviynt or by Saviynt community users. The
 
 **Note: Contributor** - [Manju Kumari]("http://linkedin.com/in/manju-royal-ab4931258" ""http://linkedin.com/in/manju-royal-ab4931258"")
 
-*   [Preface]("https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=Troubleshooting-,Preface,-This%20guide%20describes" ""https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=Troubleshooting-,Preface,-This%20guide%20describes"")
-    
-*   [Audience]("https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=EIC)%20and%20RingCentral.-,Audience,-This%20guide%20is" ""https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=EIC)%20and%20RingCentral.-,Audience,-This%20guide%20is"")
-    
-*   [Introduction]("https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=service%20with%20RingCentral.-,Introduction,-RingCentral%20is%20a" ""https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=service%20with%20RingCentral.-,Introduction,-RingCentral%20is%20a"")
-    
+* [Preface](#preface)
+* [Audience](#audience)
+* [Introduction](#introduction)  
     *   [Supported Features]("https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=the%20Supported%20Features.-,Supported%20Features,-The%20RingCentral%20integration" ""https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=the%20Supported%20Features.-,Supported%20Features,-The%20RingCentral%20integration"")
         
         *   [Supported Software Versions]("https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=the%20following%C2%A0features%3A-,Supported%20Software%20Versions,-Software" ""https://forums.saviynt.com/t5/community-sourced-integrations/ringcentral-integration-guide/ta-p/45617#:~:text=the%20following%C2%A0features%3A-,Supported%20Software%20Versions,-Software"")
