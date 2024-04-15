@@ -118,21 +118,10 @@ The connector uses the following parameters for creating a connection and for im
 ###### Connection Parameters
 
 | **Parameter** | **Description** | **Example Configuration** | **Mandatory?** |
+|---------------|-----------------|---------------------------|----------------|
 | Connection Name | Specify the name to identify the connection. | - | Yes |
 | Connection Description | Specify the description for the connection. | - | No |
-
-Connection Type
-
-*   Select the connection type as “RingCentral(REST)”
-    
-*   If the “RingCentral(REST) connection type is not present in your tenant then import the connection package using T2P
-    
-*   You can also create a new connection with type “REST” and use the JSONS specified in this document.
-    
-
-\-
-
-Yes
+| Connection Type | <ul><li>Select the connection type as “RingCentral(REST)”</li><li>If the “RingCentral(REST) connection type is not present in your tenant then import the connection package using T2P</li><li>You can also create a new connection with type “REST” and use the JSONS specified in this document.</li></ul | - | Yes |
 
 Default SAV Role 
 
