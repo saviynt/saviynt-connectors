@@ -121,39 +121,10 @@ The connector uses the following parameters for creating a connection and for im
 |---------------|-----------------|---------------------------|----------------|
 | Connection Name | Specify the name to identify the connection. | - | Yes |
 | Connection Description | Specify the description for the connection. | - | No |
-| Connection Type | <ul><li>Select the connection type as “RingCentral(REST)”</li><li>If the “RingCentral(REST) connection type is not present in your tenant then import the connection package using T2P</li><li>You can also create a new connection with type “REST” and use the JSONS specified in this document.</li></ul | - | Yes |
-
-Default SAV Role 
-
-Specify this parameter to assign the SAV role for the connection.
-
-The SAV role is a role in EIC that assigns specific access to users.
-
-This parameter is valid only for importing users.
-
-**Sample value:** User assigned with the **ROLE\_ADMIN** role, has access to all the sections of EIC.
-
-\-
-
-No
-
-Email Template
-
-Specify this parameter to select an email template for sending notifications.
-
-Email templates provide immediate trigger of emails to a user based on actions performed. Email informs user about the action performed and if critical, needs immediate action from the user.
-
-\-
-
-No
-
-ConnectionJSON
-
-Specify this parameter to create a connection.
-
-*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
-
-Yes
+| Connection Type | <ul><li>Select the connection type as “RingCentral(REST)”</li><li>If the “RingCentral(REST) connection type is not present in your tenant then import the connection package using T2P</li><li>You can also create a new connection with type “REST” and use the JSONS specified in this document.</li></ul> | - | Yes |
+| Default SAV Role | Specify this parameter to assign the SAV role for the connection.<br/><br/>The SAV role is a role in EIC that assigns specific access to users.<br/><br/>This parameter is valid only for importing users.<br/><br/>**Sample value:** User assigned with the **ROLE\_ADMIN** role, has access to all the sections of EIC. | - | No |
+| Email Template | Specify this parameter to select an email template for sending notifications.<br/><br/>Email templates provide immediate trigger of emails to a user based on actions performed. Email informs user about the action performed and if critical, needs immediate action from the user. | - | No |
+| ConnectionJSON | Specify this parameter to create a connection. | Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) | Yes |
 
 ###### **Import Parameters**
 
