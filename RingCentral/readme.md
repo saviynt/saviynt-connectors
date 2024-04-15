@@ -203,7 +203,7 @@ AccountEntImport JSON
 
 Specify this parameter to reconcile the accounts and entitlements
 
-*   Refer to the [Connection Package]("https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip" ""https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip"") 
+*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
 
 Yes
 
@@ -223,7 +223,7 @@ CreateAccountJSON
 
 Specify this parameter to create an account in the target application.
 
-*   Refer to the [Connection Package]("https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip" ""https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip"") 
+*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
 
 The bindings supported are:
 
@@ -264,7 +264,7 @@ Update Account JSON
 
 Specify this parameter to update an account in the target application.
 
-*   Refer to the [Connection Package]("https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip" ""https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip"") 
+*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
 
 The bindings supported are:
 
@@ -305,7 +305,7 @@ EnableAccountJSON
 
 Specify this parameter to Enable an account in the target application.
 
-*   Refer to the [Connection Package]("https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip" ""https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip"") 
+*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
 
 The bindings supported are:
 
@@ -346,7 +346,7 @@ DisableAccountJSON
 
 Specify this parameter to Disable an account in the target application.
 
-*   Refer to the [Connection Package]("https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip" ""https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip"") 
+*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
 
 The bindings supported are:
 
@@ -387,7 +387,7 @@ RemoveAccountJSON
 
 Specify this parameter to remove an account. 
 
-*   Refer to the [Connection Package]("https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip" ""https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip"") 
+*   Refer to the [Connection Package](https://forums.saviynt.com/wtgqs47532/attachments/wtgqs47532/se-community-integration/63/1/RingCentral.zip) 
 
 The bindings supported are:
 
@@ -477,14 +477,14 @@ You must import accounts after the users are available in EIC.
 
 ## Configuring Provisioning and Deprovisioning
 
-Provisioning is automatically enabled when a connection is configured. For detailed information about performing provisioning tasks, see [Access Request System]("https://docs.saviyntcloud.com/csh?topicname=ars-mang-ur-accs&pubname=EIC-User-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=ars-mang-ur-accs&pubname=EIC-User-v2022x"").
+Provisioning is automatically enabled when a connection is configured. For detailed information about performing provisioning tasks, see [Access Request System](https://docs.saviyntcloud.com/csh?topicname=ars-mang-ur-accs&pubname=EIC-User-v2022x).
 
 **To provision objects to the target application:**
 
-1.  Specify the connection and provisioning parameters. For more information, see [Configuration Parameters for Provisioning]("https://docs.saviyntcloud.com/bundle/SF-v2020x/page/Content/Configuring-the-Integration-for-Provisioning-and-Deprovisioning.htm" ""https://docs.saviyntcloud.com/bundle/SF-v2020x/page/Content/Configuring-the-Integration-for-Provisioning-and-Deprovisioning.htm"").  
+1.  Specify the connection and provisioning parameters. For more information, see [Configuration Parameters for Provisioning](https://docs.saviyntcloud.com/bundle/SF-v2020x/page/Content/Configuring-the-Integration-for-Provisioning-and-Deprovisioning.htm).  
     **Note:** Ensure that the connection type is selected as **REST**.
     
-2.  Configure the **Provisioning** job **(WSRETRY)**. For more information, see [Provisioning Jobs]("https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x"").
+2.  Configure the **Provisioning** job **(WSRETRY)**. For more information, see [Provisioning Jobs](https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x).
     
 
 When a provisioning job is triggered, it creates provisioning tasks in EIC. When these tasks are completed, the provisioning action is performed on the target application through the connector.
