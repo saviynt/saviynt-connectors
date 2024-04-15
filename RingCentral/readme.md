@@ -53,7 +53,7 @@ This guide is intended for administrators and target application integration tea
 
 RingCentral aims to be an all-in-one communication and collaboration platform, helping businesses move away from traditional phone systems and on-premises hardware in favor of a more flexible, scalable, and cloud-based solution. It caters to various industries and organizations, from small businesses to large enterprises. However, keep in mind that specific features and offerings may evolve over time, so it's always best to visit their official website for the most up-to-date information.
 
-The **RingCentral** connector enables you to seamlessly integrate with RingCentral to manage user lifecycle .
+The **RingCentral** connector enables you to seamlessly integrate with RingCentral to manage user lifecycle.
 
 For more information about different connectors in EIC, see  [Saviynt Enterprise Identity Cloud Connectors](https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm).
 
@@ -117,29 +117,9 @@ The connector uses the following parameters for creating a connection and for im
 
 ###### Connection Parameters
 
-**Parameter**
-
-**Description**
-
-**Example Configuration**
-
-**Mandatory?**
-
-Connection Name 
-
-Specify the name to identify the connection.
-
-\-
-
-Yes
-
-Connection Description
-
-Specify the description for the connection.
-
-\-
-
-No
+| **Parameter** | **Description** | **Example Configuration** | **Mandatory?** |
+| Connection Name | Specify the name to identify the connection. | - | Yes |
+| Connection Description | Specify the description for the connection. | - | No |
 
 Connection Type
 
