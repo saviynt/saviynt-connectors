@@ -10,3 +10,4 @@ removeLinksAndConvertToMarkdown.js
 .babelrc
 test.js
 node_modules
+html2md.ps1
