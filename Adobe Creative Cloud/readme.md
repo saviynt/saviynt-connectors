@@ -2,21 +2,21 @@
 
 The integration was either created by Saviynt or by Saviynt community users. The integration is available “as is” and falls under standard connectors support for REST, SOAP, JDBC, LDAP, PowerShell, Jar and Saviynt Connector Framework.
 
-*   [Preface]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Troubleshooting-,Preface,-This%20guide%20describes" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Troubleshooting-,Preface,-This%20guide%20describes"")
+*   [Preface](#preface)
     
-*   [Audience]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=and%20Adobe%20Cloud.-,Audience,-This%20guide%20is" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=and%20Adobe%20Cloud.-,Audience,-This%20guide%20is"")
+*   [Audience]("#audience)
     
-*   [Introduction]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=with%20Adobe%20Cloud.-,Introduction,-Adobe%20Creative%20Cloud" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=with%20Adobe%20Cloud.-,Introduction,-Adobe%20Creative%20Cloud"")
+*   [Introduction](#introduction)
     
-    *   [Supported Features]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=the%20Supported%20Features.-,Supported%20Features,-The%20Adobe%20Cloud" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=the%20Supported%20Features.-,Supported%20Features,-The%20Adobe%20Cloud"")
+    *   [Supported Features](#supported features)
         
-        *   [Supported Software Versions]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=the%20following%C2%A0features%3A-,Supported%20Software%20Versions,-Software" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=the%20following%C2%A0features%3A-,Supported%20Software%20Versions,-Software"")
+    *   [Supported Software Versions](#supported Software Versions)
             
-*   [Understanding the Integration between EIC and  Adobe Creative Cloud]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=v4.5%20and%20later-,Understanding%20the%20Integration%20between%20EIC%20and%C2%A0Adobe%20Cloud,-You%20must%20create" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=v4.5%20and%20later-,Understanding%20the%20Integration%20between%20EIC%20and%C2%A0Adobe%20Cloud,-You%20must%20create"")
+*   [Understanding the Integration between EIC and  Adobe Creative Cloud](#Understanding the Integration between EIC and  Adobe Creative Cloud)
     
-    *   [Integration Architecture]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Adobe%20Cloud%20integration.-,Integration%20Architecture,-EIC%C2%A0uses%20a" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Adobe%20Cloud%20integration.-,Integration%20Architecture,-EIC%C2%A0uses%20a"")
+    *   [Integration Architecture](#Integration Architecture)
         
-    *   [Setting Up the Integration]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=the%20target%20application.-,Setting%20Up%20the%20Integration,-Prerequisites" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=the%20target%20application.-,Setting%20Up%20the%20Integration,-Prerequisites"")
+    *   [Setting Up the Integration](#Setting Up the Integration)
         
         *   [Prerequisites]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Up%20the%20Integration-,Prerequisites,-To%20obtain%20the" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Up%20the%20Integration-,Prerequisites,-To%20obtain%20the"")
             
@@ -41,43 +41,39 @@ The integration was either created by Saviynt or by Saviynt community users. The
 *   [Troubleshooting]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=through%20the%20connector.-,Troubleshooting,-To%20troubleshoot%20common" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=through%20the%20connector.-,Troubleshooting,-To%20troubleshoot%20common"")
     
 
-Preface
-=======
+# Preface
+
 
 This guide describes the integration between Saviynt **Enterprise Identity Cloud (EIC)** and  Adobe Creative Cloud.
 
-Audience
-========
+# Audience
+
 
 This guide is intended for administrators and target application integration teams responsible for implementing a secure integration service with  Adobe Creative Cloud.
 
-Introduction
-============
+# Introduction
+
 
 **Adobe Creative Cloud** is a set of applications and services from Adobe Inc. that gives subscribers access to a collection of software used for graphic design, video editing, web development, and photography, along with a set of mobile applications and also some optional cloud services
 
 The  Adobe Creative Cloud connector enables you to seamlessly integrate with  Adobe Creative Cloud to manage user lifecycle and govern access to their Groups.
 
-For more information about different connectors in EIC, see  [Saviynt Enterprise Identity Cloud Connectors]("https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm"").
+For more information about different connectors in EIC, see  [Saviynt Enterprise Identity Cloud Connectors](https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Certified-Connectors.htm).
 
 **Note:** This guide provides information about using the  Adobe Creative Cloud REST connector using REST API for performing operations listed in the Supported Features.
 
-**Supported Features**
-----------------------
+## Supported Features
+
 
 The  Adobe Creative Cloud integration supports the following features:
 
   
 
-### **Supported Software Versions**
+### Supported Software Versions
 
-**Software**
-
-**Version**
-
-EIC
-
-Release v4.5 and later
+| **Software** | **Version** | 
+| ------------ | ----------- |
+| EIC | Release v5.5 and later| 
 
 Understanding the Integration between EIC and  Adobe Creative Cloud
 ===================================================================
@@ -90,56 +86,52 @@ You must create an integration between EIC and the collaboration platform hosted
     
 *   **Security System** represents the connection between EIC and the target application.
     
-    *   It comprises an endpoint, which is the target application for which you want EIC to manage the identity repository.
-        
-    *   It provides application instance abstraction from connectivity including high-level metadata. For more information about creating a security system, see [Creating a Security System]("https://docs.saviyntcloud.com/bundle/EIC-Admin-v2022x/page/Content/Chapter02-Identity-Repository/Creating-a-Security-System.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Admin-v2022x/page/Content/Chapter02-Identity-Repository/Creating-a-Security-System.htm"").
+    * It comprises an endpoint, which is the target application for which you want EIC to manage the identity repository.
+    * It provides application instance abstraction from connectivity including high-level metadata. For more information about creating a security system, see [Creating a Security System](https://docs.saviyntcloud.com/bundle/EIC-Admin-v2022x/page/Content/Chapter02-Identity-Repository/Creating-a-Security-System.htm).
         
 *   **Endpoint** is an instance of an application within the context of a security system.
     
-    *   It is the target application or application from which the connector imports the data and performs provisioning or de-provisioning of identity objects, such as users, accounts, and entitlements.
+    * It is the target application or application from which the connector imports the data and performs provisioning or de-provisioning of identity objects, such as users, accounts, and entitlements.
         
-    *   It is mandatory to create an endpoint after creating the security system.  
-        You can associate a single security system with multiple endpoints if the deployment involves modeling multiple isolated virtual applications (based on sets of specific entitlements according to certain categories) within a single application instance. For more information about creating an endpoint, see [Creating an Endpoint for the Security System]("https://docs.saviyntcloud.com/bundle/EIC-Admin-v23x/page/Content/Chapter02-Identity-Repository/Creating-Endpoints.htm" ""https://docs.saviyntcloud.com/bundle/EIC-Admin-v23x/page/Content/Chapter02-Identity-Repository/Creating-Endpoints.htm"").
+    * It is mandatory to create an endpoint after creating the security system.  
+      You can associate a single security system with multiple endpoints if the deployment involves modeling multiple isolated virtual applications (based on sets of specific entitlements according to certain categories) within a single application instance. For more information about creating an endpoint, see [Creating an Endpoint for the Security System](https://docs.saviyntcloud.com/bundle/EIC-Admin-v23x/page/Content/Chapter02-Identity-Repository/Creating-Endpoints.htm).
         
-*   **The connector** is a software component that enables communication between EIC and the target application. It provides a simplified integration mechanism where in some instances you only need to create a connection with minimal connectivity information for your target application. The REST connector is used for importing, provisioning accounts, and accessing through the REST APIs. For more information about creating a connection, see [Creating a Connection]("https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x"").
+*   **The connector** is a software component that enables communication between EIC and the target application. It provides a simplified integration mechanism where in some instances you only need to create a connection with minimal connectivity information for your target application. The REST connector is used for importing, provisioning accounts, and accessing through the REST APIs. For more information about creating a connection, see [Creating a Connection](https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x).
     
 *   **Job Scheduler** is a software component that executes a job based on the configured schedule to perform import or provisioning operations from EIC.  
     When a provisioning job is triggered, it creates provisioning tasks in EIC. When these tasks are completed, the provisioning action is performed on the target application through the configured connector. If you want to instantly provision requests for completing the tasks without running the provisioning job, you must enable Instant Provisioning at the security system level and the **Instant Provisioning Tasks** global configuration. For more information about the jobs used by the connectors in the  Adobe Creative Cloud integration.
     
 
-Integration Architecture
+## Integration Architecture
 ------------------------
 
 EIC uses a **REST** connection for integrating with  Adobe Creative Cloud for importing data and for performing provisioning and de-provisioning tasks.
 
 The following diagram illustrates the integration architecture and communication with the target application.
 
-Setting Up the Integration
+## Setting Up the Integration
 --------------------------
 
-### **Prerequisites**
+### Prerequisites
 
-To obtain the credentials you need to access the User Management service, create a **Service Account Integration** using the [Adobe I/O Console]("https://console.adobe.io/" ""https://console.adobe.io/"").
+To obtain the credentials you need to access the User Management service, create a **Service Account Integration** using the [Adobe I/O Console](https://console.adobe.io/).
 
-*   A member of the organization with admin rights can create the Integration. You can use the Admin Console to grant administrative privileges to users.
-    
-*   You will need to create or purchase a digital signing certification and use it to sign a JSON Web Token (JWT), which you will use to authenticate your requests.
-    
-*   Your integration provides an API key that uniquely identifies your client, and other credentials that you need to access the UM API.
-    
-*   For complete details of the entire integration process, see [Adobe documentation]("https://adobe-apiplatform.github.io/umapi-documentation/en/api/user.html" ""https://adobe-apiplatform.github.io/umapi-documentation/en/api/user.html"")  
+* A member of the organization with admin rights can create the Integration. You can use the Admin Console to grant administrative privileges to users.
+* You will need to create or purchase a digital signing certification and use it to sign a JSON Web Token (JWT), which you will use to authenticate your requests.  
+* Your integration provides an API key that uniquely identifies your client, and other credentials that you need to access the UM API. 
+* For complete details of the entire integration process, see [Adobe documentation](https://adobe-apiplatform.github.io/umapi-documentation/en/api/user.html)  
       
     
 
-### **Creating a Connection**
+### Creating a Connection
 
-Connection refers to the configuration setup for connecting EIC to target applications. For more information about the procedure to create a connection, see [Creating a Connection]("https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x"").
+Connection refers to the configuration setup for connecting EIC to target applications. For more information about the procedure to create a connection, see [Creating a Connection](https://docs.saviyntcloud.com/csh?topicname=Creating-a-Connection&pubname=EIC-Admin-v2022x).
 
-#### **Understanding the Configuration Parameters**
+#### Understanding the Configuration Parameters
 
 While creating a connection, you must specify connection parameters that the connector uses to connect with the target application, define the type of operations to perform, the target application objects against which those operations are performed, and the frequency of performing them. In addition, you can view and edit attribute mappings between EIC and the target application, predefined correlation rules, and provisioning jobs and import jobs.
 
-##### **Configuration Parameters for Account and Access Import**
+##### Configuration Parameters for Account and Access Import
 
 The connector uses the following parameters for creating a connection and for importing account and access from the target application:
 
