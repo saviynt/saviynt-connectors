@@ -1,6 +1,6 @@
-:::note
-The integration was either created by Saviynt or by Saviynt community users. The integration is available “as is” and falls under standard connectors support for REST, SOAP, JDBC, LDAP, PowerShell, Jar and Saviynt Connector Framework.
-:::
+> **Disclaimer**
+> The integration was either created by Saviynt or by Saviynt community users. The integration is available “as is” and falls under standard connectors support for REST, SOAP, JDBC, LDAP, PowerShell, Jar and Saviynt Connector Framework.
+
 *   [Preface](#preface)
 *   [Audience]("#audience)
 *   [Introduction](#introduction)
@@ -125,14 +125,14 @@ The connector uses the following parameters for creating a connection and for im
 | Default SAV Role | <ul><li>Specify this parameter to assign the SAV role for the connection.</li><li>The SAV role is a role in EIC that assigns specific access to users.</li><li>This parameter is valid only for importing users.</li> | ROLE_ADMIN| No |
 | Email Template | Specify this parameter to select an email template for sending notifications. |Email templates provide immediate trigger of emails to a user based on actions performed. Email informs user about the action performed and if critical, needs immediate action from the user. | No |
 
-> [!CAUTION] 
+
 > Users assigned with the **ROLE_ADMIN** role, has access to all the sections of EIC.
 
 **Use the following JSON syntax based on the requirements**
 
 **ConnectionJSON** Specify this parameter to create a connection.
 
-> [!NOTE]
+
 > Validate the generated JWT token in Postman
     
 
