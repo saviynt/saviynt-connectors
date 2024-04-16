@@ -4,33 +4,22 @@
 *   [Preface](#preface)
 *   [Audience]("#audience)
 *   [Introduction](#introduction)
-    *   [Supported Features](#supported features)
-    *   [Supported Software Versions](#supported Software Versions)  
-*   [Understanding the Integration between EIC and  Adobe Creative Cloud](#Understanding the Integration between EIC and  Adobe Creative Cloud)
-    *   [Integration Architecture](#Integration Architecture)
-    *   [Setting Up the Integration](#Setting Up the Integration)
-        
-        *   [Prerequisites]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Up%20the%20Integration-,Prerequisites,-To%20obtain%20the" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Up%20the%20Integration-,Prerequisites,-To%20obtain%20the"")
-            
-        *   [Creating a Connection]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=see%20Adobe%20documentation-,Creating%20a%20Connection,-Connection%20refers%20to" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=see%20Adobe%20documentation-,Creating%20a%20Connection,-Connection%20refers%20to"")
-            
-        *   [Importing Connection Package]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Yes-,Importing%20Connection%20Package,-connection%20package%20helps" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Yes-,Importing%20Connection%20Package,-connection%20package%20helps"")
-            
-        *   [Creating a Security System]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Cloud%20tenant%20details.-,Creating%20a%20Security%20System,-The%20security%20system" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Cloud%20tenant%20details.-,Creating%20a%20Security%20System,-The%20security%20system"")
-            
-        *   [Creating an Endpoint for the Security System]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Security%20System.-,Creating%20an%20Endpoint%20for%20the%20Security%20System,-Endpoint%20refers%20to" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Security%20System.-,Creating%20an%20Endpoint%20for%20the%20Security%20System,-Endpoint%20refers%20to"")
-            
-*   [Using the  Adobe Creative Cloud Integration]("http://Using ""Using")
-    
-    *   [Guidelines for Using the Integration]("http://Guidelines ""Guidelines")
-        
-    *   [Configuring Import Operations]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=JSON%20for%20provisioning.-,Configuring%20Import%20Operations,-Full%20account%20import" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=JSON%20for%20provisioning.-,Configuring%20Import%20Operations,-Full%20account%20import"")
-        
-        *   [Importing Accounts and Accesses]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Data%20Jobs.-,Importing%20Accounts%20and%20Accesses,-You%20must%20import" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Data%20Jobs.-,Importing%20Accounts%20and%20Accesses,-You%20must%20import"")
-            
-    *   [Configuring Provisioning and Deprovisioning]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Data%20Jobs.-,Configuring%20Provisioning%20and%20Deprovisioning,-Provisioning%20is%20automatically" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Data%20Jobs.-,Configuring%20Provisioning%20and%20Deprovisioning,-Provisioning%20is%20automatically"")
-        
-*   [Troubleshooting]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=through%20the%20connector.-,Troubleshooting,-To%20troubleshoot%20common" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=through%20the%20connector.-,Troubleshooting,-To%20troubleshoot%20common"")
+    *   [Supported Features](#supported-features)
+    *   [Supported Software Versions](#supported-software-versions)  
+*   [Understanding the Integration between EIC and  Adobe Creative Cloud](#understanding-the-integration-between-eic-and-adobe-creative-cloud)
+    *   [Integration Architecture](#integration-architecture)
+    *   [Setting Up the Integration](#setting-up-the-integration)  
+        *   [Prerequisites](#prerequisites)
+        *   [Creating a Connection](#creating-a-connection)
+        *   [Importing Connection Package](#importing-connection-package)
+        *   [Creating a Security System](#creating-a-security-system)
+        *   [Creating an Endpoint for the Security System](#creating-an-endpoint-for-the-security-system)
+*   [Using the  Adobe Creative Cloud Integration](#using-the-adobe-creative-cloud-integration)
+    *   [Guidelines for Using the Integration](#guidelines-for-using-the-integration)
+    *   [Configuring Import Operations](#configuring-import-operations)
+    *   [Importing Accounts and Accesses](#importing-accounts-and-accesses)  
+    *   [Configuring Provisioning and Deprovisioning](#configuring-provisioning-and-deprovisioning)     
+*   [Troubleshooting](#troubleshooting)
     
 
 # Preface
@@ -141,9 +130,7 @@ The connector uses the following parameters for creating a connection and for im
 
 **Use the following JSON syntax based on the requirements**
 
-**ConnectionJSON**
-
-Specify this parameter to create a connection.
+**ConnectionJSON** Specify this parameter to create a connection.
 
 > [!NOTE]
 > Validate the generated JWT token in Postman
@@ -152,250 +139,238 @@ Specify this parameter to create a connection.
 Use the following format to connect to the  Adobe Creative Cloud application:
 
 ```json
-{  
-"authentications": {  
-"acctAuth": {  
-"authType": "Jwt",  
-"httpParamsName": "jwt\_token",  
-"jwtConfig": {  
-"jwtHeader": {  
-"alg": "RS256",  
-"typ": "JWT"  
-},  
-"jwtPayload": {  
-"exp": 1675754298,  
-"iss": "@@ISSUER@@",  
-"sub": "@@SUBJECT@@",  
-"@@INSTANCE\_URL@@/s/ent\_user\_sdk": true,  
-"aud": "@@INSTANCE\_URL@@/c/@@ORG\_ID@@"  
-},  
-"signedAlgorithm": "RS256",  
-"key": "@@KEY@@",  
-"jwtExpiryDuration": 120  
-},  
-"url": "@@INSTANCE\_URL@@/ims/exchange/jwt",  
-"httpMethod": "POST",  
-"httpParams": {  
-"client\_id": "@@CLIENT\_ID@@",  
-"client\_secret": "@@CLIENT\_SECRET@@"  
-},  
-"httpContentType": "multipart/form-data",  
-"retryFailureStatusCode": \[  
-401,  
-500,  
-400  
-\],  
-"authError": \[  
-"SESSION\_NOT\_VALID",  
-"AuthenticationFailed",  
-"ExpiredJwtException"  
-\],  
-"errorPath": "code",  
-"maxRefreshTryCount": 5,  
-"tokenResponsePath": "access\_token",  
-"tokenType": "Bearer",  
-"accessToken": "Bearer abcd"  
-}  
-}  
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "Jwt",
+      "httpParamsName": "jwt_token",
+      "jwtConfig": {
+        "jwtHeader": {
+          "alg": "RS256",
+          "typ": "JWT"
+        },
+        "jwtPayload": {
+          "exp": 1675754298,
+          "iss": "@@ISSUER@@",
+          "sub": "@@SUBJECT@@",
+          "@@INSTANCE_URL@@/s/ent_user_sdk": true,
+          "aud": "@@INSTANCE_URL@@/c/@@ORG_ID@@"
+        },
+        "signedAlgorithm": "RS256",
+        "key": "@@KEY@@",
+        "jwtExpiryDuration": 120
+      },
+      "url": "@@INSTANCE_URL@@/ims/exchange/jwt",
+      "httpMethod": "POST",
+      "httpParams": {
+        "client_id": "@@CLIENT_ID@@",
+        "client_secret": "@@CLIENT_SECRET@@"
+      },
+      "httpContentType": "multipart/form-data",
+      "retryFailureStatusCode": [
+        401,
+        500,
+        400
+      ],
+      "authError": [
+        "SESSION_NOT_VALID",
+        "AuthenticationFailed",
+        "ExpiredJwtException"
+      ],
+      "errorPath": "code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer abcd"
+    }
+  }
 }
-```
 
-Yes
+```
+**Key Details of the Configuration**
+* authType: Specifies using JWT (JSON Web Tokens) for authentication.
+* jwtConfig: Defines the JWT configuration including the header and payload, where the payload specifies the issuer, subject, audience, and additional JWT claims.
+* httpMethod: Uses POST to interact with the token endpoint.
+* httpParams: Provides the client credentials (client_id and client_secret) which are essential for obtaining the JWT.
+* httpContentType: Set to multipart/form-data, appropriate for forms that send client credentials and tokens.
+* retryFailureStatusCode: Specifies HTTP status codes that should trigger a retry, useful in handling transient errors or authentication failures.
+* authError: Lists anticipated authentication error messages that, if encountered, should lead to specific error handling strategies.
+* errorPath: Designates the JSON path where error messages are expected to be found in the response.
+* maxRefreshTryCount: Defines the maximum number of token refresh attempts before giving up, helping to avoid infinite loops in case of repeated failures.
+* tokenResponsePath: Specifies the JSON path where the actual token can be retrieved from the authentication response.
+* tokenType: Indicates the type of token expected (Bearer), which is used in the authorization header for subsequent requests.
+* accessToken: Provides an example or placeholder for how the access token might be presented.
+
 
 ###### **Import Parameters**
 
-**Parameter**
-
-**Description**
-
-**Recommended Configuration**
-
-**Mandatory?**
-
-AccountEntImport JSON
-
-Specify this parameter to reconcile the accounts and entitlements
+**AccountEntImportJSON**  Specify this parameter to reconcile the accounts and entitlements
 
 Use the following format to import accounts and entitlements using the  Adobe Creative Cloud application:  
 
 ```json
-{  
-"accountParams": {  
-"connection": "acctAuth",  
-"processingType": "SequentialAndIterative",  
-"statusAndThresholdConfig": {  
-"statusColumn": "customproperty11",  
-"activeStatus": \[  
-"active"  
-\],  
-"deleteLinks": true,  
-"accountThresholdValue": 10,  
-"correlateInactiveAccounts": false,  
-"inactivateAccountsNotInFile": true,  
-"deleteAccEntForActiveAccounts": true  
-},  
-"call": {  
-"call1": {  
-"callOrder": 0,  
-"stageNumber": 0,  
-"http": {  
-"url": "[https://usermanagement.adobe.io/v2/usermanagement/users/@@ORG\_ID@@/0]("https://usermanagement.adobe.io/v2/usermanagement/users/@@ORG_ID@@/0")",  
-"httpHeaders": {  
-"Authorization": "${access\_token}",  
-"x-api-key": "@@X-API-KEY@@",  
-"Accept": "application/json"  
-},  
-"httpMethod": "GET"  
-},  
-"listField": "users",  
-"keyField": "accountID",  
-"statusConfig": {  
-"active": "true",  
-"inactive": "false"  
-},  
-"colsToPropsMap": {  
-"accountID": "id~#~char",  
-"name": "email~#~char",  
-"displayName": "username~#~char",  
-"customproperty2": "email~#~char",  
-"customproperty11": "status~#~char",  
-"customproperty13": "country~#~char",  
-"customproperty15": "domain~#~char",  
-"customproperty31": "STORE#ACC#ENT#MAPPINGINFO~#~char"  
-},  
-"pagination": {  
-"nextUrl": {  
-"nextUrlPath": "${response?.objectList?.size()>0?'[https://usermanagement.adobe.io/v2/usermanagement/users/@@ORG\_ID@@/'+Math.addExact(headers?.X-Current-Page,1)+':null]("https://usermanagement.adobe.io/v2/usermanagement/users/@@ORG_ID@@/'+Math.addExact(headers?.X-Current-Page,1)+':null")}"  
-}  
-}  
-}  
-},  
-"acctEntMappings": {  
-"groups": {  
-"listPath": "groups",  
-"idPath": "",  
-"keyField": "entitlement\_value"  
-}  
-}  
-},  
-"entitlementParams": {  
-"connection": "acctAuth",  
-"processingType": "SequentialAndIterative",  
-"entTypes": {  
-"groups": {  
-"entTypeOrder": 1,  
-"call": {  
-"call1": {  
-"callOrder": 0,  
-"stageNumber": 0,  
-"http": {  
-"url": "[https://usermanagement.adobe.io/v2/usermanagement/groups/@@ORG\_ID@@/0]("https://usermanagement.adobe.io/v2/usermanagement/groups/@@ORG_ID@@/0")",  
-"httpHeaders": {  
-"Authorization": "${access\_token}",  
-"x-api-key": "@@X-API-KEY@@",  
-"Accept": "application/json"  
-},  
-"httpContentType": "application/json",  
-"httpMethod": "GET"  
-},  
-"listField": "groups",  
-"keyField": "entitlementID",  
-"colsToPropsMap": {  
-"entitlementID": "groupId~#~char",  
-"entitlement\_value": "groupName~#~char",  
-"customproperty20": "type~#~char",  
-"customproperty21": "memberCount~#~char",  
-"customproperty22": "adminGroupName~#~char",  
-"customproperty23": "productName~#~char",  
-"customproperty24": "licenseQuota~#~char"  
-},  
-"pagination": {  
-"nextUrl": {  
-"nextUrlPath": "${response?.objectList?.size()>0?'[https://usermanagement.adobe.io/v2/usermanagement/groups/@@ORG\_ID@@/'+Math.addExact(headers?.X-Current-Page,1)+':null]("https://usermanagement.adobe.io/v2/usermanagement/groups/@@ORG_ID@@/'+Math.addExact(headers?.X-Current-Page,1)+':null")}"  
-}  
-}  
-}  
-}  
-}  
-}  
-},  
-"acctEntParams": {  
-"entTypes": {  
-"groups": {  
-"call": {  
-"call1": {  
-"callOrder": 0,  
-"stageNumber": 0,  
-"processingType": "acctToEntMapping"  
-}  
-}  
-}  
-}  
-}  
+{
+  "accountParams": {
+    "connection": "acctAuth",
+    "processingType": "SequentialAndIterative",
+    "statusAndThresholdConfig": {
+      "statusColumn": "customproperty11",
+      "activeStatus": ["active"],
+      "deleteLinks": true,
+      "accountThresholdValue": 10,
+      "correlateInactiveAccounts": false,
+      "inactivateAccountsNotInFile": true,
+      "deleteAccEntForActiveAccounts": true
+    },
+    "call": {
+      "call1": {
+        "callOrder": 0,
+        "stageNumber": 0,
+        "http": {
+          "url": "https://usermanagement.adobe.io/v2/usermanagement/users/@@ORG_ID@@/0",
+          "httpHeaders": {
+            "Authorization": "${access_token}",
+            "x-api-key": "@@X-API-KEY@@",
+            "Accept": "application/json"
+          },
+          "httpMethod": "GET"
+        },
+        "listField": "users",
+        "keyField": "accountID",
+        "statusConfig": {
+          "active": "true",
+          "inactive": "false"
+        },
+        "colsToPropsMap": {
+          "accountID": "id~#~char",
+          "name": "email~#~char",
+          "displayName": "username~#~char",
+          "customproperty2": "email~#~char",
+          "customproperty11": "status~#~char",
+          "customproperty13": "country~#~char",
+          "customproperty15": "domain~#~char",
+          "customproperty31": "STORE#ACC#ENT#MAPPINGINFO~#~char"
+        },
+        "pagination": {
+          "nextUrl": {
+            "nextUrlPath": "${response?.objectList?.size()>0?'https://usermanagement.adobe.io/v2/usermanagement/users/@@ORG_ID@@/'+Math.addExact(headers?.X-Current-Page,1):null}"
+          }
+        }
+      }
+    }
+  },
+  "acctEntMappings": {
+    "groups": {
+      "listPath": "groups",
+      "idPath": "",
+      "keyField": "entitlement_value"
+    }
+  },
+  "entitlementParams": {
+    "connection": "acctAuth",
+    "processingType": "SequentialAndIterative",
+    "entTypes": {
+      "groups": {
+        "entTypeOrder": 1,
+        "call": {
+          "call1": {
+            "callOrder": 0,
+            "stageNumber": 0,
+            "http": {
+              "url": "https://usermanagement.adobe.io/v2/usermanagement/groups/@@ORG_ID@@/0",
+              "httpHeaders": {
+                "Authorization": "${access_token}",
+                "x-api-key": "@@X-API-KEY@@",
+                "Accept": "application/json"
+              },
+              "httpContentType": "application/json",
+              "httpMethod": "GET"
+            },
+            "listField": "groups",
+            "keyField": "entitlementID",
+            "colsToPropsMap": {
+              "entitlementID": "groupId~#~char",
+              "entitlement_value": "groupName~#~char",
+              "customproperty20": "type~#~char",
+              "customproperty21": "memberCount~#~char",
+              "customproperty22": "adminGroupName~#~char",
+              "customproperty23": "productName~#~char",
+              "customproperty24": "licenseQuota~#~char"
+            },
+            "pagination": {
+              "nextUrl": {
+                "nextUrlPath": "${response?.objectList?.size()>0?'https://usermanagement.adobe.io/v2/usermanagement/groups/@@ORG_ID@@/'+Math.addExact(headers?.X-Current-Page,1):null}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "acctEntParams": {
+    "entTypes": {
+      "groups": {
+        "call": {
+          "call1": {
+            "callOrder": 0,
+            "stageNumber": 0,
+            "processingType": "acctToEntMapping"
+          }
+        }
+      }
+    }
+  }
 }
 
 ```
-Yes
+
 
 ###### **Configuration Parameter for Provisioning**
 
-**Parameter**
+**CreateAccountJSON**   Specify this parameter to create an account in the target application.
 
-**Description**
-
-**Recommended Configuration**
-
-**Support for Binding Variables?**
-
-**Support for Java Ternary Operations?**
-
-**CreateAccountJSON**
-
-Specify this parameter to create an account in the target application.
 
 ```json
-{  
-"accountIdPath": "call2.message.user.id",  
-"call": \[  
-{  
-"name": "call1",  
-"connection": "acctAuth",  
-"showResponse": true,  
-"url": "[https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG\_ID@@]("https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@")",  
-"httpMethod": "POST",  
-"httpParams": "\[{\\"user\\":\\"${user.email}\\",\\"requestID\\":\\"action\_1\\",\\"do\\":\[{\\"addAdobeID\\":{\\"email\\":\\"${user.email}\\",\\"country\\":\\"${user.country}\\",\\"firstname\\":\\"${user.firstname}\\",\\"lastname\\":\\"${user.lastname}\\",\\"option\\":\\"ignoreIfAlreadyExists\\"}}\]}\]",  
-"httpHeaders": {  
-"Authorization": "${access\_token}",  
-"Accept": "application/json",  
-"x-api-key": "@@X-API-KEY@@"  
-},  
-"httpContentType": "application/json",  
-"successResponses": {  
-"result": "success"  
-}  
-},  
-{  
-"name": "call2",  
-"connection": "acctAuth",  
-"showResponse": true,  
-"url": "[https://usermanagement.adobe.io/v2/usermanagement/organizations/@@ORG\_ID@@/users/${user.email]("https://usermanagement.adobe.io/v2/usermanagement/organizations/@@ORG_ID@@/users/${user.email")}",  
-"httpMethod": "GET",  
-"httpParams": "",  
-"httpHeaders": {  
-"Authorization": "${access\_token}",  
-"Accept": "application/json",  
-"x-api-key": "@@X-API-KEY@@"  
-},  
-"httpContentType": "application/json",  
-"successResponses": {  
-"statusCode": \[  
-200,  
-201  
-\]  
-}  
-}  
-\]  
+{
+  "accountIdPath": "call2.message.user.id",
+  "call": [
+    {
+      "name": "call1",
+      "connection": "acctAuth",
+      "showResponse": true,
+      "url": "https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@",
+      "httpMethod": "POST",
+      "httpParams": "[{\"user\":\"${user.email}\",\"requestID\":\"action_1\",\"do\":[{\"addAdobeID\":{\"email\":\"${user.email}\",\"country\":\"${user.country}\",\"firstname\":\"${user.firstname}\",\"lastname\":\"${user.lastname}\",\"option\":\"ignoreIfAlreadyExists\"}}]}]",
+      "httpHeaders": {
+        "Authorization": "${access_token}",
+        "Accept": "application/json",
+        "x-api-key": "@@X-API-KEY@@"
+      },
+      "httpContentType": "application/json",
+      "successResponses": {
+        "result": "success"
+      }
+    },
+    {
+      "name": "call2",
+      "connection": "acctAuth",
+      "showResponse": true,
+      "url": "https://usermanagement.adobe.io/v2/usermanagement/organizations/@@ORG_ID@@/users/${user.email}",
+      "httpMethod": "GET",
+      "httpParams": "",
+      "httpHeaders": {
+        "Authorization": "${access_token}",
+        "Accept": "application/json",
+        "x-api-key": "@@X-API-KEY@@"
+      },
+      "httpContentType": "application/json",
+      "successResponses": {
+        "statusCode": [200, 201]
+      }
+    }
+  ]
 }
+
 ```
 
 Refer to [Supported Binding Variables](https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Binding-Variables-for-Provisioning-using-Connectors.htm) for all available binding variables
@@ -403,38 +378,32 @@ Refer to [Supported Binding Variables](https://docs.saviyntcloud.com/bundle/EIC-
 
 
 
-AddAccessJSON
-
-Specify this parameter to add access to an account.
+**AddAccessJSON**  Specify this parameter to add access to an account.
 
 Use the following format to add access using the  Adobe Creative Cloud application:
 
 ```json
-{  
-"call": \[  
-{  
-"name": "groups",  
-"connection": "acctAuth",  
-"url": "[https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG\_ID@@]("https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@")",  
-"httpMethod": "POST",  
-"httpParams": "\[{\\"user\\" : \\"${user.email}\\",\\"requestID\\": \\"action\_1\\",\\"do\\" : \[{\\"add\\": {\\"group\\": \[\\"${entitlementValue.entitlement\_value}\\"\]}}\]}\]",  
-"httpHeaders": {  
-"Authorization": "${access\_token}",  
-"X-Api-Key": "@@X-API-KEY@@",  
-"Accept": "application/json"  
-},  
-"httpContentType": "application/json",  
-"successResponses": {  
-"statusCode": \[  
-200,  
-201,  
-204,  
-205  
-\]  
-}  
-}  
-\]  
+{
+  "call": [
+    {
+      "name": "groups",
+      "connection": "acctAuth",
+      "url": "https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@",
+      "httpMethod": "POST",
+      "httpParams": "[{\"user\":\"${user.email}\",\"requestID\":\"action_1\",\"do\":[{\"add\":{\"group\":[\"${entitlementValue.entitlement_value}\"]}}]}]",
+      "httpHeaders": {
+        "Authorization": "${access_token}",
+        "X-Api-Key": "@@X-API-KEY@@",
+        "Accept": "application/json"
+      },
+      "httpContentType": "application/json",
+      "successResponses": {
+        "statusCode": [200, 201, 204, 205]
+      }
+    }
+  ]
 }
+
 ```
 Refer to [Supported Binding Variables](https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Binding-Variables-for-Provisioning-using-Connectors.htm) for all available binding variables
 
@@ -447,33 +416,30 @@ Specify this parameter to remove access from an account.
 Use the following format to remove access using the  Adobe Creative Cloud application:
 
 ```json
-{  
-"call": \[  
-{  
-"name": "groups",  
-"connection": "acctAuth",  
-"url": "[https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG\_ID@@]("https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@")",  
-"httpMethod": "POST",  
-"httpParams": "\[{\\"user\\" : \\"${user.email}\\",\\"requestID\\": \\"action\_1\\",\\"do\\" : \[{\\"remove\\": {\\"group\\": \[\\"${entitlementValue.entitlement\_value}\\"\]}}\]}\]",  
-"httpHeaders": {  
-"Authorization": "${access\_token}",  
-"X-Api-Key": "@@X-API-KEY@@",  
-"Accept": "application/json"  
-},  
-"httpContentType": "application/json",  
-"successResponses": {  
-"statusCode": \[  
-200  
-\]  
-}  
-}  
-\]  
+{
+  "call": [
+    {
+      "name": "groups",
+      "connection": "acctAuth",
+      "url": "https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@",
+      "httpMethod": "POST",
+      "httpParams": "[{\"user\":\"${user.email}\",\"requestID\":\"action_1\",\"do\":[{\"remove\":{\"group\":[\"${entitlementValue.entitlement_value}\"]}}]}]",
+      "httpHeaders": {
+        "Authorization": "${access_token}",
+        "X-Api-Key": "@@X-API-KEY@@",
+        "Accept": "application/json"
+      },
+      "httpContentType": "application/json",
+      "successResponses": {
+        "statusCode": [200]
+      }
+    }
+  ]
 }
+
 ```
 Refer to [Supported Binding Variables](https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Binding-Variables-for-Provisioning-using-Connectors.htm) for all available binding variables
-    
 
-Yes
 
 **RemoveAccountJSON**
 
@@ -482,28 +448,27 @@ Specify this parameter to remove an account. 
 Use the following format to remove an account using the  Adobe Creative Cloud application:
 
 ```json
-{  
-"call": \[  
-{  
-"name": "call1",  
-"connection": "acctAuth",  
-"url": "[https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG\_ID@@]("https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@")",  
-"httpMethod": "POST",  
-"httpParams": "\[{\\"user\\" : \\"${user.email}\\",\\"requestID\\": \\"action\_1\\",\\"do\\" : \[{\\"removeFromOrg\\": {\\"deleteAccount\\": \\"false\\"}}\]}\]",  
-"httpHeaders": {  
-"Authorization": "${access\_token}",  
-"X-Api-Key": "@@X-API-KEY@@",  
-"Accept": "application/json"  
-},  
-"httpContentType": "application/json",  
-"successResponses": {  
-"statusCode": \[  
-200  
-\]  
-}  
-}  
-\]  
+{
+  "call": [
+    {
+      "name": "call1",
+      "connection": "acctAuth",
+      "url": "https://usermanagement.adobe.io/v2/usermanagement/action/@@ORG_ID@@",
+      "httpMethod": "POST",
+      "httpParams": "[{\"user\":\"${user.email}\",\"requestID\":\"action_1\",\"do\":[{\"removeFromOrg\":{\"deleteAccount\":\"false\"}}]}]",
+      "httpHeaders": {
+        "Authorization": "${access_token}",
+        "X-Api-Key": "@@X-API-KEY@@",
+        "Accept": "application/json"
+      },
+      "httpContentType": "application/json",
+      "successResponses": {
+        "statusCode": [200]
+      }
+    }
+  ]
 }
+
 ```
 Refer to [Supported Binding Variables](https://docs.saviyntcloud.com/bundle/EIC-Connectors/page/Content/Binding-Variables-for-Provisioning-using-Connectors.htm) for all available binding variables
 
@@ -539,17 +504,15 @@ You must apply the following guidelines for configuring import: 
 * Map all  Adobe Creative Cloud attributes to EIC account attributes using **ImportAccountEntJSON**.
 
 You must apply the following guidelines for configuring provisioning:
-*   Use Java ternary operators if you want to add conditions in the provisioning parameters. You can use Java operations to tweak any attributes by using if-else conditions, substrings, or operators in the JSON for provisioning.
+* Use Java ternary operators if you want to add conditions in the provisioning parameters. You can use Java operations to tweak any attributes by using if-else conditions, substrings, or operators in the JSON for provisioning.
     
 
 ## Configuring Import Operations
 
 
-*   **Full account import:** When configuring the connection for the first time, first perform the full import to import all existing accounts from the target application to EIC. To perform a full import, the invoke API gets the response from the target application and maps the attributes in the target application with attributes in EIC. As part of this process, the deleted accounts are also identified and marked as suspended from import service.
+* **Full account import:** When configuring the connection for the first time, first perform the full import to import all existing accounts from the target application to EIC. To perform a full import, the invoke API gets the response from the target application and maps the attributes in the target application with attributes in EIC. As part of this process, the deleted accounts are also identified and marked as suspended from import service.
+* **Full Access import:** When configuring the connection for the first time, first perform the full import to import all existing access from the target application to EIC. To perform a full import, the invoke API gets a response from the target application and maps the attributes in the target application with attributes in EIC. As part of this process, the deleted entitlements are also identified and marked as inactive.
     
-*   **Full Access import:** When configuring the connection for the first time, first perform the full import to import all existing access from the target application to EIC. To perform a full import, the invoke API gets a response from the target application and maps the attributes in the target application with attributes in EIC. As part of this process, the deleted entitlements are also identified and marked as inactive.
-    
-
 The import jobs are automatically created in EIC after you create a connection for the  Adobe Creative Cloud integration. For more information about creating jobs, see [Data Jobs](https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x).
 
 ### **Importing Accounts and Accesses**
@@ -561,7 +524,6 @@ You must import accounts after the users are available in EIC.
 1.  Specify the connection and import parameters. For more information, see [Account](https://docs.saviyntcloud.com/bundle/SF-v2020x/page/Content/Configuring-the-Integration-for-Importing-Accounts.htm) and [Access](https://docs.saviyntcloud.com/bundle/SF-v2020x/page/Content/Configuring-the-Integration-for-Importing-Access.htm) import.  
 > [!NOTE]
 > Ensure that the connection type is selected as **REST**.
-    
 2.  Configure the **Application Data Import (Single Threaded)** job to import accounts and access. For more information, see [Data Jobs](https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x).
     
 
@@ -575,7 +537,6 @@ Provisioning is automatically enabled when a connection is configured. For detai
 1.  Specify the connection and provisioning parameters. For more information, see [Configuration Parameters for Provisioning](https://docs.saviyntcloud.com/bundle/SF-v2020x/page/Content/Configuring-the-Integration-for-Provisioning-and-Deprovisioning.htm).  
  > [!NOTE]
 >  Ensure that the connection type is selected as **REST**.
-    
 2.  Configure the **Provisioning** job **(WSRETRY)**. For more information, see [Provisioning Jobs](https://docs.saviyntcloud.com/csh?topicname=Job-Categories-for-Flat-Job-Control-Panel&pubname=EIC-Admin-v2022x).
     
 
@@ -583,7 +544,6 @@ When a provisioning job is triggered, it creates provisioning tasks in EIC. When
 
 # Troubleshooting
 
+To troubleshoot common problems with connectors, answer frequently asked questions, and provide solutions to a few common issues you might encounter while configuring or working with connectors, see [Common Troubleshooting Guide for Connectors](https://docs.saviyntcloud.com/csh?topicname=Common-Troubleshooting-Guide-for-Connectors&pubname=Common-Troubleshooting-v2022x).
 
-To troubleshoot common problems with connectors, answer frequently asked questions, and provide solutions to a few common issues you might encounter while configuring or working with connectors, see [Common Troubleshooting Guide for Connectors]("https://docs.saviyntcloud.com/csh?topicname=Common-Troubleshooting-Guide-for-Connectors&pubname=Common-Troubleshooting-v2022x" ""https://docs.saviyntcloud.com/csh?topicname=Common-Troubleshooting-Guide-for-Connectors&pubname=Common-Troubleshooting-v2022x"").
-
-To troubleshoot common problems or obtain answers for frequently asked questions for REST connectors, see the [REST Connector Guide]("https://docs.saviyntcloud.com/bundle/REST-v2020x/page/Content/Appendix.htm" ""https://docs.saviyntcloud.com/bundle/REST-v2020x/page/Content/Appendix.htm"").
+To troubleshoot common problems or obtain answers for frequently asked questions for REST connectors, see the [REST Connector Guide](https://docs.saviyntcloud.com/bundle/REST-v2020x/page/Content/Appendix.htm).
