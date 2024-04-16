@@ -1,21 +1,13 @@
-**Disclaimer**
-
-The integration was either created by Saviynt or by Saviynt community users. The integration is available “as is” and falls under standard connectors support for REST, SOAP, JDBC, LDAP, PowerShell, Jar and Saviynt Connector Framework.
+> [!NOTE]
+> The integration was either created by Saviynt or by Saviynt community users. The integration is available “as is” and falls under standard connectors support for REST, SOAP, JDBC, LDAP, PowerShell, Jar and Saviynt Connector Framework.
 
 *   [Preface](#preface)
-    
 *   [Audience]("#audience)
-    
 *   [Introduction](#introduction)
-    
     *   [Supported Features](#supported features)
-        
-    *   [Supported Software Versions](#supported Software Versions)
-            
+    *   [Supported Software Versions](#supported Software Versions)  
 *   [Understanding the Integration between EIC and  Adobe Creative Cloud](#Understanding the Integration between EIC and  Adobe Creative Cloud)
-    
     *   [Integration Architecture](#Integration Architecture)
-        
     *   [Setting Up the Integration](#Setting Up the Integration)
         
         *   [Prerequisites]("https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Up%20the%20Integration-,Prerequisites,-To%20obtain%20the" ""https://forums.saviynt.com/t5/integration-drafts/adobe-cloud-integration-guide/ta-p/33790#:~:text=Up%20the%20Integration-,Prerequisites,-To%20obtain%20the"")
@@ -42,7 +34,6 @@ The integration was either created by Saviynt or by Saviynt community users. The
     
 
 # Preface
-
 
 This guide describes the integration between Saviynt **Enterprise Identity Cloud (EIC)** and  Adobe Creative Cloud.
 
