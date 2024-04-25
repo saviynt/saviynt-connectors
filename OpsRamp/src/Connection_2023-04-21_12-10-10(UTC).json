@@ -1,0 +1,166 @@
+{
+  "OpsRamp_Temp": {
+    "connectionname": "OpsRamp_Temp",
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "templateName": "OpsRamp",
+    "externalconnectiontype": "REST",
+    "connectorType": null,
+    "templateMandatoryData": "/qXFAG/Le4aBHE5JlJu9c7SphuDgpk7TTS91aBWk8tVnRadK9WSw0ZufOcA/nj733MESqaNXrRraZS6Rgz//Lw==",
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJOe2rPqPMfm6MH18/jH5pk7QsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw8R3gKwlb5P5Pls/NpXrJCJwnkk2cTjb+L9SDqw4xNix4/HC4STFxSSCnb9O24aAAnNq+zYkqojc7tT/DqFcTcTeOaIEoWQN4gUkLHcXrbOlactSI8UsMtmKbA6KevHkjvtEwdQ5unudDQ+qznLmHTH/sEES9SM79oswFjSW9TIEkvXP5L5xUZqWbYs4kZ+gkg0xrp1/du809TKpryWAzL0YBDPp8lOaGFnN2Ke3NuwMWijaSCe2N0mzIZMOubAZpTfQFVXVnqvES0Cagc45dI2vXzMWrevNoLYzSJweGEZzKpt9SRNy2qM00f8VhBRRBm1mHqZ8cIAAJIVFQdzAYYLyAsNH9/O+XM6T+5WLB7pur3R/QHAi6DUZNZQQg24f/NRZcDCIkUvksujaUgKEHlcb0JebrmaAbpupH5OdCnI7cI4cdDXWIzLyp9ADeDI+GqDGKY4UwbYZiRZZ32T6+XW9x3gn3u7OLlIDzmE031GRJ+yPIa1ecmqQgwa9UEcPrNONB5d+VcQ0+kOeSPrc5yiPXIA58gORW0TnJ0Cyxp8fg/YLIlttCCUH6M1x0o4wMA1QVzgOvqccCjwbr8EdkI64IRsTbWT58QW5Esjz5XftCpPvkUCOF0Xdukmo7OOngUcjCzK6h8Q+m2nT08WJUVC59dzLU1rlVcp71IihRXxHwnWL4NsOlmaSBoGguB6pd3gvaRQWeDoeQv4+NlDnNVc/QoBKjPysy1rz+sqcZ1vWWJvCUUlEF1iFr/zt3sbWvbS+7ICUdAzxMNUaakhSiw8EvhTA9oYVf0uEWG8vzvCXWfOm4PxTHxQjb23XZXZgNbqIrm8u2/gtJ0DiDnfm+LA"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"userAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https:///api/v2/tenants/msp_1123/users/search\",\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\"\r\n          }\r\n        },\r\n        \"listField\": \"results\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"customproperty1\": \"firstName~#~char\",\r\n          \"CUSTOMPROPERTY2\": \"lastName~#~char\",\r\n          \"customproperty3\": \"email~#~char\",\r\n          \"CUSTOMPROPERTY4\": \"organizationName~#~char\",\r\n          \"name\": \"loginName~#~char\",\r\n          \"CUSTOMPROPERTY5\": \"status~#~char\",\r\n          \"customproperty31\": \"STORE#ACC#ENT#MAPPINGINFO~#~char\"\r\n        }\r\n      }\r\n    },\r\n    \"acctEntMappings\": {\r\n      \"roles\": {\r\n        \"listPath\": \"roles\",\r\n        \"IdPath\": \"uniqueId\",\r\n        \"KeyField\": \"entitlementID\"\r\n      },\r\n      \"Groups\": {\r\n        \"listPath\": \"userGroups\",\r\n        \"IdPath\": \"uniqueId\",\r\n        \"KeyField\": \"entitlementID\"\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"userAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"roles\": {\r\n        \"entTypeOrder\": 0,\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\"\r\n              },\r\n              \"url\": \"https:///api/v2/tenants/msp_1123/roles/search\",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"results\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"uniqueId~#~char\",\r\n              \"customproperty7\": \"id~#~char\",\r\n              \"entitlement_value\": \"name~#~char\",\r\n              \"customproperty1\": \"uniqueId~#~char\",\r\n              \"customproperty5\": \"description~#~char\"\r\n            }\r\n          }\r\n        }\r\n      },\r\n      \"Groups\": {\r\n        \"entTypeOrder\": 1,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"connection\": \"userAuth\",\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\"\r\n              },\r\n              \"url\": \"https:///api/v2/tenants/msp_1123/userGroups\",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"results\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"description\": \"description~#~char\",\r\n              \"customproperty3\": \"createdTime~#~char\",\r\n              \"customproperty4\": \"updatedTime~#~char\",\r\n              \"customproperty5\": \"email~#~char\",\r\n              \"customproperty6\": \"uniqueId~#~char\",\r\n              \"entitlementID\": \"uniqueId~#~char\",\r\n              \"entitlement_Value\": \"name~#~char\"\r\n            }\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"connection\": \"userAuth\",\r\n    \"processingType\": \"acctToEntMapping\"\r\n  }\r\n}",
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"userAuth\",\r\n      \"url\": \"https://hostname/api/v2/tenants/msp_1123/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"loginName\\\":\\\"${user.email}\\\",\\\"firstName\\\": \\\"${user.firstname}\\\",  \\\"lastName\\\": \\\"${user.lastname}\\\", \\\"email\\\":  \\\"${user.email}\\\", \\\"password\\\":\\\"ChangeMe@1234\\\",\\\"country\\\": \\\"${user.country}\\\",\\\"timeZone\\\": { \\\"code\\\": \\\"EST\\\",\\\"name\\\": \\\"Europe/Istanbul\\\"}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"userAuth\",\r\n      \"url\": \"https:///api/v2/tenants/msp_1123/${account.accountID}\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"firstName\\\": \\\"${user.firstname}\\\",  \\\"lastName\\\": \\\"${user.lastname}\\\",\\\"country\\\": \\\"${user.country}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\"\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"userAuth\",\r\n      \"url\": \"https:///api/v2/tenants/msp_1123/users/${account.accountID}/ACTIVATE\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204,\r\n          205\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"userAuth\",\r\n      \"url\": \"https:///api/v2/tenants/msp_1123/users/${account.accountID}/DEACTIVATE\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"deactivateReason\\\": \\\"${user.customproperty7}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204,\r\n          205\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"roles\",\r\n      \"connection\": \"userAuth\",\r\n      \"url\": \"https:///api/v2/tenants/msp_1123/roles/${entitlementValue.entitlementID}\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"uniqueId\\\":\\\"${entitlementValue.entitlementID}\\\",\\\"allClients\\\":\\\"true\\\",\\\"users\\\": [{ \\\"id\\\": \\\"${account.accountID}\\\",\\\"loginName\\\": \\\"${user.systemUserName+'@sav.com'}\\\",\\\"lastName\\\": \\\"${account.customproperty2}\\\",\\\"firstName\\\": \\\"${account.customproperty1}\\\",\\\"email\\\": \\\"${user.systemUserName+'@sav.com'}\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200\r\n        ]\r\n      }\r\n    },\r\n    {\r\n      \"name\": \"Groups\",\r\n      \"connection\": \"userAuth\",\r\n      \"url\": \"https:///api/v2/tenants/msp_1123/userGroups/${entitlementValue.entitlementID}/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"[{\\\"id\\\":\\\"${account.accountID}\\\"}]\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"userAuth\",\r\n      \"url\": \"https:///api/v2/tenants/msp_1123/users/${account.accountID}/DEACTIVATE\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"deactivateReason\\\": \\\"${user.customproperty7}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204,\r\n          205\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

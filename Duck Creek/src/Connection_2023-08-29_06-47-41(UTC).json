@@ -1,0 +1,166 @@
+{
+  "Duck_Creek": {
+    "sslCertificateId": null,
+    "connectionname": "Duck_Creek",
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "externalconnectiontype": "SOAP",
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "templateMandatoryData": "1aIxVX5ngxfMEOoy1bOB1kWyxjZ2YPkuYg45ecICFAVrlmzDnAGzZk5NcFabS8OOs/JMNJ4LWNq8EDkhiGD2wA==",
+    "templateName": "Duck_Creek",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 0,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CONNECTIONJSON",
+        "encryptedattributevalue": null
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SOAP_ENDPOINT",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "attributename": "SOAP_OR_XML",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "SOAP"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "PAGE_SIZE",
+        "credentialSaveStatus": false
+      },
+      {
+        "attributename": "HR_IMPORT_JSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "attributename": "ACCOUNTS_IMPORT_JSON",
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\r\n    \"CONNECTION1\": \"login\",\r\n\r\n    \"REQUESTXML1\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Body><server><requests><Session.loginRq userName=\\\"${USERNAME}\\\" password=\\\"${PASSWORD}\\\"><\u002fSession.loginRq><OnlineData.listEntityUsersRq entityID=\\\"1\\\"><\u002fOnlineData.listEntityUsersRq><Session.closeRq><\u002fSession.closeRq><\u002frequests><\u002fserver><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n\r\n    \"REQUESTPARAMS1\": {\r\n\r\n        \"Content-Type\": \"text/xml; charset=utf-8\"\r\n\r\n    },\r\n\r\n    \"RESPONSEDATAPATH1\": \"Body.processRequestsAsDOMResponse.result.server.responses.OnlineData~dot#listEntityUsersRs.Users.User\",\r\n\r\n    \"ACCOUNTMAPPING1\": \"name:@name,accountID:@id,customproperty1:@email,customproperty2:@status,displayname:@fullName\",\r\n\r\n    \"ENTITLEMENTMAPPING1\": {\r\n\r\n        \"Entity\": \"UserEntityMemberships.UserEntityMembership.@entityName\",\r\n\r\n        \"Role\": \"Roles.Role.@name\"\r\n\r\n    },\r\n\r\n    \"CONNECTION2\": \"login\",\r\n\r\n    \"REQUESTTYPE2\": \"ENTITLEMENTS\",\r\n\r\n    \"REQUESTXML2\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Body><server><requests><Session.loginRq userName=\\\"${USERNAME}\\\" password=\\\"${PASSWORD}\\\"><\u002fSession.loginRq><Security.listRolesRq includePrivileges=\\\"false\\\"><\u002fSecurity.listRolesRq><Session.closeRq><\u002fSession.closeRq><\u002frequests><\u002fserver><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n\r\n    \"REQUESTPARAMS2\": {\r\n\r\n        \"Content-Type\": \"text/xml; charset=utf-8\"\r\n\r\n    },\r\n\r\n    \"RESPONSEDATAPATH2\": \"Body.processRequestsAsDOMResponse.result.server.responses.Security~dot#listRolesRs.Roles.Role\",\r\n\r\n    \"ENTITLEMENTMAPPING2\": {\r\n\r\n        \"Role\": {\r\n\r\n            \"entitlement_value\":\"@name\",\r\n\r\n            \"description\":\"@description\",\r\n\r\n            \"customproperty1\":\"@id\"\r\n\r\n        }\r\n\r\n    },\r\n\r\n   \"CONNECTION3\": \"login\",\r\n\r\n    \"REQUESTTYPE3\": \"ENTITLEMENTS\",\r\n\r\n    \"REQUESTXML3\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Body><server><requests><Session.loginRq userName=\\\"${USERNAME}\\\" password=\\\"${PASSWORD}\\\"><\u002fSession.loginRq><OnlineData.listEntitiesRq><\u002fOnlineData.listEntitiesRq><Session.closeRq><\u002fSession.closeRq><\u002frequests><\u002fserver><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n\r\n    \"REQUESTPARAMS3\": { \"Content-Type\": \"text/xml; charset=utf-8\"},\r\n\r\n    \"RESPONSEDATAPATH3\": \"Body.processRequestsAsDOMResponse.result.server.responses.OnlineData~dot#listEntitiesRs.Entities.children()\",\r\n\r\n    \"ENTITLEMENTMAPPING3\": { \r\n\r\n        \"Entity\": {\r\n\r\n            \"entitlement_value\":\"@name\",\r\n\r\n            \"customproperty1\":\"@id\"\r\n\r\n        }\r\n\r\n    },\r\n\r\n    \"CONNECTION4\": \"login\",\r\n\r\n    \"REQUESTTYPE4\": \"ENTITLEMENTS\",\r\n\r\n    \"REQUESTXML4\": \"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Body><server><requests><Session.loginRq userName=\\\"${USERNAME}\\\" password=\\\"${PASSWORD}\\\"><\u002fSession.loginRq><Security.listPrivilegesRq><\u002fSecurity.listPrivilegesRq><Session.closeRq><\u002fSession.closeRq><\u002frequests><\u002fserver><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n\r\n    \"REQUESTPARAMS4\": { \"Content-Type\": \"text/xml; charset=utf-8\"},\r\n\r\n    \"RESPONSEDATAPATH4\": \"Body.processRequestsAsDOMResponse.result.server.responses.Security~dot#listPrivilegesRs.Privileges.Privilege\",\r\n\r\n    \"ENTITLEMENTMAPPING4\": { \r\n\r\n        \"Privilege\": {\r\n\r\n            \"entitlement_value\":\"@name\",\r\n\r\n            \"description\":\"@description\",\r\n\r\n            \"customproperty1\":\"@type\",\r\n\r\n            \"customproperty2\":\"@id\"\r\n\r\n        }\r\n\r\n    }\r\n\r\n}",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CUSTOM_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RESPONSEPATH_TOTALRESULTS"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RESPONSEPATH_PAGERESULTS"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "RESPONSEPATH_USERLIST",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DATEFORMAT"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "COMBINEDCREATEREQUEST"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CREATEACCOUNTJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UPDATEACCOUNTJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DELETEACCOUNTJSON"
+      },
+      {
+        "attributename": "DISABLEACCOUNTJSON",
+        "formdata": null,
+        "encryptedattributevalue": "[\r\n\r\n    {\r\n\r\n        \"CONNECTION\":\"login\",\r\n\r\n        \"REQUESTXML\":\"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Body><server><requests><Session.loginRq userName=\\\"${USERNAME}\\\" password=\\\"${PASSWORD}\\\"><\u002fSession.loginRq><Security.lockUserAccountRq userID=\\\"${account.accountID}\\\" userName=\\\"${account.name}\\\"><\u002fSecurity.lockUserAccountRq><Session.closeRq><\u002fSession.closeRq><\u002frequests><\u002fserver><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n\r\n        \"REQUESTPARAMS\": {\r\n\r\n            \"Content-Type\":\"text/xml; charset=utf-8\"\r\n\r\n        },\r\n\r\n        \"RESPONSEMAPPING\": {\r\n\r\n            \"RESPONSECODE\":\"Body.processRequestsAsDOMResponse.result.server.responses.Security~dot#lockUserAccountRs.@status\"\r\n\r\n        },\r\n\r\n        \"SUCCESSCRITERIA\":\"RESPONSECODE=Success\"\r\n\r\n    }\r\n\r\n]",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "[\r\n\r\n    {\r\n\r\n        \"CONNECTION\":\"login\",\r\n\r\n        \"REQUESTXML\":\"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Body><server><requests><Session.loginRq userName=\\\"${USERNAME}\\\" password=\\\"${PASSWORD}\\\"><\u002fSession.loginRq><Security.unlockUserAccountRq userName=\\\"${account.name}\\\"><\u002fSecurity.lockUserAccountRq><Session.closeRq><\u002fSession.closeRq><\u002frequests><\u002fserver><\u002fsoapenv:Body><\u002fsoapenv:Envelope>\",\r\n\r\n        \"REQUESTPARAMS\": {\r\n\r\n            \"Content-Type\":\"text/xml; charset=utf-8\"\r\n\r\n        },\r\n\r\n        \"RESPONSEMAPPING\": {\r\n\r\n            \"RESPONSECODE\":\"Body.processRequestsAsDOMResponse.result.server.responses.Security~dot#unlockUserAccountRs.@status\"\r\n\r\n        },\r\n\r\n        \"SUCCESSCRITERIA\":\"RESPONSECODE=Success\"\r\n\r\n    }\r\n\r\n]",
+        "attributename": "ENABLEACCOUNTJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "GRANTACCESSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "REVOKEACCESSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CHANGEPASSJSON",
+        "encryptedattributevalue": null
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UPDATEUSERJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "TICKETSTATUSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "Confluent": {
+    "templateName": "Confluent",
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "externalconnectiontype": "REST",
+    "credentialChangeConfig": null,
+    "templateMandatoryData": "1aIxVX5ngxfMEOoy1bOB1jzLMTemtuUgE7k37rihDzXoKMdXwmU1iO7LsqWcAV9N",
+    "connectionname": "Confluent",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "yeh49p6OqxZ6EDukFEkcgh2jvKaTR6Jf3ZHkF1n2pQZoitznkxgj28ruVyi69OwEP92jraZOlNUB6LxCyRynt31ykxzz0lIDs0FDDtHY/Etd4iiPW/JjNqVgb/aQ3afYcpCN7ke873lsZ/tkc7R+kTH2AzB4BuKW+1tFN4JKJvdzOtp9wU8yls6qpJkQBhl2qw8P74J+Ags25EJG6nmejmQC6pV7XKTbUO+jXd74V0hvIeENmR2vbFjQJyoRew7bhifr4wnJTIC3Rk5QuRh3Zy/FYANORyJ8JoCco3gvO1f880Vo3hgLCcaDIlRDIoj/wvlwsZgW9XaazuGYo+/Mk3CZUEWIeMg9j5kxj8kwC9mG34nZFwY2l8JClpluYVQFvXzMWrevNoLYzSJweGEZzN+6Fyydpgm8tsuMRt7FzOjrlQQ4TzTOSHMwkN1IDxiudYubp18n5wIzn2lthmZ37AY01TYRUN5yMPtlNY3zm3JlrSinaZx7nx+S8hc5ux+sWx7q3DPC5DN3BzkGbvfZ85af4ZxwrB1tV7L5C8fkb2eKdZdZCNFsw1MksA6uCJwkh3/8ZozDhOoTmW+y05z8BpcAj4CD+5D2tJvn6Cr3edo0Z1W0oWed5P+sksOzZZ8BmMkHSbam/TU2O9QwFzDQvMPuq6vqJVRZhWoygf54la5MmyP8qVNhcENJFuPzCpiJFP70+x6n7P1wjphV+G2qv9zBEqmjV60a2mUukYM//y8="
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"accountParams\": {\r\n\t\t\"connection\": \"acctAuth\",\r\n\t\t\"processingType\": \"SequentialAndIterative\",\r\n\t\t\"call\": {\r\n\t\t\t\"call1\": {\r\n\t\t\t\t\"callOrder\": 0,\r\n\t\t\t\t\"stageNumber\": 0,\r\n\t\t\t\t\"http\": {\r\n\t\t\t\t\t\"url\": \"https://api.confluent.cloud/iam/v2/users\",\r\n\t\t\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\t\t\"Authorization\": \"${access_token}\",\r\n\t\t\t\t\t\t\"Accept\": \"application/json\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\t\t\"httpMethod\": \"GET\"\r\n\t\t\t\t},\r\n\t\t\t\t\"listField\": \"data\",\r\n\t\t\t\t\"keyField\": \"accountID\",\r\n\t\t\t\t\"colsToPropsMap\": {\r\n\t\t\t\t\t\"accountID\": \"id~#~char\",\r\n\t\t\t\t\t\"name\": \"full_name~#~char\",\r\n\t\t\t\t\t\"displayName\": \"full_name~#~char\",\r\n\t\t\t\t\t\"customproperty2\": \"email~#~char\",\r\n\t\t\t\t\t\"customproperty3\": \"kind~#~char\"\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"call2\": {\r\n\t\t\t\t\"callOrder\": 1,\r\n\t\t\t\t\"stageNumber\": 1,\r\n\t\t\t\t\"http\": {\r\n\t\t\t\t\t\"url\": \"https://api.confluent.cloud/iam/v2/service-accounts\",\r\n\t\t\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\t\t\"Authorization\": \"${access_token}\"\r\n\t\t\t\t\t},\r\n\t\t\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\t\t\"httpMethod\": \"GET\"\r\n\t\t\t\t},\r\n\t\t\t\t\"inputParams\": {\r\n\t\t\t\t\t\"dependentCall\": false\r\n\t\t\t\t},\r\n\t\t\t\t\"listField\": \"data\",\r\n\t\t\t\t\"keyField\": \"accountID\",\r\n\t\t\t\t\"colsToPropsMap\": {\r\n\t\t\t\t\t\"accountID\": \"id~#~char\",\r\n\t\t\t\t\t\"name\": \"display_name~#~char\",\r\n\t\t\t\t\t\"displayName\": \"display_name~#~char\",\r\n\t\t\t\t\t\"customproperty1\": \"description~#~char\",\r\n\t\t\t\t\t\"customproperty3\": \"kind~#~char\",\r\n\t\t\t\t\t\"customproperty4\": \"description~#~char\"\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t},\r\n\t\"entitlementParams\": {\r\n\t\t\"connection\": \"acctAuth\",\r\n\t\t\"processingType\": \"SequentialAndIterative\",\r\n\t\t\"entTypes\": {\r\n\t\t\t\"organization\": {\r\n\t\t\t\t\"entTypeOrder\": 0,\r\n\t\t\t\t\"entTypeLabels\": {\r\n\t\t\t\t\t\"customproperty1\": \"Deleted\",\r\n\t\t\t\t\t\"customproperty2\": \"CreatedAt\",\r\n\t\t\t\t\t\"customproperty3\": \"UpdatedAt\"\r\n\t\t\t\t},\r\n\t\t\t\t\"call\": {\r\n\t\t\t\t\t\"call1\": {\r\n\t\t\t\t\t\t\"callOrder\": 0,\r\n\t\t\t\t\t\t\"stageNumber\": 0,\r\n\t\t\t\t\t\t\"http\": {\r\n\t\t\t\t\t\t\t\"url\": \"https://api.confluent.cloud/org/v2/organizations\",\r\n\t\t\t\t\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\t\t\t\t\"Authorization\": \"${access_token}\",\r\n\t\t\t\t\t\t\t\t\"Accept\": \"application/json\"\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\t\t\t\t\"httpMethod\": \"GET\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"listField\": \"data\",\r\n\t\t\t\t\t\t\"keyField\": \"entitlementID\",\r\n\t\t\t\t\t\t\"colsToPropsMap\": {\r\n\t\t\t\t\t\t\t\"entitlementID\": \"id~#~char\",\r\n\t\t\t\t\t\t\t\"entitlement_value\": \"display_name~#~char\",\r\n\t\t\t\t\t\t\t\"customproperty1\": \"kind~#~char\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"disableDeletedEntitlements\": true\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\t\"environment\": {\r\n\t\t\t\t\"entTypeOrder\": 1,\r\n\t\t\t\t\"call\": {\r\n\t\t\t\t\t\"call1\": {\r\n\t\t\t\t\t\t\"callOrder\": 0,\r\n\t\t\t\t\t\t\"stageNumber\": 0,\r\n\t\t\t\t\t\t\"http\": {\r\n\t\t\t\t\t\t\t\"url\": \"https://api.confluent.cloud/org/v2/environments\",\r\n\t\t\t\t\t\t\t\"httpHeaders\": {\r\n\t\t\t\t\t\t\t\t\"Authorization\": \"${access_token}\",\r\n\t\t\t\t\t\t\t\t\"Accept\": \"application/json\"\r\n\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\t\"httpContentType\": \"application/json\",\r\n\t\t\t\t\t\t\t\"httpMethod\": \"GET\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"listField\": \"data\",\r\n\t\t\t\t\t\t\"keyField\": \"entitlementID\",\r\n\t\t\t\t\t\t\"colsToPropsMap\": {\r\n\t\t\t\t\t\t\t\"entitlementID\": \"id~#~char\",\r\n\t\t\t\t\t\t\t\"entitlement_value\": \"display_name~#~char\",\r\n\t\t\t\t\t\t\t\"customproperty1\": \"kind~#~char\"\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"disableDeletedEntitlements\": true\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t},\r\n\t\"acctEntParams\": {}\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n\t\"accountIdPath\": \"call1.message.id\",\r\n\t\"dateFormat\": \"yyyy-MM-dd'T'HH:mm:ssXXX\",\r\n\t\"responseColsToPropsMap\": {\r\n\t\t\"displayName\": \"call1.message.display_name~#~char\",\r\n\t\t\"customproperty3\": \"call1.message.kind~#~char\"\r\n\t},\r\n\t\"call\": [{\r\n\t\t\"name\": \"call1\",\r\n\t\t\"connection\": \"acctAuth\",\r\n\t\t\"url\": \"https://api.confluent.cloud/iam/v2/service-accounts\",\r\n\t\t\"httpMethod\": \"POST\",\r\n\t\t\"httpParams\": \"{\\\"display_name\\\": \\\"${user.username}\\\",\\\"description\\\": \\\"${user.customproperty4}\\\"}\",\r\n\t\t\"httpHeaders\": {\r\n\t\t\t\"Authorization\": \"${access_token}\",\r\n\t\t\t\"Accept\": \"application/json\"\r\n\t\t},\r\n\t\t\"httpContentType\": \"application/json\",\r\n\t\t\"successResponses\": {\r\n\t\t\t\"statusCode\": [\r\n\t\t\t\t200,\r\n\t\t\t\t201\r\n\t\t\t]\r\n\t\t}\r\n\t}]\r\n}",
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n\t\"dateFormat\": \"yyyy-MM-dd'T'HH:mm:ssXXX\",\r\n\t\"responseColsToPropsMap\": {\r\n\t\t\"displayName\": \"call1.message.display_name~#~char\"\r\n\t},\r\n\t\"call\": [{\r\n\t\t\"name\": \"call1\",\r\n\t\t\"connection\": \"acctAuth\",\r\n\t\t\"url\": \"https://api.confluent.cloud/iam/v2/service-accounts/${account.accountID}\",\r\n\t\t\"httpMethod\": \"PATCH\",\r\n\t\t\"httpParams\": \"{\\\"description\\\": \\\"${user.customproperty4}\\\"}\",\r\n\t\t\"httpHeaders\": {\r\n\t\t\t\"Authorization\": \"${access_token}\",\r\n\t\t\t\"Accept\": \"application/json\"\r\n\t\t},\r\n\t\t\"httpContentType\": \"application/json\",\r\n\t\t\"successResponses\": {\r\n\t\t\t\"statusCode\": [\r\n\t\t\t\t200,\r\n\t\t\t\t201\r\n\t\t\t]\r\n\t\t}\r\n\t}]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n\t\"call\": [{\r\n\t\t\"name\": \"call1\",\r\n\t\t\"connection\": \"acctAuth\",\r\n\t\t\"url\": \"https://api.confluent.cloud/iam/v2/service-accounts/${account.accountID}\",\r\n\t\t\"httpMethod\": \"DELETE\",\r\n\t\t\"httpHeaders\": {\r\n\t\t\t\"Authorization\": \"${access_token}\",\r\n\t\t\t\"Accept\": \"application/json\"\r\n\t\t},\r\n\t\t\"httpContentType\": \"application/json\",\r\n\t\t\"successResponses\": {\r\n\t\t\t\"statusCode\": [\r\n\t\t\t\t200,\r\n\t\t\t\t201,\r\n\t\t\t\t204\r\n\t\t\t]\r\n\t\t}\r\n\t}]\r\n}",
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

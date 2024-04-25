@@ -1,0 +1,16 @@
+{
+  "Objects": {
+    "connection": 
+    [
+      "Kaseya_vsa"
+    ]
+  },
+  "Information": {
+    "GUID": "51043969-6219-47e2-a72d-91461306054d",
+    "Exported By": "admin",
+    "Exported On": "2023-09-12 11:40:57",
+    "System": "scrum-exchange.saviyntcloud.com",
+    "TransferOwners": "0",
+    "TransferUsers": "0"
+  }
+}

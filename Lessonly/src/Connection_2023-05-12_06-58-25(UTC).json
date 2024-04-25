@@ -1,0 +1,166 @@
+{
+  "Lessonly_Test": {
+    "externalconnectiontype": "REST",
+    "templateName": "Lessonly",
+    "sslCertificateId": null,
+    "connectionname": "Lessonly_Test",
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "templateMandatoryData": "7NZAniIXRGvifZFxkT6or2xhjjHO/VR4wL5OtTQ9wmyMEtT7v02c+lCQ90IH+u4x",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw9aJJ9G669MN3wkkhgNGXqBZQ83yKByRfh/rdSgsk1A9cS1V1eps+9eNIV2W/Kov9qogpovtbKe8R/0Mtc6rwmPDzXWqDKJPbNcDIuJWaEs2DoV1PMgApiCp9HZgzxL2qZiwcga40YgIRY1ZW6045GV3jgx6hSDIwErVNrxubpVETsfuMwAZ/MfDsOpAJov3Z63S8XOLqPYqxcEpJzuCj5WNom+TA7o+HTBaT4dReB9Y0LZft7XLAqVrnlBmqU6v+UTRKNrfKw6TfWQTAVWRV3RFZ0mt70/DzJCAqDOI6DhM85B2FRF+fl/SIMiAVy/1qsNUKMK2MtYNeY5G38SzigQpSFzEzYiaZFSbCmmzVePTkNptwW3CFRAzeDOIuW5p+YAqv4JLryt0YEaxFDztWIPpAi7++HJAsYEYFPF2BUzsIrn4Svq1yDYY1tWCsj8fXYmZfD8q6Uu+L/2izKoFtdRwxOVXlWVCGEj8Dzh/sM5Aio7UotGoVBZ7FiVSsY6d1SUG7GStU/7OarKEdAl+CGASneynkj289DX/TIQC5+3MyVKw6s71dXXnHD83wkL9y8QZHDQIJJUqPJaqEevROokmYxwWKKoBsZp0fcfCvnjzc9LQGZJTRZiETH6FW9dTS1OCu6Fg0+yT4B4lAme6LhD4K5SQjlgCM3T5GWvxMRCSL/iPHTKTfBU4AWgmDf2Xm6nIvNtxdQqkE3KNeKaSzXb6iK5vLtv4LSdA4g535viwA==",
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"statusAndThresholdConfig\": {\r\n      \"deleteLinks\": true,\r\n      \"accountThresholdValue\": 100,\r\n      \"correlateInactiveAccounts\": false,\r\n      \"inactivateAccountsNotInFile\": true,\r\n      \"deleteAccEntForActiveAccounts\": true\r\n    },\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"@HOST_URL@/api/v1/users\",\r\n          \"httpHeaders\": {\r\n            \"\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"users\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"name\": \"email~#~char\",\r\n          \"displayName\": \"name~#~char\",\r\n          \"customproperty2\": \"email~#~char\",\r\n          \"customproperty31\": \"STORE#ACC#ENT#MAPPINGINFO~#~char\"\r\n        },\r\n        \"pagination\": {\r\n          \"nextUrl\": {\r\n            \"nextUrlPath\": \"${response?.objectList?.size()>0?'@HOST_URL@/api/v1/users?page='+Math.addExact(response.completeResponseMap.page,1)+'&per_page='+response.completeResponseMap.per_page:null}\"\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"acctEntMappings\": {\r\n      \"Role\": {\r\n        \"importAsEntitlement\": true,\r\n        \"listPath\": \"\",\r\n        \"idPath\": \"role\",\r\n        \"keyField\": \"entitlementID\",\r\n        \"colsToPropsMap\": {\r\n          \"entitlementID\": \"entitlementID~#~char\",\r\n          \"entitlement_value\": \"entitlement_value~#~char\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Group\": {\r\n        \"entTypeOrder\": 0,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"@HOST_URL@/api/v1/groups\",\r\n              \"httpHeaders\": {\r\n                \"\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"groups\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"id~#~char\",\r\n              \"entitlement_value\": \"name~#~char\"\r\n            },\r\n            \"pagination\": {\r\n              \"nextUrl\": {\r\n                \"nextUrlPath\": \"${response?.objectList?.size()>0?'@HOST_URL@/api/v1/groups?page='+Math.addExact(response.completeResponseMap.page,1)+'&per_page='+response.completeResponseMap.per_page:null}\"\r\n              }\r\n            },\r\n            \"disableDeletedEntitlements\": true\r\n          }\r\n        }\r\n      },\r\n      \"Role\": {\r\n        \"entTypeOrder\": 1,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {}\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"entTypes\": {\r\n      \"Group\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"processingType\": \"httpAcctToEnt\",\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"\": \"${access_token}\"\r\n              },\r\n              \"url\": \"@HOST_URL@/api/v1/users/${id}/groups\",\r\n              \"httpContentType\": \"application/x-www-form-urlencoded\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"memberships\",\r\n            \"entIdPath\": \"id\",\r\n            \"entKeyField\": \"entitlementID\",\r\n            \"acctKeyField\": \"accountID\"\r\n          }\r\n        }\r\n      },\r\n      \"Role\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"processingType\": \"acctToEntMapping\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"dateFormat\": \"yyyy-MM-dd'T'HH:mm:ssXXX\",\r\n  \"responseColsToPropsMap\": {\r\n    \"displayName\": \"call1.message.name~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"@HOST_URL@/api/v1/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"name\\\":\\\"${user.username}\\\",\\\"email\\\":\\\"${user.email}\\\",\\\"manager_name\\\":\\\"${userManager}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n   \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"@HOST_URL@/api/v1/users/${account.accountID}\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"name\\\":\\\"${user.username}\\\",\\\"email\\\":\\\"${user.email}\\\",\\\"manager_name\\\":\\\"${userManager}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Group\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"@HOST_URL@/api/v1/users/${account.accountID}/groups\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"type\\\":\\\"user_groups\\\",\\\"memberships\\\":[{\\\"id\\\":\\\"${entitlementValue.entitlementID}\\\",\\\"name\\\":\\\"${entitlementValue_entitlement_value}\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Group\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"@HOST_URL@/api/v1/users/${account.accountID}/groups\",\r\n      \"httpMethod\": \"put\",\r\n      \"httpParams\": \"{\\\"memberships\\\":[{\\\"id\\\":\\\"{entitlementValue.entitlementID}\\\",\\\"remove\\\":\\\"true\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"@HOST_URL@/api/v1/users/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

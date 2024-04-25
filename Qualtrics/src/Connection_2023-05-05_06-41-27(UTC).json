@@ -1,0 +1,166 @@
+{
+  "Qualtrics_TEST": {
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "externalconnectiontype": "REST",
+    "connectorms": false,
+    "templateName": "Qualtrics",
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "templateMandatoryData": "6/hCE0T7PT/sxL7s0AN4a2OtQ1hvaYgNGbg4Qg9rLpw=",
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectionname": "Qualtrics_TEST",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw8R3gKwlb5P5Pls/NpXrJCJfyi2Pe7yCcKpjFyrNd0wy3PJjB/4VaaukUABmjFa6P681NSgLcUDdoaSlTdb1fIYtKppjgtJSIwTANd6FGOILpvPC2iCTJ9lw3WBiPp1E+1FvgRLCRToQq3SJtkZTQq7AwjLXUeox1gvdg+qI2dDELi8JL0Jfb7Uq0TJaVjpilxccs7dyqzlEsrmTnNr7rQ+4zuiKvG9H//Kr0veZpa2IrqNK9cXQe1aX074d7HFwCABZXvg57l2Rfv4xhUjp+CsW0wzSLrEwJWS2opg4JrkU7kqNYPH4c9CMO3cTt/11fUnpfMm1lqL5nhVBtHV8i32uZFc2zaYBp1xTrzcCeGqdiRSeZGDMZmyxze0uU7WNR1FusHDcJfxLoKJTNLnWd1ytyDKICmIvKoqikWLqtOeLaCU40y6V1gEJObwIGgcHkfCS7cerxA90HTB4vRK9UH1r1erpavWQLPBsOQaLnPKxkhB7J/Qrl+pCFHQjYyrdSmTPjAZiRB75a9Y6x28tIlua5ePz9BnFvG799nhvQ54XGYNfJzoiV21OOsJn1gVtLEpnLbvJsVaQR4FZbXMZQ+cs/JMNJ4LWNq8EDkhiGD2wA=="
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"statusAndThresholdConfig\": {\r\n      \"statusColumn\": \"customproperty5\",\r\n      \"activeStatus\": [\r\n        \"active\"\r\n      ],\r\n      \"deleteLinks\": true,\r\n      \"accountThresholdValue\": 1000,\r\n      \"correlateInactiveAccounts\": false,\r\n      \"inactivateAccountsNotInFile\": true,\r\n      \"deleteAccEntForActiveAccounts\": true\r\n    },\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://.qualtrics.com/API/v3/users\",\r\n          \"httpHeaders\": {\r\n            \"X-API-TOKEN\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"result.elements\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"name\": \"username~#~char\",\r\n          \"displayName\": \"email~#~char\",\r\n          \"customproperty1\": \"divisionId~#~char\",\r\n          \"customproperty2\": \"firstName~#~char\",\r\n          \"customproperty3\": \"lastName~#~char\",\r\n          \"customproperty4\": \"userType~#~char\",\r\n          \"customproperty5\": \"accountStatus~#~char\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Group\": {\r\n        \"entTypeOrder\": 0,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"connection\": \"acctAuth\",\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"https://.qualtrics.com/API/v3/groups\",\r\n              \"httpHeaders\": {\r\n                \"X-API-TOKEN\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"result.elements\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"id~#~char\",\r\n              \"entitlement_value\": \"name~#~char\"\r\n            },\r\n            \"disableDeletedEntitlements\": true\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"entTypes\": {\r\n      \"Group\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"processingType\": \"httpEntToAcct\",\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"X-API-TOKEN\": \"${access_token}\"\r\n              },\r\n              \"url\": \"https://.qualtrics.com/API/v3/groups/${id}/members\",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"result.elements\",\r\n            \"entKeyField\": \"entitlementID\",\r\n            \"acctIdPath\": \"id\",\r\n            \"acctKeyField\": \"accountID\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.result.id\",\r\n  \"responseColsToPropsMap\": {},\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.qualtrics.com/API/v3/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"username\\\":\\\"${user.username}\\\",\\\"firstName\\\":\\\"${user.firstname}\\\",\\\"lastName\\\":\\\"${user.lastname}\\\",\\\"userType\\\":\\\"${user.customproperty4}\\\",\\\"email\\\":\\\"${user.email}\\\",\\\"password\\\":\\\"${password}\\\",\\\"language\\\":\\\"es\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"X-API-TOKEN\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.qualtrics.com/API/v3/users/${account.accountID}\",\r\n      \"httpMethod\": \"PUT\",\r\n      \"httpParams\": \"{\\\"firstName\\\":\\\"${user.firstname}\\\",\\\"lastName\\\":\\\"${user.lastname}\\\",\\\"email\\\":\\\"${user.email}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"X-API-TOKEN\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.qualtrics.com/API/v3/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"id\\\":\\\"${account.accountID}\\\",\\\"active\\\":\\\"true\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"X-API-TOKEN\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.qualtrics.com/API/v3/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"id\\\":\\\"${account.accountID}\\\",\\\"active\\\":\\\"false\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"X-API-TOKEN\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Group\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \" https://.qualtrics.com/API/v3/groups/${entitlementValue.entitlementID}/members\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"userId\\\":[\\\"${account.accountID}\\\"]}}\",\r\n      \"httpHeaders\": {\r\n        \"X-API-TOKEN\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Group\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.qualtrics.com/API/v3/groups/${entitlementValue.entitlementID}/members/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"X-API-TOKEN\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.qualtrics.com/API/v3/users/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"X-API-TOKEN\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

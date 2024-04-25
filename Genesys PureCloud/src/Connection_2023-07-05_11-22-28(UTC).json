@@ -1,0 +1,166 @@
+{
+  "Genesys_PureCloud": {
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "connectionname": "Genesys_PureCloud",
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "templateName": "Genesys_PureCloud",
+    "templateMandatoryData": "K8hAQn2ku0XOHxng7tVTRY0hdhIVmTdfymYDkXvX/ZQ=",
+    "connectorType": null,
+    "externalconnectiontype": "REST",
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw9nuleW4PySgjgjeXLu5mO9USL9b9F9g5xEz/6GkGuchtxRba5Zjf+Gnye7ZvBALCgfljYE2DoikYTEfmcO8Oh4rUYiobk/D8vbctvCVbZH1JODfZ06T6PXL8PnhNyPLk8om7oqxfPi/uVhJiSaloPdiyYLVW6U5qn7yZRXWwiu6NPCWtT0rDEqg5ue2L34tSEhcgQptZeiUGMwjso0A3J39MZZPHhtEbqvIee6bg2E2K75Ej5GE/pgqE1DdQrvreFYHdcmnOR67xKBZexFwKcFKd1bHlmlNB+49gEFi8xCViYV+kuaMiQ4RxgJz3n30Aliit3kWBWZEPZa+RlXv7T/oHi7lICqQTMG1VdpP10s0RS0I4hQkdNViRIzZ/zurRsc4EYN041LaCn8H4BTn6c7bmps5Vvy1P4vSeG3SJfGUJXUzjFHf5cll/ggDtDlV+ukz1Emv+wWJy6AJRFeobmBd7AUHhODl+6/BK95utaK+b1cZEOq6PTcTPL/qkMP5fw="
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"/api/v2/scim/users?pageSize=50&pageNumber=2\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"Resources\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"name\": \"userName~#~char\",\r\n          \"displayName\": \"displayName~#~char\",\r\n          \"customproperty1\": \"schemas~#~char\",\r\n          \"customproperty2\": \"active~#~char\",\r\n          \"customproperty3\": \"password~#~char\",\r\n          \"customproperty4\": \"title~#~char\",\r\n          \"customproperty5\": \"phoneNumbers.value~#~char\",\r\n          \"customproperty6\": \"phoneNumbers.type~#~char\",\r\n          \"customproperty7\": \"phoneNumbers.primary~#~char\",\r\n          \"customproperty8\": \"emails.value~#~char\",\r\n          \"customproperty9\": \"emails.type~#~char\",\r\n          \"customproperty10\": \"emails.primary~#~char\",\r\n          \"customproperty11\": \"externalId~#~char\",\r\n          \"customproperty31\": \"STORE#ACC#ENT#MAPPINGINFO~#~char\"\r\n        },\r\n        \"pagination\": {\r\n          \"page\": {\r\n            \"pageSizeParam\": \"pageSize\",\r\n            \"pageSize\": 50,\r\n            \"pageRecordCount\": \"itemsPerPage\",\r\n            \"pageNumberParam\": \"pageNumber\",\r\n            \"totalCountPath\": \"completeResponseMap.totalResults\",\r\n            \"firstPageNumber\": 0\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"acctEntMappings\": {\r\n      \"Role\": {\r\n        \"importAsEntitlement\": true,\r\n        \"listPath\": \"roles\",\r\n        \"idPath\": \"value\",\r\n        \"keyField\": \"entitlementID\",\r\n        \"colsToPropsMap\": {\r\n          \"entitlementID\": \"value~#~char\",\r\n          \"entitlement_value\": \"value~#~char\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Group\": {\r\n        \"entTypeOrder\": 0,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"connection\": \"acctAuth\",\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"/api/v2/scim/groups\",\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"Resources\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"id~#~char\",\r\n              \"entitlement_value\": \"displayName~#~char\",\r\n              \"customproperty1\": \"externalId~#~char\",\r\n              \"customproperty2\": \"meta.resourceType~#~char\",\r\n              \"customproperty3\": \"meta.lastModified~#~char\",\r\n              \"customproperty4\": \"meta.location~#~char\",\r\n              \"customproperty5\": \"meta.version~#~char\"\r\n            },\r\n            \"pagination\": {\r\n              \"page\": {\r\n                \"pageSizeParam\": \"pageSize\",\r\n                \"pageSize\": 50,\r\n                \"pageRecordCount\": \"itemsPerPage\",\r\n                \"pageNumberParam\": \"pageNumber\",\r\n                \"totalCountPath\": \"completeResponseMap.totalResults\",\r\n                \"firstPageNumber\": 0\r\n              }\r\n            },\r\n            \"disableDeletedEntitlements\": true\r\n          }\r\n        }\r\n      },\r\n      \"Role\": {\r\n        \"entTypeOrder\": 1,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {}\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"entTypes\": {\r\n      \"Group\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"processingType\": \"httpEntToAcct\",\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\"\r\n              },\r\n              \"url\": \"/api/v2/scim/groups/${id}/members\",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"Resources\",\r\n            \"entKeyField\": \"entitlementID\",\r\n            \"acctIdPath\": \"members.value\",\r\n            \"acctKeyField\": \"accountID\"\r\n          }\r\n        }\r\n      },\r\n      \"Role\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"processingType\": \"acctToEntMapping\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"responseColsToPropsMap\": {\r\n    \"name\": \"call1.message.userName~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"/api/v2/scim/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"userName\\\":\\\"${user.username}\\\",\\\"displayName\\\":\\\"${user.displayname}\\\",\\\"password\\\":\\\"${user.customproperty3}\\\",\\\"title\\\":\\\"${user.customproperty4}\\\",\\\"phoneNumbers\\\":[{\\\"value\\\":\\\"${user.phonenumber}\\\",\\\"primary\\\":true}],\\\"emails\\\":[{\\\"value\\\":\\\"${user.email}\\\",\\\"primary\\\":true}],\\\"externalId\\\":\\\"\\\",\\\"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\\\":\\\"\\\",\\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User\\\":\\\"\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"/api/v2/scim/users/${account.accountID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\\\"],\\\"Operations\\\":[{\\\"op\\\":\\\"replace\\\",\\\"path\\\":\\\"emails\\\",\\\"value\\\":\\\"${user.email}\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"/api/v2/scim/users/${account.accountID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\\\"],\\\"Operations\\\":[{\\\"op\\\":\\\"replace\\\",\\\"path\\\":\\\"active\\\",\\\"value\\\":\\\"true\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"/api/v2/scim/users/${account.accountID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"schemas\\\":[\\\"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User\\\"],\\\"Operations\\\":[{\\\"op\\\":\\\"replace\\\",\\\"path\\\":\\\"active\\\",\\\"value\\\":\\\"false\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"/api/v2/scim/users/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

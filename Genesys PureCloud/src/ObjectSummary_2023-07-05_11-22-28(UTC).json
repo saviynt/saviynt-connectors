@@ -1,0 +1,16 @@
+{
+  "Objects": {
+    "connection": 
+    [
+      "Genesys_PureCloud"
+    ]
+  },
+  "Information": {
+    "GUID": "789ea486-eea4-45a2-9968-f94c35e7e94f",
+    "Exported By": "admin",
+    "Exported On": "2023-07-05 11:22:02",
+    "System": "scrum-exchange.saviyntcloud.com",
+    "TransferOwners": "0",
+    "TransferUsers": "0"
+  }
+}

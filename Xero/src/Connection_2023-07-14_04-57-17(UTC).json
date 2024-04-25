@@ -1,0 +1,166 @@
+{
+  "Xero_Test": {
+    "connectionname": "Xero_Test",
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectiondescription": "Xero_Test",
+    "templateName": "Xero",
+    "externalconnectiontype": "REST",
+    "connectorType": null,
+    "templateMandatoryData": "WdbeBTnxB6wMFfHxZDrPNbEf8cLPEF502Tpq6EV/JkeRKczysS39Mv5whIkDRJSB3meN/JZOD4A6VChvYdEn5Q==",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw/VHkLwia23To8ZvdX/NUEDxhOhTZizS79kV/oKLzmEaFFlwMIiRS+Sy6NpSAoQeVxvQl5uuZoBum6kfk50Kcjt9ajrRB5RIplWXlXgoBvsKhGZIIF8sXIr0oiz6PCq/krgaVgYrjckY/NHPBmwX2YbWvFA6PpmvNPP6ncm7aDPXNVl172jw6e+NGZlQmpttR2LHyXNtt2ziZL3NuQHuFBQoSbnIfy8xcl+a/Wr+bQdJ9hWBKRBYWgpTrmYuZoTKJ/Ip8T2C79OW3RGfzpBuT7tv6IXnTEcJqNzGxyZtiIWDtdFXaQLxXsWg+m/0N/UwHhiRcy73BVdScK45u/mgLVtZOXtKN/fwiyyLeZVJoLuynFvbG+EW+Xb+tC/Hn6H5t7COHHQ11iMy8qfQA3gyPhqgximOFMG2GYkWWd9k+vl1vcd4J97uzi5SA85hNN9RkR9A3aPMH5Mo9EkTaARngMSCPAtMC0UhkWbFXekahxwQhIO2VSq9mwNOCpUn2OP/TWqLQWa8Dj9SxGIJICM9iIR2qTx2m1FZMoHRdaVufrFd21OTAcgvM5cvfcoDYySa81CoRPirrRNONneSNb+fTRtvOlrzh2TQKUL8/x2PgqaTSL5U2JyRiKW/RgrqOxihts3ASQCa1robn4IMbeeuHNK9BKQ6bPsccxGn+xCbq0CBgrpL+g6F0lqMnc20edky8JbzbJkmqmX3WuKwGn23z0urp3eVfF32qstoS/StgE+bUncDZNUf7LkS8xLrpr9bYkEOBVRFxIQR6+tMnEwobXEuSo1g8fhz0Iw7dxO3/XV9Sel8ybWWovmeFUG0dXyLfa5kVzbNpgGnXFOvNwJ4ap2McdejgPxABCcVG0AtqUBApGoVzNNAp+PniYLOeH/9U3DWt3CRSQ0gcyGUiv8zThmeLG3t9MAzHZ5QZpisRso3tg6u5jzv6PAFvkTgnOJPGTymeumnZpMa7kf68q578FiuH+09kRsU4fbLHzD+J2SM46n4N9uoI+J3fHq4QyXxmf0iaeMqz2zTH9bEU/eUPP62N5DNSwK8FFDphKmNpZ1nQhm4+50W/A5NxnbioJjluRsh8YjZmNf+9nDNfZDhpRgR399XB6cF7Kp0H0cltF4cL3gZWOKiwW4ybriXlk+B9yor0aNBG+naQIeaP3KazPj"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"connection\": \"userAuth\",\r\n  \"url\": \"@HOST_URL@/api.xro/2.0/Employees\",\r\n  \"httpMethod\": \"GET\",\r\n  \"httpHeaders\": {\r\n    \"contentType\": \"application/json\",\r\n    \"Authorization\": \"${access_token}\"\r\n  },\r\n  \"colsToPropsMap\": {\r\n    \"username\": \"EmployeeID~#~char\",\r\n    \"statuskey\": \"Status~#~char\",\r\n    \"lastname\": \"LastName~#~char\",\r\n    \"firstname\": \"FirstName~#~char\",\r\n    \"customproperty1\": \"ExternalLink.Description~#~char\"\r\n  },\r\n  \"userResponsePath\": \"Employees\"\r\n}",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"actions\": {\r\n    \"Update Login\": {\r\n      \"call\": [\r\n        {\r\n          \"name\": \"Update Login\",\r\n          \"connection\": \"userAuth\",\r\n          \"url\": \"@HOST_URL@/api.xro/2.0/Employees${user.username}\",\r\n          \"httpMethod\": \"PUT\",\r\n          \"httpParams\": \"{\\\"Employees\\\":[{\\\"FirstName\\\":\\\"${user.firstname}\\\",\\\"LastName\\\":\\\"${user.lastname}\\\"}]}\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"successResponses\": {\r\n            \"statusCode\": [\r\n              200,\r\n              201\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

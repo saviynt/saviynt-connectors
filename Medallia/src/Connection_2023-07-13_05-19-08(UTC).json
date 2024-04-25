@@ -1,0 +1,166 @@
+{
+  "Medallia": {
+    "sslCertificateId": null,
+    "templateName": "Medallia",
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "externalconnectiontype": "REST",
+    "sslCertificate": null,
+    "connectiondescription": "Medallia",
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectionname": "Medallia",
+    "connectorType": null,
+    "status": 1,
+    "templateMandatoryData": "X2C3G7ZT9FLyIehpJge8doLIT6xXDJmKwloZS+WIVvb/fWnqoKF4+w2x0IL1+KpSz34MPw9rRUGvriRR2cnhvw==",
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON",
+        "encryptedattributevalue": "WQbeejNqj+r4uxiVa/CIfruLzRKoHo+vQFHBV2KdJnmQjEuZu3zver9Nkt53qTSlZco/QYW8DuPq7m/uJPJDjs/OLHi1llsivwUtvrCXP6MdtcUe67xoWXgG3wDiTnwencHyycysXpZ76ldxXO1Y7fxODCFuGcAtS5HIsdSm4cPEtVdXqbPvXjSFdlvyqL/aaBbVKFukgWZHlZD3YkPgd82r7NiSqiNzu1P8OoVxNxM4LsjYLnsF8d9S/UMQoI71UZaGf69/BsF+W7tNEnbTQxfJ5/HLwI2uLSa+UF6HOaQ8hmVZZc7leyNiw4ZPER3KjG3jyYn+lBKAt1nUZgqZU6M8hSiERFGUraSCkq7hV7YeEd4pT75hEbb80EMh8VkoxAhmNVJ1imAnrH5kHZVrmWvm17BtBY8RYhYscA62WXQJ1LI1TjuagqtgNEmuFYEQpMwv65vMofq9bARv2+UZRBs8mh40xa1GmQDREYGokYlIZR6qyZEvJbYVeiN993koHAe2zPL4UhNDUaeiZ810wA6BnOGiD37H931eppksCG+tRiKhuT8Py9ty28JVtkfUUlBFXR37MxiNVnCjp4Axjmuwc5upNZAuKqonTX29pDOI87fymVS0EDVQ51PJbJhLsesqTFYh/FidxYisR5lXsTRK3f8FjyFLahKRAb6uDLgXhPJvdBtWTvRrW4p1Vmve+0GBWjjzgpsrOvMWhx6HdnLASZXkG2bAdq1FfbkaxJ3aDVE9ub2WC5cpSleFMlbqgO7sdnGs7JHDenJ1Hh25Dz8C1uMfEs7aonK83W+hdAR6OvS0kY6VJNS6n2NOSz8zhbtobPIEZ+hDG569YpC/73vyS++y1gGxydjfzN936jJKd7KeSPbz0Nf9MhALn7czAcJxuN3icHpmgmOy/Uld7xi/bSlXjNI7u5lMT3JsA8IxxR/HfDyLpHsjxz1TNPuogtHJZbARTBgqqOIRhJQcyefXcy1Na5VXKe9SIoUV8R8CKKXG/b5ywWiFat3ANyD/Pwf3I71+cWF8Vhsoz4u5fWEzY0+5OWGVHOXxMc0LBfyLJgtVbpTmqfvJlFdbCK7o08Ja1PSsMSqDm57Yvfi1IUTsPlmqZAXAmY4kqlg1eVbYzmMaoVXUtabgUlSitkL2v+I8dMpN8FTgBaCYN/ZebsngpIMTCl+0VJT55kc064raGMGdRE7amNatMHyGqDsU3MESqaNXrRraZS6Rgz//Lw=="
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"statusAndThresholdConfig\": {\r\n      \"statusColumn\": \"customproperty8\",\r\n      \"status\": [\r\n        \"ACTIVE\"\r\n      ],\r\n      \"deleteLinks\": true,\r\n      \"accountThresholdValue\": 1000,\r\n      \"correlateInactiveAccounts\": false,\r\n      \"inactivateAccountsNotInFile\": true,\r\n      \"deleteAccEntForActiveAccounts\": true\r\n    },\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://.apis.medallia.com/admin/v1/users\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"items\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"username~#~char\",\r\n          \"name\": \"username~#~char\",\r\n          \"displayName\": \"username~#~char\",\r\n          \"customproperty1\": \"first_name~#~char\",\r\n          \"customproperty2\": \"last_name~#~char\",\r\n          \"customproperty3\": \"phone~#~char\",\r\n          \"customproperty4\": \"automatic_update~#~char\",\r\n          \"customproperty5\": \"excluded_from_user_activity~#~char\",\r\n          \"customproperty6\": \"company_account_id~#~char\",\r\n          \"customproperty7\": \"login_blocked~#~char\",\r\n          \"customproperty8\": \"_system_properties.status~#~char\",\r\n          \"customproperty9\": \"_system_properties.created_on~#~char\",\r\n          \"customproperty10\": \"_system_properties.created_by~#~char\",\r\n          \"customproperty11\": \"_system_properties.modified_on~#~char\",\r\n          \"customproperty12\": \"_system_properties.modified_by~#~char\",\r\n          \"customproperty13\": \"_system_properties.login_blocked_reason~#~char\",\r\n          \"customproperty14\": \"_system_properties.last_login~#~char\",\r\n          \"customproperty15\": \"_system_properties.login_count~#~char\",\r\n          \"customproperty16\": \"_system_properties.failed_login_count~#~char\",\r\n          \"customproperty31\": \"STORE#ACC#ENT#MAPPINGINFO~#~char\"\r\n        }\r\n      }\r\n    },\r\n    \"acctEntMappings\": {\r\n      \"Role\": {\r\n        \"importAsEntitlement\": false,\r\n        \"listPath\": \"roles\",\r\n        \"idPath\": \"primary_role.role\",\r\n        \"keyField\": \"entitlementID\"\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Role\": {\r\n        \"entTypeOrder\": 0,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"connection\": \"acctAuth\",\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"https://.apis.medallia.com/admin/v1/roles \",\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"items\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"name~#~char\",\r\n              \"entitlement_value\": \"role_type~#~char\",\r\n              \"customproperty1\": \"data-views.data-view~#~char\",\r\n              \"customproperty2\": \"permissions.administrative.permission~#~char\",\r\n              \"customproperty3\": \"display_order~#~char\",\r\n              \"customproperty4\": \"_system_properties.permission.created_on~#~char\",\r\n              \"customproperty5\": \"_system_properties.modified_on~#~char\"\r\n            },\r\n            \"disableDeletedEntitlements\": true\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"processingType\": \"acctToEntMapping\"\r\n  }\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.username\",\r\n  \"responseColsToPropsMap\": {\r\n    \"firstname\": \"call1.message.first_name~#~char\",\r\n    \"lastname\": \"call1.message.last_name~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.apis.medallia.com/admin/v1/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"roles\\\":{\\\"primary_role\\\":{\\\"role\\\":\\\"admin\\\"},\\\"extra_roles\\\":[{\\\"role\\\":\\\"user\\\"}]},\\\"username\\\":\\\"${user.username}\\\",\\\"first_name\\\":\\\"${user.firstname}\\\",\\\"last_name\\\":\\\"${user.lastname}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.apis.medallia.com/admin/v1/users/${account.accountID}\",\r\n      \"httpMethod\": \"PUT\",\r\n      \"httpParams\": \"{\\\"roles\\\":{\\\"primary_role\\\":{\\\"role\\\":\\\"admin\\\"},\\\"extra_roles\\\":[{\\\"role\\\":\\\"user\\\"}]},\\\"username\\\":\\\"${user.username}\\\",\\\"first_name\\\":\\\"${user.firstname}\\\",\\\"last_name\\\":\\\"${user.lastname}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.apis.medallia.com/admin/v1/users/${account.accountID}/actions/activate\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": {},\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.apis.medallia.com/admin/v1/users/${account.accountID}/actions/inactive\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": {},\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

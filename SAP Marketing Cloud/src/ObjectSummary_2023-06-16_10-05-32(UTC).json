@@ -1,0 +1,16 @@
+{
+  "Objects": {
+    "connection": 
+    [
+      "SAP_Marketing_Cloud"
+    ]
+  },
+  "Information": {
+    "GUID": "9a9a4873-8d54-4f37-9980-5d6a6673a4e2",
+    "Exported By": "admin",
+    "Exported On": "2023-06-16 10:05:32",
+    "System": "scrum-exchange.saviyntcloud.com",
+    "TransferOwners": "0",
+    "TransferUsers": "0"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "SAP_Marketing_Cloud": {
+    "connectionname": "SAP_Marketing_Cloud",
+    "sslCertificateId": null,
+    "externalconnectiontype": "SOAP",
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectorType": null,
+    "templateMandatoryData": "9kJvWBX/uFe1xkmNaA/0Td+lTiZweNc+R+YMpDedHNURXnZoHQMXCnLZjE87v3uL",
+    "connectiondescription": "",
+    "templateName": "SAP_Marketing_Cloud",
+    "status": 0,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CONNECTIONJSON",
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJOwEKjS5B+n5673bGB0NohJKAu/FcF31pZk/Ugf8tj7IW9x0rwudh/ob32m/WLrnunwQ1itDK5o+DgRB4xYsRBXaEBMxbcHYY4NKV9ggagRsVYFaYrsV1fSvbvZovD9/UQrtkn4F91W0oNNsZw4m/qbwUdFRIFoNGowzM9713iPrL0iO/fun3+bj6FzwThOTtKxuegTbJlUqSlBFKJbN9Aw2eucT3diLXCb9cdMvZ18ogzUfGKJ13g3kMp5wP+EPmcqB/OHd6JqSXo1EWky9JSbINtRcz8GKWSha2iNUWjHHTmg7k+Vyyi7c3aH5+TCgXveMrgdyZBPv+OeWkRn4XFt"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SOAP_ENDPOINT",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "attributename": "SOAP_OR_XML",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "SOAP"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "PAGE_SIZE",
+        "credentialSaveStatus": false
+      },
+      {
+        "attributename": "HR_IMPORT_JSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"CONNECTION1\": \"login\",\r\n  \"REQUESTTYPE1\": \"ACCOUNTS\",\r\n  \"REQUESTXML1\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\">\\n<soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header>\\n<soap:Body>\\n<aba:BusinessUserSimpleByElementsQuery_sync>\\n<BusinessUser>\\n<PersonIDInterval>\\n<IntervalBoundaryTypeCode>3<\u002fIntervalBoundaryTypeCode>\\n<LowerBoundaryPersonID>1110000001<\u002fLowerBoundaryPersonID>\\n<UpperBoundaryPersonID>1110001000<\u002fUpperBoundaryPersonID>\\n<\u002fPersonIDInterval>\\n<BusinessPartnerRoleCodeInterval>\\n<IntervalBoundaryTypeCode>1<\u002fIntervalBoundaryTypeCode>\\n<LowerBoundaryBusinessPartnerRoleCode>bup003<\u002fLowerBoundaryBusinessPartnerRoleCode>\\n<\u002fBusinessPartnerRoleCodeInterval>\\n<\u002fBusinessUser>\\n<QueryProcessingConditions>\\n<QueryHitsMaximumNumberValue>500<\u002fQueryHitsMaximumNumberValue>\\n<QueryHitsUnlimitedIndicator>false<\u002fQueryHitsUnlimitedIndicator>\\n<\u002fQueryProcessingConditions>\\n<\u002faba:BusinessUserSimpleByElementsQuery_sync>\\n<\u002fsoap:Body>\\n<\u002fsoap:Envelope>\",\r\n  \"soapaction1\": \"http://sap.com/xi/ABA/QueryBusinessUserIn/QueryBusinessUserInRequest\",\r\n  \"RESPONSEDATAPATH1\": \"Body.BusinessUserSimplyByElementsResponse_sync.BusinessUser\",\r\n  \"ACCOUNTMAPPING1\": \"NAME:PersonExternalID,ACCOUNTID:PersonID,CUSTOMPROPERTY1:ValidityPeriod.StartDate,CUSTOMPROPERTY2:ValidityPeriod.EndDate,CUSTOMPROPERTY3:WorkplaceInformation.EmailAddress,description:User.UserID,CUSTOMPROPERTY4:User.LockedIndicator,CUSTOMPROPERTY5:MarkedForArchivingIndicator\",\r\n  \"ENTITLEMENTMAPPING1\": {\r\n    \"SAP_MC_ROLE\": \"User.Role.RoleName\"\r\n  },\r\n  \"TEMPMAPPING1\": [\r\n    \"status = 'Active' where customproperty4 = 'false'\",\r\n    \"status = 'Locked' where customproperty4 = 'true'\",\r\n    \"status = 'Archived' where CUSTOMPROPERTY5 = 'true'\"\r\n  ]\r\n}",
+        "attributename": "ACCOUNTS_IMPORT_JSON",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CUSTOM_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RESPONSEPATH_TOTALRESULTS"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RESPONSEPATH_PAGERESULTS"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "RESPONSEPATH_USERLIST",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DATEFORMAT"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "COMBINEDCREATEREQUEST"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "[\r\n  {\r\n    \"REQUESTXML\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\"><soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header>\\n<soap:Body><aba:BusinessUserBundleMaintainRequest_sync><BusinessUser actionCode=\\\"01\\\" businessPartnerRoleListCompleteTransmissionIndicator=\\\"false\\\" personalInformationListCompleteTransmissionIndicator=\\\"false\\\" userListCompleteTransmissionIndicator=\\\"false\\\" userAssignmentListCompleteTransmissionIndicator=\\\"false\\\" workplaceInformationListCompleteTransmissionIndicator=\\\"false\\\">\\n<PersonExternalID>AT${user.username}<\u002fPersonExternalID>\\n<BusinessPartnerRoleCode>BUP003<\u002fBusinessPartnerRoleCode>\\n<PersonalInformation actionCode=\\\"01\\\">\\n<FirstName>${user.firstname}<\u002fFirstName>\\n<LastName>${user.lastname}<\u002fLastName>\\n<PersonFullName>${user.displayname}<\u002fPersonFullName>\\n<MiddleName>${user.middlename}<\u002fMiddleName>\\n<\u002fPersonalInformation>\\n<User actionCode=\\\"01\\\" roleListCompleteTransmissionIndicator=\\\"false\\\">\\n<LogonLanguageCode>EN<\u002fLogonLanguageCode>\\n<\u002fUser>\\n<WorkplaceInformation actionCode = \\\"01\\\" phoneInformationListCompleteTransmissionIndicator=\\\"false\\\">\\n<EmailAddress>${user.email}<\u002fEmailAddress>\\n<FunctionalTitleName>${user.title}<\u002fFunctionalTitleName>\\n<Department>${user.departmentname}<\u002fDepartment>\\n<\u002fWorkplaceInformation>\\n<\u002fBusinessUser>\\n<\u002faba:BusinessUserBundleMaintainRequest_sync>\\n<\u002fsoap:Body>\\n<\u002fsoap:Envelope>\",\r\n    \"RESPONSEMAPPING\": {\r\n      \"task.provisioningcomments\": \"Body.UserCreateResponse.MsgDesc\",\r\n      \"RESPONSECODE\": \"Body.UserCreateResponse.MsgDesc\",\r\n      \"ACCOUNT.ACCOUNTID\": \"Body.BusinessUserBundleMaintainConfirmation_sync.BusinessUser.PersonId\",\r\n      \"ACCOUNT.NAME\": \"Body.BusinessUserBundleMaintainConfirmation_sync.BusinessUser.PersonExternalID\"\r\n    },\r\n    \"SOAPACTION\": \"http://sap.com/xi/ABA/ManageBusinessUserIn/ManageBusinessUserInRequest\"\r\n  }\r\n]",
+        "attributename": "CREATEACCOUNTJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UPDATEACCOUNTJSON",
+        "encryptedattributevalue": "[\r\n  {\r\n    \"REQUESTXML\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\"><soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header>\\n<soap:Body><aba:BusinessUserBundleMaintainRequest_sync><BusinessUser actionCode=\\\"02\\\" businessPartnerRoleListCompleteTransmissionIndicator=\\\"false\\\" personalInformationListCompleteTransmissionIndicator=\\\"false\\\" userListCompleteTransmissionIndicator=\\\"false\\\" userAssignmentListCompleteTransmissionIndicator=\\\"false\\\" workplaceInformationListCompleteTransmissionIndicator=\\\"false\\\">\\n<PersonExternalID>${accountName}<\u002fPersonExternalID>\\n<BusinessPartnerRoleCode>BUP003<\u002fBusinessPartnerRoleCode>\\n<PersonalInformation actionCode=\\\"02\\\">\\n<FirstName>${user.firstname}<\u002fFirstName>\\n<LastName>${user.lastname}<\u002fLastName>\\n<PersonFullName>${user.displayname}<\u002fPersonFullName>\\n<MiddleName>${user.middlename}<\u002fMiddleName>\\n<\u002fPersonalInformation>\\n<User actionCode=\\\"02\\\" roleListCompleteTransmissionIndicator=\\\"false\\\">\\n<LogonLanguageCode>EN<\u002fLogonLanguageCode>\\n<\u002fUser>\\n<WorkplaceInformation actionCode = \\\"02\\\" phoneInformationListCompleteTransmissionIndicator=\\\"false\\\">\\n<EmailAddress>${user.email}<\u002fEmailAddress>\\n<FunctionalTitleName>${user.title}<\u002fFunctionalTitleName>\\n<Department>${user.departmentname}<\u002fDepartment>\\n<\u002fWorkplaceInformation>\\n<\u002fBusinessUser>\\n<\u002faba:BusinessUserBundleMaintainRequest_sync>\\n<\u002fsoap:Body>\\n<\u002fsoap:Envelope>\",\r\n    \"RESPONSEMAPPING\": {\r\n      \"task.provisioningcomments\": \"Body.UserUpdateResponse.MsgDesc\",\r\n      \"RESPONSECODE\": \"Body.UserUpdateResponse.MsgDesc\"\r\n    },\r\n    \"SOAPACTION\": \"http://sap.com/xi/ABA/ManageBusinessUserIn/ManageBusinessUserInRequest\"\r\n  }\r\n]",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DELETEACCOUNTJSON",
+        "encryptedattributevalue": "[\r\n  {\r\n    \"REQUESTXML\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\"><soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header>\\n<soap:Body><aba:BusinessUserBundleMaintainRequest_sync><BusinessUser actionCode=\\\"03\\\" businessPartnerRoleListCompleteTransmissionIndicator=\\\"false\\\" personalInformationListCompleteTransmissionIndicator=\\\"false\\\" userListCompleteTransmissionIndicator=\\\"false\\\" userAssignmentListCompleteTransmissionIndicator=\\\"false\\\" workplaceInformationListCompleteTransmissionIndicator=\\\"false\\\">\\n<PersonExternalID>${accountName}<\u002fPersonExternalID>\\n<BusinessPartnerRoleCode>BUP003<\u002fBusinessPartnerRoleCode>\\n<\u002fBusinessUser>\\n<\u002faba:BusinessUserBundleMaintainRequest_sync>\\n<\u002fsoap:Body>\\n<\u002fsoap:Envelope>\",\r\n    \"RESPONSEMAPPING\": {\r\n      \"task.provisioningcomments\": \"Body.UserUpdateResponse.MsgDesc\",\r\n      \"RESPONSECODE\": \"Body.UserUpdateResponse.MsgDesc\"\r\n    },\r\n    \"SOAPACTION\": \"http://sap.com/xi/ABA/ManageBusinessUserIn/ManageBusinessUserInRequest\"\r\n  }\r\n]"
+      },
+      {
+        "encryptedattributevalue": "",
+        "attributename": "DISABLEACCOUNTJSON",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ENABLEACCOUNTJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "[\r\n  {\r\n    \"REQUESTXML\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\"><soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header>\\n<soap:Body><aba:BusinessUserBundleMaintainRequest_sync><BusinessUser actionCode=\\\"02\\\" businessPartnerRoleListCompleteTransmissionIndicator=\\\"false\\\" personalInformationListCompleteTransmissionIndicator=\\\"false\\\" userListCompleteTransmissionIndicator=\\\"false\\\" userAssignmentListCompleteTransmissionIndicator=\\\"false\\\" workplaceInformationListCompleteTransmissionIndicator=\\\"false\\\">\\n<PersonExternalID>${accountName}<\u002fPersonExternalID>\\n<BusinessPartnerRoleCode>BUP003<\u002fBusinessPartnerRoleCode>\\n<User actionCode=\\\"02\\\" roleListCompleteTransmissionIndicator=\\\"false\\\">\\n${newEntitlementMap.get('SAP_MC_ROLE').collect{'<Role actionCode=\\\"01\\\">\\n<RoleName>' + it + '<\u002fRoleName>\\n<\u002fRole>'}.join('')}\\n<\u002fUser>\\n<\u002fBusinessUser>\\n<\u002faba:BusinessUserBundleMaintainRequest_sync>\\n<\u002fsoap:Body>\\n<\u002fsoap:Envelope>\",\r\n    \"COOKIEOPTIONS\": \"SENDFROMSAVED\",\r\n    \"REQUESTPARAMS\": {\r\n      \"Content-Type\": \"text/xml; charset=utf-8\",\r\n      \"SOAPACTION\": \"http://sap.com/xi/ABA/ManageBusinessUserIn/ManageBusinessUserInRequest\"\r\n    },\r\n    \"RESPONSEMAPPING\": {\r\n      \"ADDUSERTOGROUPINSPACERESPONSE\": \"Body.addUserToGroupInSpaceResponse.nodeexists\"\r\n    }\r\n  }\r\n]",
+        "attributename": "GRANTACCESSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "[\r\n  {\r\n    \"REQUESTXML\": \"<soap:Envelope xmlns:soap=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" xmlns:aba=\\\"http://sap.com/xi/ABA\\\"><soap:Header><soap:AuthenticationInfo>\\n<soap:userName>${USERNAME}<\u002fsoap:userName>\\n<soap:password>${PASSWORD}<\u002fsoap:password>\\n<soap:authentication><\u002fsoap:authentication>\\n<\u002fsoap:AuthenticationInfo>\\n<\u002fsoap:Header>\\n<soap:Body><aba:BusinessUserBundleMaintainRequest_sync><BusinessUser actionCode=\\\"02\\\" businessPartnerRoleListCompleteTransmissionIndicator=\\\"false\\\" personalInformationListCompleteTransmissionIndicator=\\\"false\\\" userListCompleteTransmissionIndicator=\\\"false\\\" userAssignmentListCompleteTransmissionIndicator=\\\"false\\\" workplaceInformationListCompleteTransmissionIndicator=\\\"false\\\">\\n<PersonExternalID>${accountName}<\u002fPersonExternalID>\\n<BusinessPartnerRoleCode>BUP003<\u002fBusinessPartnerRoleCode>\\n<User actionCode=\\\"02\\\" roleListCompleteTransmissionIndicator=\\\"false\\\">\\n${newEntitlementMap.get('SAP_MC_ROLE').collect{'<Role actionCode=\\\"03\\\">\\n<RoleName>' + it + '<\u002fRoleName>\\n<\u002fRole>'}.join('')}\\n<\u002fUser>\\n<\u002fBusinessUser>\\n<\u002faba:BusinessUserBundleMaintainRequest_sync>\\n<\u002fsoap:Body>\\n<\u002fsoap:Envelope>\",\r\n    \"COOKIEOPTIONS\": \"SENDFROMSAVED\",\r\n    \"REQUESTPARAMS\": {\r\n      \"Content-Type\": \"text/xml; charset=utf-8\",\r\n      \"SOAPACTION\": \"http://sap.com/xi/ABA/ManageBusinessUserIn/ManageBusinessUserInRequest\"\r\n    },\r\n    \"RESPONSEMAPPING\": {\r\n      \"ADDUSERTOGROUPINSPACERESPONSE\": \"Body.addUserToGroupInSpaceResponse.nodeexists\"\r\n    }\r\n  }\r\n]",
+        "attributename": "REVOKEACCESSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CHANGEPASSJSON",
+        "encryptedattributevalue": null
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UPDATEUSERJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "TICKETSTATUSJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      }
+    ]
+  }
+}

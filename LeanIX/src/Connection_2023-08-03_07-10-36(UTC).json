@@ -1,0 +1,166 @@
+{
+  "LeanIX": {
+    "sslCertificateId": null,
+    "externalconnectiontype": "REST",
+    "connectiondescription": "LeanIX",
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "templateName": "LeanIX",
+    "sslCertificate": null,
+    "connectionname": "LeanIX",
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "templateMandatoryData": "48+cSEAaC4jWYvBlR7f+qN+sE+rhAg7DBo0XONxQCgCJddmN1+yT6c5a+So1/og88nFSgGcoU/SRvX/oNBar3jDpJs9wC1u1oWN0VE3E1J5l4taDAYTIRHzPsycptka/",
+    "connectorType": null,
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw++hOUErRhAXblBcQBaQqGWAHn+YpyX4awCK84DVIyS3o9Owl81gGlbq/GtTUfiHZdx8rseABd/QzlK3/ACRH8MK7HH36jM/aT9/Esv70GdJY/HC4STFxSSCnb9O24aAAmSZYKwp+eqM0Du/2ntppeQJdEyyIXSsyQ+AoFfGfX4lcu7xr485+RsfxcyTRJdK9O/ohedMRwmo3MbHJm2IhYO10VdpAvFexaD6b/Q39TAeKYvPgBe2F5s3VjESzxhhQF9Kujh+uDTDr0t82byjc07D9gsiW20IJQfozXHSjjAwDVBXOA6+pxwKPBuvwR2QjrghGxNtZPnxBbkSyPPld+0Kk++RQI4XRd26Sajs46eBRyMLMrqHxD6badPTxYlRULn13MtTWuVVynvUiKFFfEfo+sKIiYQwCmgjQfOIGc/asF/IA1kEk2fIuziZaH81du7PWI+2feZ4ciS5DCPXzFwpM9RJr/sFicugCURXqG5gcqXNmMZAx6yHp8FCFSK41URQSE832f/irEAf4yk52DuOabJCGWlqQ9plGj+y+IB3vS+0higmgXZAs611hvUVLCI7nCDr0FdlliyyFBNsLMTcV17k4i1WAkxNIKfvSiJN4KyM5zccFeKzUHB0yW3TJR2FhzXDhYNSGRo8A18mQX8U5i29vYDbo6OGdMzYzfJAU0ZCfwm4yOS38a9mw/0y5I39nKojKvLj5Nc8G44Z1432B9r56U2iNzfOTmhupDYf/cGEg1Nx4FZVytR4c6Mk4gfjbQS6t1GSDyccf0pomPJ",
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://.leanix.net/services/mtm/v1/workspaces//users\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"data\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"name\": \"userName~#~char\",\r\n          \"displayname\": \"displayName~#~char\",\r\n          \"customproperty1\": \"email~#~char\",\r\n          \"customproperty2\": \"firstName~#~char\",\r\n          \"customproperty3\": \"lastName~#~char\",\r\n          \"lastlogondate\": \"lastLogin~#~epochdate\",\r\n          \"customproperty5\": \"currentLogin~#~char\",\r\n          \"customproperty6\": \"role~#~char\",\r\n          \"status\": \"status~#~char\",\r\n          \"customproperty7\": \"status~#~char\",\r\n          \"customproperty8\": \"technicalUser~#~char\",\r\n          \"customproperty9\": \"scimManaged ~#~char\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Permission\": {\r\n        \"entTypeOrder\": 0,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"connection\": \"acctAuth\",\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\"\r\n              },\r\n              \"url\": \"https:// .leanix.net/services/mtm/v1/workspaces//permissions?size=10\",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"data\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"role~#~char\",\r\n              \"entitlement_value\": \"role~#~char\",\r\n              \"displayName\": \"role~#~char\",\r\n              \"customproperty1\": \"workspace.name~#~char\",\r\n              \"customproperty2\": \"id~#~char\",\r\n              \"customproperty3\": \"role~#~char\",\r\n              \"customproperty4\": \"status~#~char\",\r\n              \"customproperty5\": \"workspace.id~#~char\"\r\n            }\r\n          }\r\n        },\r\n        \"entMappings\": {\r\n          \"Permission\": {\r\n            \"listPath\": \"parent\",\r\n            \"idPath\": \"value\",\r\n            \"idColumn\": \"entitlementID\",\r\n            \"mappingTypes\": [\r\n              \"ENTMAP\"\r\n            ]\r\n          }\r\n        },\r\n        \"pagination\": {\r\n          \"nextUrl\": {\r\n            \"nextUrlPath\": \"${headers?.Link?.split(',')?.size()==4?headers?.Link?.split(',')[2]?.replace('<', '')?.replace('>;rel=\\\"next\\\"','')?.trim():headers?.Link?.split(',')?.size()==3&&headers?.Link?.split(',')[1]?.contains('next')?headers?.Link?.split(',')[1]?.replace('<', '')?.replace('>;rel=\\\"next\\\"','')?.trim():null}\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"entTypes\": {\r\n      \"Permission\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"processingType\": \"http\",\r\n            \"connection\": \"acctAuth\",\r\n            \"http\": {\r\n              \"url\": \"https:// .leanix.net/services/mtm/v1/workspaces//permissions \",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\",\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\"\r\n              }\r\n            },\r\n            \"listField\": \"data\",\r\n            \"acctKeyField\": \"accountID\",\r\n            \"entKeyField\": \"entitlementID\",\r\n            \"acctIdPath\": \"user.id\",\r\n            \"entIdPath\": \"role\",\r\n            \"pagination\": {\r\n              \"nextUrl\": {\r\n                \"nextUrlPath\": \"${headers?.Link?.split(',')?.size()==4?headers?.Link?.split(',')[2]?.replace('<', '')?.replace('>;rel=\\\"next\\\"','')?.trim():headers?.Link?.split(',')?.size()==3&&headers?.Link?.split(',')[1]?.contains('next')?headers?.Link?.split(',')[1]?.replace('<', '')?.replace('>;rel=\\\"next\\\"','')?.trim():null}\"\r\n              }\r\n            }\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON",
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.data.id\",\r\n  \"dateFormat\": \"yyyy-MM-dd'T'HH:mm:ssXXX\",\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"showResponse\": true,\r\n      \"url\": \"https://.leanix.net/services/mtm/v1/users\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"userName\\\": \\\"${user.customproperty1}\\\",\\\"firstName\\\": \\\"${user.firstname}\\\",\\\"lastname\\\": \\\"${user.lastname}\\\",\\\"role\\\": \\\"ACCOUNTUSER\\\",\\\"status\\\": \\\"ACTIVE\\\",\\\"account\\\": {\\\"id\\\": \\\"\\\",\\\"name\\\": \\\"${user.username}\\\",\\\"fromAddress\\\": \\\"support@leanix.net\\\"},\\\"permissions\\\": [{\\\"workspaceId\\\": \\\"\\\"},{\\\"role\\\": \\\"ADMIN\\\"}]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    },\r\n    {\r\n      \"name\": \"call2\",\r\n      \"connection\": \"acctAuth\",\r\n      \"showResponse\": true,\r\n      \"url\": \"https://.leanix.net/services/mtm/v1/permissions\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"role\\\": \\\"VIEWER\\\",\\\"user\\\": {\\\"id\\\": \\\"${response.call1.message.data.id}\\\"},\\\"workspace\\\": {\\\"id\\\": \\\"\\\"}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.leanix.net/services/mtm/v1/users/${account.accountID}\",\r\n      \"httpMethod\": \"PUT\",\r\n      \"httpParams\": \"{\\\"userName\\\": \\\"${user.customproperty1}\\\", \\\"role\\\": \\\"${account.customproperty6}\\\",\\\"status\\\": \\\"ACTIVE\\\",\\\"account\\\": {\\\"id\\\": \\\"\\\"}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"SuccessResponses\": {\r\n        \"statusCode\": [\r\n          204,\r\n          200,\r\n          201,\r\n          202,\r\n          203\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Permission\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.leanix.net/services/mtm/v1/permissions\",\r\n      \"httpMethod\": \"POST\",\r\n      \"showResponse\": true,\r\n      \"httpParams\": \"{\\\"role\\\": \\\"${entitlementValue.entitlementID}\\\",\\\"user\\\": {\\\"id\\\": \\\"${account.accountID}\\\"},\\\"workspace\\\": {\\\"id\\\": \\\"${entitlementValue.customproperty5}\\\"}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Permission\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.leanix.net/services/mtm/v1/permissions\",\r\n      \"httpMethod\": \"POST\",\r\n\t  \"showResponse\": true,\r\n      \"httpParams\": \"{\\\"role\\\": \\\"VIEWER\\\" }\\\",\\\"user\\\": {\\\"id\\\": \\\"${account.accountID}\\\"},\\\"workspace\\\": {\\\"id\\\": \\\"${entitlementValue.customproperty5}\\\"}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://.leanix.net/services/mtm/v1/users/${account.accountID}\",\r\n      \"httpMethod\": \"PUT\",\r\n      \"httpParams\": \"{\\\"userName\\\": \\\"${user.customproperty1}\\\", \\\"role\\\": \\\"${account.customproperty6}\\\",\\\"status\\\": \\\"ARCHIVED\\\",\\\"account\\\": {\\\"id\\\": \\\"\\\"}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"SuccessResponses\": {\r\n        \"statusCode\": [\r\n          204,\r\n          200,\r\n          201,\r\n          202,\r\n          203\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

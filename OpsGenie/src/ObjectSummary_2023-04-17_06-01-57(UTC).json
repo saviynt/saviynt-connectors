@@ -1,0 +1,16 @@
+{
+  "Objects": {
+    "connection": 
+    [
+      "opsgenie_temp"
+    ]
+  },
+  "Information": {
+    "GUID": "19cb9877-b1eb-4dad-979f-904d4ac41e66",
+    "Exported By": "admin",
+    "Exported On": "2023-04-17 06:01:57",
+    "System": "dev-tech-integrations-2022.saviyntcloud.com",
+    "TransferOwners": "0",
+    "TransferUsers": "0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Objects": {
+    "connection": 
+    [
+      "Qualtrics_TEST"
+    ]
+  },
+  "Information": {
+    "GUID": "b06a1565-adb0-41c4-8022-87718dd64048",
+    "Exported By": "admin",
+    "Exported On": "2023-05-05 06:41:27",
+    "System": "dev-tech-integrations-2022.saviyntcloud.com",
+    "TransferOwners": "0",
+    "TransferUsers": "0"
+  }
+}

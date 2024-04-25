@@ -1,0 +1,166 @@
+{
+  "Zoho_Desk": {
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "connectionname": "Zoho_Desk",
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "templateMandatoryData": "/qXFAG/Le4aBHE5JlJu9c76fGOn5wwtyDvDqrQprR9h2Mo4O+1KqbMH9sIbyWYHskkhcO0tcER0Xf4bYp32O+1j+mdZeGLHhzQREcUbXBJ32Ie6mVDSWJ4z+p2aUFn1CPZ8MahQ5GAR9YoMaZyVTl7HZJg2CrKlMUZ6lerFhAsZQNgxwWMOY0HMddXKcJVCdxUuti5y9Qr3GJEOfZ28fvOJEiv8qgJ/fcrVdsnYYHbo=",
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "templateName": "Zoho_Desk",
+    "externalconnectiontype": "REST",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw/QzYhBiRtgJ1aSWzo6q1BWLvLZnJqneihOPDQPvMiAqmFec8//efcmEzfyjwyEkEeyDeqWVdeH3rk+HS3gTxLckxcqeVCy3XVnytBAnCsZZ/kOUWDUOOuMs2y04J01le5R96Thl6hAWLCHRDCBiysOVZC48udMABAmUc7mgpxFu5LyP07nq2OaIKuKhqwV6wbALcHIiGSQKWAB3UO1Y7EuSI31CFmBosdYXpgOvSQCwxpEvCN3vpxIbVrFSYIn02oETaDzOd0IPGV0XBxHSpaFKkVolPBOwxewYkvAv8rxQO3Q3svRW6nlTRl6i4E2KP7rlWJi4MLHArwY+7mAV5nXjFJP6r/BAH6jGcB5og6Ru89n5JI9tptfwDpsbURlgLewMD+ubVB0kOxfa/o2djZDcW9sb4Rb5dv60L8efofm3sI4cdDXWIzLyp9ADeDI+GpYuvvbGakDEIKKiOkOt1mldxa0LebILoqddq7cFhdg4RwlyUjLSgtoCEoomrrrnZMMAe+U0vqIpzecbWmkuqiz1eP4buc7T937clopFOiZahP6BaC+Q3wC9SEwOY4h1xGy8CsvzjbNjbN+S5lIq5nBlxMPFG/hDYkvBMg+9eOlCD+fu1Xz6AJuYvvaTmqfXevdav0A/V/i2IhsF0BFUDPBZy9cZHsso9Ds/6YbOeizKO8pqCv+pbifIv2SGMp0gONrqngCZVK03g6avLtPfYeTfmRiDS/MTPXqFxvbyHHikfzw6/BkDfEs1FbzGqbXnnMkeHfLu9n98mGZAI/pDttpITO+YstUYeGXRGCstP13fdrRjzT+yureyNMlmYm8TlH9z/JJt/HLQUAYlkAg3yGB4zuiKvG9H//Kr0veZpa2IrqNK9cXQe1aX074d7HFwCABZXvg57l2Rfv4xhUjp+CsSc4uH3pklWyicAwAi3PgOw+yGhwo8Ka3KPCaYNInCvXk3rS9UmAoMIrmDpIQamTn4xoHOkx6lP/vHNyhJDzehA==",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"@HOSTURL@/api/v1/tickets/${ticketID}\",\r\n      \"httpMethod\": \"GET\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"ticketStatusPath\": \"statusType\",\r\n      \"ticketStatusValue\": [\r\n        \"CLOSED\"\r\n      ],\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n       \"connection\": \"acctAuth\",\r\n      \"url\": \"@HOSTURL@/api/v1/tickets\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"entitySkills\\\":[],\\\"subCategory\\\":\\\"${user.customproperty13}\\\",\\\"cf\\\":{},\\\"productId\\\":\\\"${user.customproperty1}\\\",\\\"contactId\\\":\\\"${user.customproperty2}\\\",\\\"subject\\\":\\\"${user.customproperty3}\\\",\\\"dueDate\\\":\\\"${user.customproperty4}\\\",\\\"departmentId\\\":\\\"${user.customproperty5}\\\",\\\"channel\\\":\\\"${user.customproperty6}\\\",\\\"description\\\":\\\"${user.customproperty7}\\\",\\\"language\\\":\\\"${user.customproperty8}\\\",\\\"priority\\\":\\\"${user.customproperty9}\\\",\\\"assigneeId\\\":\\\"${user.customproperty10}\\\",\\\"phone\\\":\\\"${user.phoneNumber}\\\",\\\"category\\\":\\\"${user.customproperty11}\\\",\\\"email\\\":\\\"${user.email}\\\",\\\"status\\\":\\\"${user.customproperty12}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"ticketidPath\": \"id\",\r\n       \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

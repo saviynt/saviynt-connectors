@@ -1,0 +1,16 @@
+{
+  "Objects": {
+    "connection": 
+    [
+      "Confluent"
+    ]
+  },
+  "Information": {
+    "GUID": "92325e99-4b98-4a48-b2e4-f76831395293",
+    "Exported By": "admin",
+    "Exported On": "2023-03-24 11:31:55",
+    "System": "dev-tech-integrations-2022.saviyntcloud.com",
+    "TransferOwners": "0",
+    "TransferUsers": "0"
+  }
+}

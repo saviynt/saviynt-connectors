@@ -1,0 +1,166 @@
+{
+  "Signal_Sciences": {
+    "connectionname": "Signal_Sciences",
+    "sslCertificateId": null,
+    "msconnectorversion": null,
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "templateMandatoryData": "h2R6jYBzyoHd1QAXG7+z4LSf2W5Yr94nzyDLpILqTZF/C7E1cfrmDl1doWiFZ5+K",
+    "credentialChangeConfig": null,
+    "externalconnectiontype": "REST",
+    "templateName": "Signal_Sciences",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw8R3gKwlb5P5Pls/NpXrJCJ3fWcwm7suTm3GoNQ+WWugs9WQBhG3HfINvzDWkpgt+8M8MOKmVIOOuMk008L5Dj40aTfaf1cSId2f9lUiHNQXgvn3fxB0V21DO6MSRFLqJv+/CHrPcVoc5ERicpdewWG2aKX5tvma8zw7mkbUxffFFe3/PXLPYP9nqogeYoqkW/tNeb+w9CrGunqSLV6wNApBvkOeaFXuNc8PtSu6X6kdeg6jEpNXP+ZEX5aOwGHQRmPhcHaaGr3py9jQlwIQ8U9QoOK8F6/OxXdGCgKeAWaWpRyCF485RvvKZyb56/rRGqmLz4AXthebN1YxEs8YYUBn5vh5d2jQf+dmIy1NOvTky6CAjzvXMVVeOLGyEHmqAI48WpDMpQ6i1XpZzBmLwdpV9HLIxjlpyOIHJjYdRR9IWySxVVH3ia+fwe+LKCcdiKg64ti4Uyt/7B5ksDlJUCYWXNxM81XFdMX8BqZHSf5iTrOebj5dtWoXSE1X/O0r4zOVwRqGdgRAHbIVKr9lwHBteH+zdekX02CFiQU/GsC1aTLbvuh3DmYGo3kBNeUjOXgc5G8DfWv/joPskPGqNvGvVxkQ6ro9NxM8v+qQw/l/A==",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"statusAndThresholdConfig\": {\r\n      \"statusColumn\": \"customproperty5\",\r\n      \"status\": [\r\n        \"active\"\r\n      ],\r\n      \"deleteLinks\": true,\r\n      \"accountThresholdValue\": 1000,\r\n      \"correlateInactiveAccounts\": false,\r\n      \"inactivateAccountsNotInFile\": true,\r\n      \"deleteAccEntForActiveAccounts\": true\r\n    },\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/users\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"data\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"email~#~char\",\r\n          \"name\": \"name~#~char\",\r\n          \"displayName\": \"email~#~char\",\r\n          \"customproperty1\": \"announcements~#~char\",\r\n          \"customproperty2\": \"defaultDashboards~#~char\",\r\n          \"customproperty3\": \"memberships~#~char\",\r\n          \"customproperty4\": \"role~#~char\",\r\n          \"customproperty5\": \"status~#~char\",\r\n          \"customproperty6\": \"mfaEnabled~#~char\",\r\n          \"customproperty7\": \"authStatus~#~char\",\r\n          \"customproperty8\": \"created~#~char\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Site\": {\r\n        \"entTypeOrder\": 0,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"connection\": \"acctAuth\",\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/sites\",\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"data\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"name~#~char\",\r\n              \"entitlement_value\": \"displayName~#~char\",\r\n              \"customproperty1\": \"agentLevel~#~char\",\r\n              \"customproperty2\": \"blockHTTPCode~#~char\",\r\n              \"customproperty3\": \"blockDurationSeconds~#~char\",\r\n              \"customproperty4\": \"created~#~char\",\r\n              \"customproperty5\": \"whitelist.uri~#~char\",\r\n              \"customproperty6\": \"blacklist.uri~#~char\",\r\n              \"customproperty7\": \"events.uri~#~char\",\r\n              \"customproperty8\": \"requests.uri~#~char\",\r\n                            \"customproperty9\": \"redactions.uri~#~char\",\r\n              \"customproperty10\": \"suspiciousIPs.uri~#~char\",\r\n              \"customproperty11\": \"monitors.uri~#~char\",\r\n              \"customproperty12\": \"integrations.uri~#~char\",\r\n\r\n                                   \"customproperty13\": \"headerLinks.uri~#~char\",\r\n              \"customproperty14\": \"agents.uri~#~char\",\r\n              \"customproperty15\": \"alerts.uri~#~char\",\r\n              \"customproperty16\": \"members.uri~#~char\"\r\n            },\r\n            \"disableDeletedEntitlements\": true\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"entTypes\": {\r\n      \"Site\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"processingType\": \"httpEntToAcct\",\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\"\r\n              },\r\n              \"url\": \"https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/sites/${id}/members\",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"data\",\r\n            \"entKeyField\": \"entitlementID\",\r\n            \"acctIdPath\": \"user.email\",\r\n            \"acctKeyField\": \"accountID\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.email\",\r\n  \"responseColsToPropsMap\": {\r\n    \"name\": \"call1.message.name~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/users/${user.email}/invite\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"role\\\":\\\"${user.customproperty4}\\\",\\\"memberships\\\":{\\\"data\\\":[{\\\"site\\\":{\\\"name\\\":\\\"staging\\\"}}]}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/users/${account.accountID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"{\\\"role\\\":\\\"${user.customproperty4}\\\",\\\"memberships\\\":{\\\"data\\\":[{\\\"site\\\":{\\\"name\\\":\\\"staging\\\"}}]}}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Site\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \" https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/sites/${entitlementValue.entitlementID}/members\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"members\\\":[\\\"${account.accountID}\\\"]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Site\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/sites/${entitlementValue.entitlementID}/members/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://dashboard.signalsciences.net/api/v0/corps/@CORPNAME@/users/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

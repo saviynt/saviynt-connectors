@@ -1,0 +1,166 @@
+{
+  "Digicert_Test": {
+    "sslCertificateId": null,
+    "externalconnectiontype": "REST",
+    "msconnectorversion": null,
+    "templateMandatoryData": "DwitEostW3Z60d/A6Ua4sw==",
+    "connectorms": false,
+    "templateName": "Digicert",
+    "statusForEnableDisable": 1,
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectionname": "Digicert_Test",
+    "connectorType": null,
+    "connectiondescription": "",
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "formdata": null,
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw+hJuch/LzFyX5r9av5tB0nkJe75QYJCdM+WcDl1B7fl6HMB2HQDD3PVp3suO8mzJewMD+ubVB0kOxfa/o2djZDltHC5id/mSQ1rvo8gPOa/qcIsfTQDRmtsvvrIIArjrNfLVcmKuM+b8AUaMKfdozsKMRbLKw+kpd9NY2s4t/4e6FmmTtpgNPkyr7E2B7VaejaXHOoQ3TvKevKlihA3Q/2ZIF82Qc6LGOx69uZCfCqZRC0tUaJNDD24GZxlNyeSxwvxWADTkcifCaAnKN4LztX/PNFaN4YCwnGgyJUQyKI//5ZOFxTOUWuuiTQ/4XmnAM9oRbOni2niWO7fya39kS+xw6lABG7skYUVYerSTiag08snf5pEsdfdpwIf7Mm98yGHbexgOPkfn7ZRcWmV2x9XkOkZAWgtzXa2eK26g2S2je5lbhbAItZSgOH0dbsFTy/81G8Umi4oOf6CeUzbsyTAzoN1l046O/H2ubLiiyPGlItr9kLqfDuKiTVaQGYFWIEmnU7GJpc38cwfrSinvl9Hud8dlXxDQRzXGmKQbX6FaXqt+0C8WEeqEiLZr0XF2UDqWIwvLfKMFdSkmA94i0EoqSpZBnpqw4bHTNzNSIh0AiR9o3FJS9We9yis7FI5BnZHBzOsOx9UaPPWPYA9eZypM9RJr/sFicugCURXqG5gScBk0Vh1AWuboa8766gNF23A4bcqZlC9GE7lrm+p1+k",
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"statusAndThresholdConfig\": {\r\n      \"statusColumn\": \"customproperty4\",\r\n      \"status\": [\r\n        \"active\"\r\n      ],\r\n      \"deleteLinks\": true,\r\n      \"accountThresholdValue\": 1000,\r\n      \"correlateInactiveAccounts\": false,\r\n      \"inactivateAccountsNotInFile\": true,\r\n      \"deleteAccEntForActiveAccounts\": true\r\n    },\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://www.digicert.com/services/v2/user\",\r\n          \"httpHeaders\": {\r\n            \"X-DC-DEVKEY\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"users\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"id~#~char\",\r\n          \"name\": \"username~#~char\",\r\n          \"displayName\": \"email~#~char\",\r\n          \"customproperty1\": \"account_id~#~char\",\r\n          \"customproperty2\": \"first_name~#~char\",\r\n          \"customproperty3\": \"last_name~#~char\",\r\n          \"customproperty4\": \"status~#~char\",\r\n          \"customproperty5\": \"container.id~#~char\",\r\n          \"customproperty6\": \"container.public_id~#~char\",\r\n          \"customproperty7\": \"container.name~#~char\",\r\n          \"customproperty8\": \"container.parent_id~#~char\",\r\n          \"customproperty9\": \"container.template_id~#~char\",\r\n          \"customproperty10\": \"container.ekey~#~char\",\r\n          \"customproperty11\": \"container.is_active~#~char\",\r\n          \"customproperty12\": \"access_roles.id~#~char\",\r\n          \"customproperty13\": \"access_roles.name~#~char\",\r\n          \"customproperty14\": \"type~#~char\",\r\n          \"customproperty15\": \"has_container_assignments~#~char\",\r\n          \"customproperty31\": \"STORE#ACC#ENT#MAPPINGINFO~#~char\"\r\n        },\r\n        \"pagination\": {\r\n          \"offset\": {\r\n            \"offsetParam\": \"offset\",\r\n            \"batchParam\": \"limit\",\r\n            \"batchSize\": 1000,\r\n            \"totalCountPath\": \"completeResponseMap.total\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {}\r\n}",
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message.id\",\r\n  \"responseColsToPropsMap\": {\r\n    \"name\": \"call1.message.username~#~char\",\r\n    \"firstname\": \"call1.message.first_name~#~char\",\r\n    \"lastname\": \"call1.message.last_name~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://www.digicert.com/services/v2/user\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"username\\\":\\\"${user.username}\\\",\\\"first_name\\\":\\\"${user.firstname}\\\",\\\"last_name\\\":\\\"${user.lastname}\\\",\\\"email\\\":\\\"${user.email}\\\",\\\"status\\\":\\\"active\\\",\\\"access_roles\\\":[{\\\"id\\\":1,\\\"name\\\":\\\"Administrator\\\"}],\\\"type\\\":\\\"standard\\\",\\\"has_container_assignments\\\":false}\",\r\n      \"httpHeaders\": {\r\n        \"X-DC-DEVKEY\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://www.digicert.com/services/v2/user/${account.accountID}\",\r\n      \"httpMethod\": \"PUT\",\r\n      \"httpParams\": \"{\\\"username\\\":\\\"${user.username}\\\",\\\"first_name\\\":\\\"${user.firstname}\\\",\\\"last_name\\\":\\\"${user.lastname}\\\",\\\"email\\\":\\\"${user.email}\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"X-DC-DEVKEY\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://www.digicert.com/services/v2/user\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"id\\\":\\\"${account.accountID}\\\",\\\"status\\\":\\\"active\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"X-DC-DEVKEY\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON",
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://www.digicert.com/services/v2/user\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"id\\\":\\\"${account.accountID}\\\",\\\"status\\\":\\\"Inactive\\\"}\",\r\n      \"httpHeaders\": {\r\n        \"X-DC-DEVKEY\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://www.digicert.com/services/v2/user/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"X-DC-DEVKEY\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}

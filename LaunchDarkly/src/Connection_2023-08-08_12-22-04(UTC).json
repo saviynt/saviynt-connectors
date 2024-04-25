@@ -1,0 +1,166 @@
+{
+  "LaunchDarkly_Test": {
+    "connectiondescription": "LaunchDarkly",
+    "sslCertificateId": null,
+    "externalconnectiontype": "REST",
+    "msconnectorversion": null,
+    "templateMandatoryData": "DwitEostW3Z60d/A6Ua4sw==",
+    "connectorms": false,
+    "statusForEnableDisable": 1,
+    "templateName": "LaunchDarkly",
+    "vaultCredentialConnection": null,
+    "sslCertificate": null,
+    "vaultConfig": null,
+    "credentialChangeConfig": null,
+    "connectionname": "LaunchDarkly_Test",
+    "connectorType": null,
+    "status": 1,
+    "EXTERNAL_ATTR": 
+    [
+      {
+        "encryptedattributevalue": "F094T0v6WHOpHcSzOqzN/G0EOXMVamwB8u2E9ttQNJNH/uqcgtvsw9t4/JqDJeCqQsdihkRCJpZn9bLHAwEt1khfhJ57qiyRImlt7xYaAw8R3gKwlb5P5Pls/NpXrJCJBYb5Obuonj6J2vZS1uSzHZ4fpEiSZzQJWzo1gQ6bT4DhYcc+n99nhznC4HgDdMZ8GNaaMCecNe1z1M/s85a6ptqbzWXRnxZPvntVP+dkR4gCx611y6MUghlXoHoYcWZHZgi7g3lMFnPndjxY2IYYAVdNvg9GW27NhX5tdD5FJppibwlFJRBdYha/87d7G1r20vuyAlHQM8TDVGmpIUosPLJMhviz7We1BFKoFQkzCHQs697aiED94iz+atJzc+Rf/WJLxg22da950KyoIQk/0zJPchaz2/ptGhoLDOGeMz1/vduTn9BKExuuX7s8wP1B5xE2NSS5vOTmypVjrHtvlYp1l1kI0WzDUySwDq4InCRZxArHRrz/hq+o6Aom3NkbGL9tKVeM0ju7mUxPcmwDwqHUj5tpGjq8sKcezCYeSdu4f7T2RGxTh9ssfMP4nZIzJhKIPiFhPE4uxbDgH5sqBQOEWi1uYk8hSfs1xNuhHXh5ziOeBTFWtsyheCEUJsqEAuWAUiDCRO63eqJTbnOQwAE0Yt6GXh/NtEpY2r9BJ3uE55oqihbWrf4V1tkuJ4Hh",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConnectionJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ImportUserJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "encryptedattributevalue": "{\r\n  \"accountParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"call\": {\r\n      \"call1\": {\r\n        \"callOrder\": 0,\r\n        \"stageNumber\": 0,\r\n        \"http\": {\r\n          \"url\": \"https://app.launchdarkly.com/api/v2/members?limit=5\",\r\n          \"httpHeaders\": {\r\n            \"Authorization\": \"${access_token}\",\r\n            \"Accept\": \"application/json\"\r\n          },\r\n          \"httpContentType\": \"application/json\",\r\n          \"httpMethod\": \"GET\"\r\n        },\r\n        \"listField\": \"items\",\r\n        \"keyField\": \"accountID\",\r\n        \"colsToPropsMap\": {\r\n          \"accountID\": \"_id~#~char\",\r\n          \"name\": \"email~#~char\",\r\n          \"displayName\": \"email~#~char\",\r\n          \"customproperty1\": \"firstName~#~char\",\r\n          \"customproperty2\": \"lastName~#~char\",\r\n          \"customproperty3\": \"role~#~char\",\r\n          \"customproperty4\": \"_pendingInvite~#~char\",\r\n          \"customproperty5\": \"_verified~#~char\",\r\n          \"customproperty6\": \"isBeta~#~char\",\r\n          \"customproperty7\": \"customRoles~#~char\",\r\n          \"customproperty8\": \"mfa~#~char\"\r\n        },\r\n        \"pagination\": {\r\n          \"offset\": {\r\n            \"offsetParam\": \"offset\",\r\n            \"batchParam\": \"limit\",\r\n            \"batchSize\": 5,\r\n            \"totalCountPath\": \"20\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"entitlementParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"processingType\": \"SequentialAndIterative\",\r\n    \"entTypes\": {\r\n      \"Team\": {\r\n        \"entTypeOrder\": 0,\r\n        \"entTypeLabels\": {},\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"connection\": \"acctAuth\",\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"http\": {\r\n              \"url\": \"  https://app.launchdarkly.com/api/v2/teams\",\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\",\r\n                \"Accept\": \"application/json\"\r\n              },\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"items\",\r\n            \"keyField\": \"entitlementID\",\r\n            \"colsToPropsMap\": {\r\n              \"entitlementID\": \"key~#~char\",\r\n              \"entitlement_value\": \"name~#~char\",\r\n              \"customproperty1\": \"_creationDate~#~char\",\r\n              \"customproperty2\": \"_lastModified~#~char\",\r\n              \"customproperty3\": \"roles.items.key~#~char\",\r\n              \"customproperty4\": \"roles.items.name~#~char\",\r\n              \"customproperty5\": \"projects.items.key~#~char\"\r\n            },\r\n            \"disableDeletedEntitlements\": true\r\n          }\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"acctEntParams\": {\r\n    \"connection\": \"acctAuth\",\r\n    \"entTypes\": {\r\n      \"Team\": {\r\n        \"call\": {\r\n          \"call1\": {\r\n            \"callOrder\": 0,\r\n            \"stageNumber\": 0,\r\n            \"processingType\": \"httpEntToAcct\",\r\n            \"http\": {\r\n              \"httpHeaders\": {\r\n                \"Authorization\": \"${access_token}\"\r\n              },\r\n              \"url\": \"https://app.launchdarkly.com/api/v2/teams/${id}/maintainers\",\r\n              \"httpContentType\": \"application/json\",\r\n              \"httpMethod\": \"GET\"\r\n            },\r\n            \"listField\": \"items\",\r\n            \"entKeyField\": \"entitlementID\",\r\n            \"acctIdPath\": \"_id\",\r\n            \"acctKeyField\": \"accountID\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+        "attributename": "ImportAccountEntJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "STATUS_THRESHOLD_CONFIG"
+      },
+      {
+        "formdata": null,
+        "encryptedattributevalue": "{\r\n  \"accountIdPath\": \"call1.message._id\",\r\n  \"responseColsToPropsMap\": {\r\n    \r\n    \"firstname\": \"call1.message.firstName~#~char\",\r\n    \"lastname\": \"call1.message.lastName~#~char\"\r\n  },\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://app.launchdarkly.com/api/v2/members\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"[{\\\"email\\\":\\\"${user.email}\\\",\\\"firstName\\\":\\\"${user.firstname}\\\",\\\"lastName\\\":\\\"${user.lastname}\\\",\\\"role\\\":\\\"${user.customproperty3}\\\"}]\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "credentialSaveStatus": false,
+        "attributename": "CreateAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://app.launchdarkly.com/api/v2/members/${account.accountID}\",\r\n      \"httpMethod\": \"PATCH\",\r\n      \"httpParams\": \"[{\\\"op\\\":\\\"add\\\",\\\"path\\\":\\\"/role\\\",\\\"value\\\":\\\"${user.customproperty3}\\\"}]\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "attributename": "UpdateAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "EnableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "DisableAccountJSON"
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"Team\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://app.launchdarkly.com/api/v2/members/${account.accountID}/teams\",\r\n      \"httpMethod\": \"POST\",\r\n      \"httpParams\": \"{\\\"teamKeys\\\":[\\\"${entitlementValue.entitlement_value}\\\"]}\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "UpdateUserJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ChangePassJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "{\r\n  \"call\": [\r\n    {\r\n      \"name\": \"call1\",\r\n      \"connection\": \"acctAuth\",\r\n      \"url\": \"https://app.launchdarkly.com/api/v2/members/${account.accountID}\",\r\n      \"httpMethod\": \"DELETE\",\r\n      \"httpHeaders\": {\r\n        \"Authorization\": \"${access_token}\",\r\n        \"Accept\": \"application/json\"\r\n      },\r\n      \"httpContentType\": \"application/json\",\r\n      \"successResponses\": {\r\n        \"statusCode\": [\r\n          200,\r\n          201,\r\n          204\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+        "formdata": null,
+        "attributename": "RemoveAccountJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "TicketStatusJSON"
+      },
+      {
+        "attributename": "CreateTicketJSON",
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ENDPOINTS_FILTER",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PasswdPolicyJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "ConfigJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "AddFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "RemoveFFIDAccessJSON"
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "MODIFYUSERDATAJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "SendOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "attributename": "ValidateOtpJSON",
+        "credentialSaveStatus": false
+      },
+      {
+        "encryptedattributevalue": "",
+        "formdata": null,
+        "credentialSaveStatus": false,
+        "attributename": "PAM_CONFIG"
+      }
+    ]
+  }
+}
