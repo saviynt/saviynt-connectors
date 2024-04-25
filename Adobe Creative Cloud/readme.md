@@ -133,7 +133,7 @@ The connector uses the following parameters for creating a connection and for im
 **ConnectionJSON** Specify this parameter to create a connection.
 
 
-> Validate the generated JWT token in Postman
+>  **Validate the generated JWT token in Postman**
     
 
 Use the following format to connect to the  Adobe Creative Cloud application:
