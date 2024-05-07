@@ -1,3 +1,14 @@
+<div align="center">
+   
+<iframe
+  src="https://ghbtns.com/github-btn.html?user=saviynt&amp;repo=saviynt-connectors&amp;type=star&amp;count=true&amp;size=large"
+  width={160}
+  height={30}
+  title="GitHub Stars"
+/>
+
+</div>
+
 > **Disclaimer**
 > The integration was either created by Saviynt or by Saviynt community users. The integration is available “as is” and falls under standard connectors support for REST, SOAP, JDBC, LDAP, PowerShell, Jar and Saviynt Connector Framework.
 
@@ -547,3 +558,13 @@ When a provisioning job is triggered, it creates provisioning tasks in EIC. When
 To troubleshoot common problems with connectors, answer frequently asked questions, and provide solutions to a few common issues you might encounter while configuring or working with connectors, see [Common Troubleshooting Guide for Connectors](https://docs.saviyntcloud.com/csh?topicname=Common-Troubleshooting-Guide-for-Connectors&pubname=Common-Troubleshooting-v2022x).
 
 To troubleshoot common problems or obtain answers for frequently asked questions for REST connectors, see the [REST Connector Guide](https://docs.saviyntcloud.com/bundle/REST-v2020x/page/Content/Appendix.htm).
+
+
+
+
+
+## Contributors
+<a href="https://github.com/saviynt/saviynt-connectors/graphs/contributors">
+ <img src="https://contrib.rocks/image?repo=saviynt/saviynt-connectors" />
+</a>
+Made with [contributors-img](https://contrib.rocks).
