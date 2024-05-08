@@ -550,19 +550,6 @@ To troubleshoot common problems with connectors, answer frequently asked questio
 To troubleshoot common problems or obtain answers for frequently asked questions for REST connectors, see the [REST Connector Guide](https://docs.saviyntcloud.com/bundle/REST-v2020x/page/Content/Appendix.htm).
 
 
-
-<div align="center">
-   
-<iframe
-  src="https://ghbtns.com/github-btn.html?user=saviynt&amp;repo=saviynt-connectors&amp;type=star&amp;count=true&amp;size=large"
-  width={160}
-  height={30}
-  title="GitHub Stars"
-/>
-
-</div>
-
-
 ## Contributors
 <a href="https://github.com/saviynt/saviynt-connectors/graphs/contributors">
  <img src="https://contrib.rocks/image?repo=saviynt/saviynt-connectors" />
