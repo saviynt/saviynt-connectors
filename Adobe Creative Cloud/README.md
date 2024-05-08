@@ -1,13 +1,3 @@
-<div align="center">
-   
-<iframe
-  src="https://ghbtns.com/github-btn.html?user=saviynt&amp;repo=saviynt-connectors&amp;type=star&amp;count=true&amp;size=large"
-  width={160}
-  height={30}
-  title="GitHub Stars"
-/>
-
-</div>
 
 > **Disclaimer**
 > The integration was either created by Saviynt or by Saviynt community users. The integration is available “as is” and falls under standard connectors support for REST, SOAP, JDBC, LDAP, PowerShell, Jar and Saviynt Connector Framework.
@@ -561,6 +551,16 @@ To troubleshoot common problems or obtain answers for frequently asked questions
 
 
 
+<div align="center">
+   
+<iframe
+  src="https://ghbtns.com/github-btn.html?user=saviynt&amp;repo=saviynt-connectors&amp;type=star&amp;count=true&amp;size=large"
+  width={160}
+  height={30}
+  title="GitHub Stars"
+/>
+
+</div>
 
 
 ## Contributors
