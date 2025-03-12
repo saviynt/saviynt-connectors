@@ -1,4 +1,4 @@
-# community-connectors
+# Saviynt Community Connectors
 
 Maintain Following folder strcuture 
 
